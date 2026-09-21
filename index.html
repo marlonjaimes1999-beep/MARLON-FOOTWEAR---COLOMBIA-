@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  CAMBIA ESTO — título de la pestaña y descripción         ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <title>Tu Nombre — lo que haces</title>
+  <meta name="description" content="Una línea sobre quién eres y a quién ayudas." />
+
+  <style>
+    /* ── Cambia estos colores y cambia toda la web ── */
+    :root {
+      --fondo: #0a0a0b;
+      --panel: #111113;
+      --texto: #ffffff;
+      --acento: #ff5623;
+      --suave: rgba(255, 255, 255, 0.62);
+      --tenue: rgba(255, 255, 255, 0.4);
+      --linea: rgba(255, 255, 255, 0.1);
+      --radio: 18px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    a { color: inherit; }
+
+    .label {
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+      font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--acento);
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 26px; border-radius: 999px; font-size: 14px; font-weight: 600;
+      text-decoration: none; cursor: pointer; border: none; transition: all 0.25s ease;
+    }
+    .btn-primario { background: var(--acento); color: #000; }
+    .btn-primario:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(255, 86, 35, 0.3); }
+    .btn-borde { border: 1px solid var(--linea); color: var(--texto); background: transparent; }
+    .btn-borde:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.25); }
+
+    /* ── Aparición al hacer scroll ── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+    /* ── Navegación ── */
+    nav {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(12px); background: rgba(10, 10, 11, 0.72);
+      border-bottom: 1px solid var(--linea);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+    nav .marca { font-weight: 700; letter-spacing: -0.02em; font-size: 17px; }
+    nav .links a { color: var(--suave); text-decoration: none; margin-left: 26px; font-size: 14px; transition: color 0.2s; }
+    nav .links a:hover { color: var(--texto); }
+    nav .btn { margin-left: 26px; padding: 9px 18px; }
+    @media (max-width: 640px) { nav .links a:not(.btn) { display: none; } }
+
+    /* ── Hero ── */
+    header { position: relative; padding: 130px 0 90px; overflow: hidden; }
+    .orb {
+      position: absolute; top: -120px; right: -80px; width: 520px; height: 520px;
+      background: radial-gradient(circle, rgba(255, 86, 35, 0.28), transparent 62%);
+      filter: blur(60px); pointer-events: none; animation: float 14s ease-in-out infinite;
+    }
+    @keyframes float { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(-40px, 40px); } }
+    @media (prefers-reduced-motion: reduce) { .orb { animation: none; } }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid var(--linea); border-radius: 999px; padding: 7px 14px;
+      font-size: 13px; color: var(--suave); margin-bottom: 26px;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #38d96b; box-shadow: 0 0 10px #38d96b; }
+    header h1 {
+      font-size: clamp(2.6rem, 7.5vw, 4.6rem); line-height: 1.04;
+      letter-spacing: -0.035em; font-weight: 600; max-width: 14ch;
+    }
+    header h1 .grad { color: var(--acento); }
+    header p { font-size: clamp(1.05rem, 2.4vw, 1.3rem); color: var(--suave); max-width: 540px; margin-top: 22px; }
+    .botones { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 12px; }
+
+    /* Tira de confianza */
+    .stats { display: flex; flex-wrap: wrap; gap: 36px; margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--linea); }
+    .stat .n { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; }
+    .stat .t { font-size: 13px; color: var(--tenue); margin-top: 2px; }
+
+    /* ── Secciones ── */
+    section { padding: 84px 0; }
+    .sec-head { max-width: 620px; margin-bottom: 44px; }
+    .sec-head h2 { font-size: clamp(1.9rem, 4.5vw, 2.9rem); letter-spacing: -0.025em; margin: 14px 0 0; font-weight: 600; }
+    .sec-head p { color: var(--suave); margin-top: 14px; }
+
+    /* Sobre mí */
+    .about { display: grid; grid-template-columns: 0.8fr 1fr; gap: 48px; align-items: center; }
+    .about img { width: 100%; border-radius: var(--radio); border: 1px solid var(--linea); aspect-ratio: 4/5; object-fit: cover; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+    .chip { border: 1px solid var(--linea); border-radius: 999px; padding: 7px 14px; font-size: 13px; color: var(--suave); }
+    @media (max-width: 720px) { .about { grid-template-columns: 1fr; } .about img { max-width: 320px; } }
+
+    /* Servicios */
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card {
+      background: var(--panel); border: 1px solid var(--linea); border-radius: var(--radio);
+      padding: 28px; transition: transform 0.25s, border-color 0.25s;
+    }
+    .card:hover { transform: translateY(-4px); border-color: rgba(255, 86, 35, 0.5); }
+    .card .num { font-family: ui-monospace, monospace; color: var(--acento); font-size: 13px; }
+    .card h3 { font-size: 1.25rem; margin: 14px 0 8px; letter-spacing: -0.01em; }
+    .card p { color: var(--suave); font-size: 14px; }
+
+    /* Imagen / placeholder (sin depender de red: se ve bien siempre) */
+    .ph {
+      display: grid; place-items: center; color: var(--tenue);
+      font-family: ui-monospace, monospace; font-size: 12px; letter-spacing: 0.05em;
+      background: radial-gradient(circle at 30% 25%, rgba(255, 86, 35, 0.22), #0e0e10 62%);
+    }
+    .ph-2 { background: radial-gradient(circle at 70% 35%, rgba(120, 110, 255, 0.2), #0e0e10 62%); }
+    .ph-3 { background: radial-gradient(circle at 50% 70%, rgba(56, 217, 107, 0.16), #0e0e10 62%); }
+    .about-ph { width: 100%; aspect-ratio: 4/5; border-radius: var(--radio); border: 1px solid var(--linea); }
+
+    /* Proyectos */
+    .works { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .work { position: relative; border-radius: var(--radio); overflow: hidden; border: 1px solid var(--linea); aspect-ratio: 3/2; }
+    .work .ph { position: absolute; inset: 0; transition: transform 0.5s ease; }
+    .work:hover .ph { transform: scale(1.06); }
+    .work .cap {
+      position: absolute; inset: auto 0 0 0; padding: 18px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+      font-weight: 600; letter-spacing: -0.01em;
+    }
+    .work .cap span { display: block; font-size: 13px; font-weight: 400; color: var(--suave); }
+
+    /* Testimonio */
+    .quote { max-width: 760px; }
+    .quote p { font-size: clamp(1.4rem, 3.5vw, 2.1rem); line-height: 1.35; letter-spacing: -0.02em; font-weight: 500; }
+    .quote .who { margin-top: 22px; color: var(--tenue); font-size: 14px; }
+
+    /* Contacto */
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .contact form { display: flex; flex-direction: column; gap: 14px; }
+    .field { display: flex; flex-direction: column; gap: 7px; }
+    .field label { font-size: 13px; color: var(--tenue); }
+    .field input, .field textarea {
+      background: var(--panel); border: 1px solid var(--linea); border-radius: 12px;
+      padding: 13px 15px; color: var(--texto); font-size: 15px; font-family: inherit; resize: vertical;
+    }
+    .field input:focus, .field textarea:focus { outline: none; border-color: var(--acento); }
+    .contact .btn { justify-content: center; margin-top: 4px; }
+    .contact .aside a { display: block; color: var(--suave); text-decoration: none; margin-top: 10px; transition: color 0.2s; }
+    .contact .aside a:hover { color: var(--acento); }
+    @media (max-width: 720px) { .contact { grid-template-columns: 1fr; } }
+
+    footer { padding: 40px 0; border-top: 1px solid var(--linea); color: var(--tenue); font-size: 14px; }
+    footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; }
+    footer a { color: var(--acento); text-decoration: none; }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="wrap">
+      <!-- CAMBIA: tu nombre o marca -->
+      <span class="marca">Tu Nombre</span>
+      <div class="links">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#contacto" class="btn btn-primario">Hablemos</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <header>
+    <div class="orb"></div>
+    <div class="wrap">
+      <span class="badge"><span class="dot"></span> Disponible para nuevos proyectos</span>
+      <!-- CAMBIA: tu titular. Lo naranja es la palabra que quieres destacar -->
+      <h1>Hago que tu marca <span class="grad">destaque</span> de verdad.</h1>
+      <p>Una frase clara sobre a quién ayudas y cómo. Que se entienda en 3 segundos y dé ganas de seguir leyendo.</p>
+      <div class="botones">
+        <a href="#contacto" class="btn btn-primario">Empezar un proyecto →</a>
+        <a href="#trabajos" class="btn btn-borde">Ver trabajos</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><div class="n">8+</div><div class="t">Años de experiencia</div></div>
+        <div class="stat"><div class="n">40+</div><div class="t">Proyectos entregados</div></div>
+        <div class="stat"><div class="n">5.0★</div><div class="t">Valoración media</div></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════ SOBRE MÍ ══════════════ -->
+  <section id="sobre-mi">
+    <div class="wrap about reveal">
+      <!-- CAMBIA: tu foto. Sube una a la carpeta y sustituye este bloque por:
+           <img src="mi-foto.jpg" alt="Tu Nombre" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;border:1px solid var(--linea);" /> -->
+      <div class="ph about-ph">Tu foto aquí</div>
+      <div>
+        <span class="label">Sobre mí</span>
+        <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-0.025em;margin:14px 0 16px;font-weight:600;">Un poco sobre quién soy</h2>
+        <p style="color:var(--suave);">Dos o tres frases sobre ti: de dónde vienes, qué te mueve y por qué alguien debería confiar en ti. Habla como hablarías en persona, sin postureo. Lo cercano vende más que lo perfecto.</p>
+        <div class="chips">
+          <span class="chip">Diseño</span>
+          <span class="chip">Estrategia</span>
+          <span class="chip">Dirección de arte</span>
+          <span class="chip">Lo que tú hagas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SERVICIOS ══════════════ -->
+  <section id="servicios">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">Servicios</span>
+        <h2>Lo que puedo hacer por ti</h2>
+        <p>Resume aquí en una frase tu propuesta: qué resuelves y a quién.</p>
+      </div>
+      <div class="grid">
+        <div class="card reveal"><div class="num">01</div><h3>Servicio uno</h3><p>Qué incluye, para quién es y qué se lleva el cliente. Breve y concreto.</p></div>
+        <div class="card reveal"><div class="num">02</div><h3>Servicio dos</h3><p>Qué incluye, para quién es y qué se lleva el cliente. Breve y concreto.</p></div>
+        <div class="card reveal"><div class="num">03</div><h3>Servicio tres</h3><p>Qué incluye, para quién es y qué se lleva el cliente. Breve y concreto.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ TRABAJOS ══════════════ -->
+  <section id="trabajos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="label">Trabajos</span>
+        <h2>Algunos proyectos</h2>
+        <p>Cambia estas imágenes por las tuyas. Pocas y buenas mejor que muchas.</p>
+      </div>
+      <!-- CAMBIA: pon tus imágenes sustituyendo cada <div class="ph"> por:
+           <img src="proyecto.jpg" alt="..." style="width:100%;height:100%;object-fit:cover;" /> -->
+      <div class="works">
+        <a class="work reveal" href="#"><div class="ph">Imagen del proyecto</div><div class="cap">Proyecto uno<span>Tipo de trabajo</span></div></a>
+        <a class="work reveal" href="#"><div class="ph ph-2">Imagen del proyecto</div><div class="cap">Proyecto dos<span>Tipo de trabajo</span></div></a>
+        <a class="work reveal" href="#"><div class="ph ph-3">Imagen del proyecto</div><div class="cap">Proyecto tres<span>Tipo de trabajo</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ TESTIMONIO ══════════════ -->
+  <section>
+    <div class="wrap quote reveal">
+      <span class="label">Lo que dicen</span>
+      <p style="margin-top:18px;">“Una frase real de un cliente contento. Corta, concreta y específica: qué cambió gracias a ti.”</p>
+      <div class="who">— Nombre del cliente, lo que hace</div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CONTACTO ══════════════ -->
+  <section id="contacto">
+    <div class="wrap contact">
+      <div class="reveal">
+        <span class="label">Contacto</span>
+        <h2 style="font-size:clamp(1.9rem,4.5vw,2.9rem);letter-spacing:-0.025em;margin:14px 0 14px;font-weight:600;">Hablemos de tu proyecto</h2>
+        <p style="color:var(--suave);">Cuéntame qué necesitas y te respondo pronto. Sin compromiso.</p>
+        <div class="aside" style="margin-top:26px;">
+          <!-- CAMBIA: tu email y tus redes -->
+          <a href="mailto:tu@email.com">tu@email.com</a>
+          <a href="https://instagram.com/tu_usuario" target="_blank" rel="noopener">Instagram →</a>
+          <a href="https://linkedin.com/in/tu_usuario" target="_blank" rel="noopener">LinkedIn →</a>
+        </div>
+      </div>
+
+      <!-- ╔══════════════════════════════════════════════════════════════════╗
+           ║  FORMULARIO QUE FUNCIONA (sin programar). Recibes los mensajes    ║
+           ║  en tu email vía FormSubmit (gratis, sin cuenta):                 ║
+           ║  1. Cambia "tu@email.com" de abajo por tu email real.            ║
+           ║  2. Publica la web y envíate un mensaje de prueba.               ║
+           ║  3. La 1ª vez te llega un correo de FormSubmit: pulsa para        ║
+           ║     activarlo. Listo, ya recibes todos los mensajes.            ║
+           ╚══════════════════════════════════════════════════════════════════╝ -->
+      <form class="reveal" action="https://formsubmit.co/tu@email.com" method="POST">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde mi web" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" style="display:none" />
+        <div class="field">
+          <label for="n">Nombre</label>
+          <input id="n" type="text" name="name" placeholder="Tu nombre" required />
+        </div>
+        <div class="field">
+          <label for="e">Email</label>
+          <input id="e" type="email" name="email" placeholder="tu@email.com" required />
+        </div>
+        <div class="field">
+          <label for="m">Mensaje</label>
+          <textarea id="m" name="message" rows="4" placeholder="Cuéntame qué necesitas" required></textarea>
+        </div>
+        <button class="btn btn-primario" type="submit">Enviar mensaje →</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="year"></span> Tu Nombre</span>
+      <span>Hecho con IA siguiendo la guía de <a href="https://axcod.es" target="_blank" rel="noopener">axcodes</a></span>
+    </div>
+  </footer>
+
+  <script>
+    // Año automático.
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Aparición suave al hacer scroll. No tienes que tocar nada.
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+  </script>
+</body>
+</html>
