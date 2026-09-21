@@ -1,335 +1,1097 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARLON FOOTWEAR | Calzado Femenino Premium en Colombia</title>
+    <meta name="description" content="Descubre la colección exclusiva de Marlon Footwear (MF Colombia). Tacones, plataformas y calzado femenino premium diseñado con presencia, elegancia y carácter. Envíos a toda Colombia.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MARLON FOOTWEAR | Calzado Femenino Premium">
+    <meta property="og:description" content="Tacones, plataformas y diseño de alto impacto. Presencia, elegancia y carácter en cada paso.">
+    <meta property="og:site_name" content="MARLON FOOTWEAR">
+    <meta property="og:locale" content="es_CO">
 
-  <!-- ╔══════════════════════════════════════════════════════════╗
-       ║  CAMBIA ESTO — título de la pestaña y descripción         ║
-       ╚══════════════════════════════════════════════════════════╝ -->
-  <title>Tu Nombre — lo que haces</title>
-  <meta name="description" content="Una línea sobre quién eres y a quién ayudas." />
+    <!-- Fonts: Playfair Display for luxury titles, Inter for sleek UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-  <style>
-    /* ── Cambia estos colores y cambia toda la web ── */
-    :root {
-      --fondo: #0a0a0b;
-      --panel: #111113;
-      --texto: #ffffff;
-      --acento: #ff5623;
-      --suave: rgba(255, 255, 255, 0.62);
-      --tenue: rgba(255, 255, 255, 0.4);
-      --linea: rgba(255, 255, 255, 0.1);
-      --radio: 18px;
-    }
+    <!-- Tailwind CSS CDN for fluid utility styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0D0D0D',
+                            white: '#FFFFFF',
+                            cream: '#F9F8F6',
+                            sand: '#EFECE6',
+                            gold: '#C5A880',
+                            goldlight: '#D4AF37',
+                            mauve: '#D8A798',
+                            mauvelight: '#E2C0B8',
+                            darkgray: '#222222',
+                            lightgray: '#E5E5E5'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--fondo);
-      color: var(--texto);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-    a { color: inherit; }
+    <style>
+        :root {
+            --bg-black: #0D0D0D;
+            --bg-cream: #F9F8F6;
+            --accent-gold: #C5A880;
+            --accent-mauve: #D8A798;
+        }
 
-    .label {
-      font-family: ui-monospace, "SF Mono", Menlo, monospace;
-      font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--acento);
-    }
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 14px 26px; border-radius: 999px; font-size: 14px; font-weight: 600;
-      text-decoration: none; cursor: pointer; border: none; transition: all 0.25s ease;
-    }
-    .btn-primario { background: var(--acento); color: #000; }
-    .btn-primario:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(255, 86, 35, 0.3); }
-    .btn-borde { border: 1px solid var(--linea); color: var(--texto); background: transparent; }
-    .btn-borde:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.25); }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #0D0D0D;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
 
-    /* ── Aparición al hacer scroll ── */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
-    .reveal.in { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+        h1, h2, h3, h4, .font-serif-brand {
+            font-family: 'Playfair Display', serif;
+        }
 
-    /* ── Navegación ── */
-    nav {
-      position: sticky; top: 0; z-index: 20;
-      backdrop-filter: blur(12px); background: rgba(10, 10, 11, 0.72);
-      border-bottom: 1px solid var(--linea);
-    }
-    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; }
-    nav .marca { font-weight: 700; letter-spacing: -0.02em; font-size: 17px; }
-    nav .links a { color: var(--suave); text-decoration: none; margin-left: 26px; font-size: 14px; transition: color 0.2s; }
-    nav .links a:hover { color: var(--texto); }
-    nav .btn { margin-left: 26px; padding: 9px 18px; }
-    @media (max-width: 640px) { nav .links a:not(.btn) { display: none; } }
+        /* Custom subtle scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F9F8F6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C5A880;
+            border-radius: 3px;
+        }
 
-    /* ── Hero ── */
-    header { position: relative; padding: 130px 0 90px; overflow: hidden; }
-    .orb {
-      position: absolute; top: -120px; right: -80px; width: 520px; height: 520px;
-      background: radial-gradient(circle, rgba(255, 86, 35, 0.28), transparent 62%);
-      filter: blur(60px); pointer-events: none; animation: float 14s ease-in-out infinite;
-    }
-    @keyframes float { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(-40px, 40px); } }
-    @media (prefers-reduced-motion: reduce) { .orb { animation: none; } }
+        /* Subtle smooth animations */
+        .transition-lux {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
 
-    .badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      border: 1px solid var(--linea); border-radius: 999px; padding: 7px 14px;
-      font-size: 13px; color: var(--suave); margin-bottom: 26px;
-    }
-    .dot { width: 8px; height: 8px; border-radius: 50%; background: #38d96b; box-shadow: 0 0 10px #38d96b; }
-    header h1 {
-      font-size: clamp(2.6rem, 7.5vw, 4.6rem); line-height: 1.04;
-      letter-spacing: -0.035em; font-weight: 600; max-width: 14ch;
-    }
-    header h1 .grad { color: var(--acento); }
-    header p { font-size: clamp(1.05rem, 2.4vw, 1.3rem); color: var(--suave); max-width: 540px; margin-top: 22px; }
-    .botones { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 12px; }
+        /* Image hover zoom effect */
+        .img-hover-zoom {
+            overflow: hidden;
+        }
+        .img-hover-zoom img {
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .img-hover-zoom:hover img {
+            transform: scale(1.04);
+        }
 
-    /* Tira de confianza */
-    .stats { display: flex; flex-wrap: wrap; gap: 36px; margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--linea); }
-    .stat .n { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; }
-    .stat .t { font-size: 13px; color: var(--tenue); margin-top: 2px; }
+        /* Size selector active state */
+        .size-btn.active {
+            background-color: #0D0D0D;
+            color: #FFFFFF;
+            border-color: #0D0D0D;
+        }
 
-    /* ── Secciones ── */
-    section { padding: 84px 0; }
-    .sec-head { max-width: 620px; margin-bottom: 44px; }
-    .sec-head h2 { font-size: clamp(1.9rem, 4.5vw, 2.9rem); letter-spacing: -0.025em; margin: 14px 0 0; font-weight: 600; }
-    .sec-head p { color: var(--suave); margin-top: 14px; }
+        /* Drawer overlays */
+        .drawer-overlay {
+            background-color: rgba(13, 13, 13, 0.5);
+            backdrop-filter: blur(4px);
+        }
 
-    /* Sobre mí */
-    .about { display: grid; grid-template-columns: 0.8fr 1fr; gap: 48px; align-items: center; }
-    .about img { width: 100%; border-radius: var(--radio); border: 1px solid var(--linea); aspect-ratio: 4/5; object-fit: cover; }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
-    .chip { border: 1px solid var(--linea); border-radius: 999px; padding: 7px 14px; font-size: 13px; color: var(--suave); }
-    @media (max-width: 720px) { .about { grid-template-columns: 1fr; } .about img { max-width: 320px; } }
-
-    /* Servicios */
-    .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .card {
-      background: var(--panel); border: 1px solid var(--linea); border-radius: var(--radio);
-      padding: 28px; transition: transform 0.25s, border-color 0.25s;
-    }
-    .card:hover { transform: translateY(-4px); border-color: rgba(255, 86, 35, 0.5); }
-    .card .num { font-family: ui-monospace, monospace; color: var(--acento); font-size: 13px; }
-    .card h3 { font-size: 1.25rem; margin: 14px 0 8px; letter-spacing: -0.01em; }
-    .card p { color: var(--suave); font-size: 14px; }
-
-    /* Imagen / placeholder (sin depender de red: se ve bien siempre) */
-    .ph {
-      display: grid; place-items: center; color: var(--tenue);
-      font-family: ui-monospace, monospace; font-size: 12px; letter-spacing: 0.05em;
-      background: radial-gradient(circle at 30% 25%, rgba(255, 86, 35, 0.22), #0e0e10 62%);
-    }
-    .ph-2 { background: radial-gradient(circle at 70% 35%, rgba(120, 110, 255, 0.2), #0e0e10 62%); }
-    .ph-3 { background: radial-gradient(circle at 50% 70%, rgba(56, 217, 107, 0.16), #0e0e10 62%); }
-    .about-ph { width: 100%; aspect-ratio: 4/5; border-radius: var(--radio); border: 1px solid var(--linea); }
-
-    /* Proyectos */
-    .works { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    .work { position: relative; border-radius: var(--radio); overflow: hidden; border: 1px solid var(--linea); aspect-ratio: 3/2; }
-    .work .ph { position: absolute; inset: 0; transition: transform 0.5s ease; }
-    .work:hover .ph { transform: scale(1.06); }
-    .work .cap {
-      position: absolute; inset: auto 0 0 0; padding: 18px;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
-      font-weight: 600; letter-spacing: -0.01em;
-    }
-    .work .cap span { display: block; font-size: 13px; font-weight: 400; color: var(--suave); }
-
-    /* Testimonio */
-    .quote { max-width: 760px; }
-    .quote p { font-size: clamp(1.4rem, 3.5vw, 2.1rem); line-height: 1.35; letter-spacing: -0.02em; font-weight: 500; }
-    .quote .who { margin-top: 22px; color: var(--tenue); font-size: 14px; }
-
-    /* Contacto */
-    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-    .contact form { display: flex; flex-direction: column; gap: 14px; }
-    .field { display: flex; flex-direction: column; gap: 7px; }
-    .field label { font-size: 13px; color: var(--tenue); }
-    .field input, .field textarea {
-      background: var(--panel); border: 1px solid var(--linea); border-radius: 12px;
-      padding: 13px 15px; color: var(--texto); font-size: 15px; font-family: inherit; resize: vertical;
-    }
-    .field input:focus, .field textarea:focus { outline: none; border-color: var(--acento); }
-    .contact .btn { justify-content: center; margin-top: 4px; }
-    .contact .aside a { display: block; color: var(--suave); text-decoration: none; margin-top: 10px; transition: color 0.2s; }
-    .contact .aside a:hover { color: var(--acento); }
-    @media (max-width: 720px) { .contact { grid-template-columns: 1fr; } }
-
-    footer { padding: 40px 0; border-top: 1px solid var(--linea); color: var(--tenue); font-size: 14px; }
-    footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; }
-    footer a { color: var(--acento); text-decoration: none; }
-  </style>
+        /* Floating WhatsApp Button Pulse */
+        @keyframes subtlePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .pulse-subtle {
+            animation: subtlePulse 3s infinite ease-in-out;
+        }
+    </style>
 </head>
+<body class="antialiased flex flex-col min-h-screen">
 
-<body>
-  <nav>
-    <div class="wrap">
-      <!-- CAMBIA: tu nombre o marca -->
-      <span class="marca">Tu Nombre</span>
-      <div class="links">
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#trabajos">Trabajos</a>
-        <a href="#contacto" class="btn btn-primario">Hablemos</a>
-      </div>
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="bg-brand-black text-white text-xs tracking-widest uppercase py-2.5 px-4 text-center border-b border-gray-800">
+        <p class="font-light">Envíos a toda Colombia &nbsp;|&nbsp; Atención personalizada por <span class="text-brand-gold font-normal">WhatsApp</span></p>
     </div>
-  </nav>
 
-  <!-- ══════════════ HERO ══════════════ -->
-  <header>
-    <div class="orb"></div>
-    <div class="wrap">
-      <span class="badge"><span class="dot"></span> Disponible para nuevos proyectos</span>
-      <!-- CAMBIA: tu titular. Lo naranja es la palabra que quieres destacar -->
-      <h1>Hago que tu marca <span class="grad">destaque</span> de verdad.</h1>
-      <p>Una frase clara sobre a quién ayudas y cómo. Que se entienda en 3 segundos y dé ganas de seguir leyendo.</p>
-      <div class="botones">
-        <a href="#contacto" class="btn btn-primario">Empezar un proyecto →</a>
-        <a href="#trabajos" class="btn btn-borde">Ver trabajos</a>
-      </div>
+    <!-- MAIN HEADER -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-lux" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button id="openMobileMenu" class="lg:hidden p-2 text-brand-black hover:text-brand-gold transition-colors focus:outline-none" aria-label="Abrir menú">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                </svg>
+            </button>
 
-      <div class="stats">
-        <div class="stat"><div class="n">8+</div><div class="t">Años de experiencia</div></div>
-        <div class="stat"><div class="n">40+</div><div class="t">Proyectos entregados</div></div>
-        <div class="stat"><div class="n">5.0★</div><div class="t">Valoración media</div></div>
-      </div>
-    </div>
-  </header>
+            <!-- Brand Logo -->
+            <a href="#" class="flex flex-col items-center group">
+                <span class="font-serif text-2xl sm:text-3xl font-bold tracking-widest text-brand-black group-hover:text-brand-gold transition-colors">MF</span>
+                <span class="text-[9px] sm:text-[10px] tracking-[0.3em] font-medium text-gray-500 uppercase -mt-1">Marlon Footwear</span>
+            </a>
 
-  <!-- ══════════════ SOBRE MÍ ══════════════ -->
-  <section id="sobre-mi">
-    <div class="wrap about reveal">
-      <!-- CAMBIA: tu foto. Sube una a la carpeta y sustituye este bloque por:
-           <img src="mi-foto.jpg" alt="Tu Nombre" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;border:1px solid var(--linea);" /> -->
-      <div class="ph about-ph">Tu foto aquí</div>
-      <div>
-        <span class="label">Sobre mí</span>
-        <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-0.025em;margin:14px 0 16px;font-weight:600;">Un poco sobre quién soy</h2>
-        <p style="color:var(--suave);">Dos o tres frases sobre ti: de dónde vienes, qué te mueve y por qué alguien debería confiar en ti. Habla como hablarías en persona, sin postureo. Lo cercano vende más que lo perfecto.</p>
-        <div class="chips">
-          <span class="chip">Diseño</span>
-          <span class="chip">Estrategia</span>
-          <span class="chip">Dirección de arte</span>
-          <span class="chip">Lo que tú hagas</span>
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center space-x-8 text-xs tracking-[0.2em] font-medium uppercase">
+                <a href="#inicio" class="text-brand-black hover:text-brand-gold transition-colors py-2 border-b border-transparent hover:border-brand-gold">Inicio</a>
+                <a href="#coleccion" class="text-brand-black hover:text-brand-gold transition-colors py-2 border-b border-transparent hover:border-brand-gold">Colección</a>
+                <a href="#tacones" class="text-brand-black hover:text-brand-gold transition-colors py-2 border-b border-transparent hover:border-brand-gold">Tacones</a>
+                <a href="#plataformas" class="text-brand-black hover:text-brand-gold transition-colors py-2 border-b border-transparent hover:border-brand-gold">Plataformas</a>
+                <a href="#nosotros" class="text-brand-black hover:text-brand-gold transition-colors py-2 border-b border-transparent hover:border-brand-gold">Nosotros</a>
+                <a href="#contacto" class="text-brand-black hover:text-brand-gold transition-colors py-2 border-b border-transparent hover:border-brand-gold">Contacto</a>
+            </nav>
+
+            <!-- Action Icons (Search & Cart) -->
+            <div class="flex items-center space-x-4 sm:space-x-6">
+                <!-- Search Button -->
+                <button id="openSearchBtn" class="text-brand-black hover:text-brand-gold transition-colors p-1" aria-label="Buscar producto">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path>
+                    </svg>
+                </button>
+
+                <!-- Shopping Cart Toggle Button -->
+                <button id="openCartBtn" class="relative text-brand-black hover:text-brand-gold transition-colors p-1" aria-label="Ver carrito">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"></path>
+                    </svg>
+                    <span id="cartCountBadge" class="absolute -top-1.5 -right-2 bg-brand-gold text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-between justify-center hidden">0</span>
+                </button>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- ══════════════ SERVICIOS ══════════════ -->
-  <section id="servicios">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="label">Servicios</span>
-        <h2>Lo que puedo hacer por ti</h2>
-        <p>Resume aquí en una frase tu propuesta: qué resuelves y a quién.</p>
-      </div>
-      <div class="grid">
-        <div class="card reveal"><div class="num">01</div><h3>Servicio uno</h3><p>Qué incluye, para quién es y qué se lleva el cliente. Breve y concreto.</p></div>
-        <div class="card reveal"><div class="num">02</div><h3>Servicio dos</h3><p>Qué incluye, para quién es y qué se lleva el cliente. Breve y concreto.</p></div>
-        <div class="card reveal"><div class="num">03</div><h3>Servicio tres</h3><p>Qué incluye, para quién es y qué se lleva el cliente. Breve y concreto.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════ TRABAJOS ══════════════ -->
-  <section id="trabajos">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="label">Trabajos</span>
-        <h2>Algunos proyectos</h2>
-        <p>Cambia estas imágenes por las tuyas. Pocas y buenas mejor que muchas.</p>
-      </div>
-      <!-- CAMBIA: pon tus imágenes sustituyendo cada <div class="ph"> por:
-           <img src="proyecto.jpg" alt="..." style="width:100%;height:100%;object-fit:cover;" /> -->
-      <div class="works">
-        <a class="work reveal" href="#"><div class="ph">Imagen del proyecto</div><div class="cap">Proyecto uno<span>Tipo de trabajo</span></div></a>
-        <a class="work reveal" href="#"><div class="ph ph-2">Imagen del proyecto</div><div class="cap">Proyecto dos<span>Tipo de trabajo</span></div></a>
-        <a class="work reveal" href="#"><div class="ph ph-3">Imagen del proyecto</div><div class="cap">Proyecto tres<span>Tipo de trabajo</span></div></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════ TESTIMONIO ══════════════ -->
-  <section>
-    <div class="wrap quote reveal">
-      <span class="label">Lo que dicen</span>
-      <p style="margin-top:18px;">“Una frase real de un cliente contento. Corta, concreta y específica: qué cambió gracias a ti.”</p>
-      <div class="who">— Nombre del cliente, lo que hace</div>
-    </div>
-  </section>
-
-  <!-- ══════════════ CONTACTO ══════════════ -->
-  <section id="contacto">
-    <div class="wrap contact">
-      <div class="reveal">
-        <span class="label">Contacto</span>
-        <h2 style="font-size:clamp(1.9rem,4.5vw,2.9rem);letter-spacing:-0.025em;margin:14px 0 14px;font-weight:600;">Hablemos de tu proyecto</h2>
-        <p style="color:var(--suave);">Cuéntame qué necesitas y te respondo pronto. Sin compromiso.</p>
-        <div class="aside" style="margin-top:26px;">
-          <!-- CAMBIA: tu email y tus redes -->
-          <a href="mailto:tu@email.com">tu@email.com</a>
-          <a href="https://instagram.com/tu_usuario" target="_blank" rel="noopener">Instagram →</a>
-          <a href="https://linkedin.com/in/tu_usuario" target="_blank" rel="noopener">LinkedIn →</a>
+    <!-- SEARCH MODAL -->
+    <div id="searchModal" class="fixed inset-0 z-50 hidden drawer-overlay flex items-start justify-center pt-20 px-4 transition-lux">
+        <div class="bg-white w-full max-w-2xl rounded-none p-6 shadow-2xl relative border border-gray-100">
+            <div class="flex items-center justify-between pb-4 border-b border-gray-200">
+                <input type="text" id="searchInput" placeholder="Buscar por modelo, tacón o plataforma..." class="w-full text-base sm:text-lg focus:outline-none text-brand-black font-light pr-4">
+                <button id="closeSearchBtn" class="text-gray-400 hover:text-brand-black p-1">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="searchResults" class="mt-4 max-h-60 overflow-y-auto text-sm text-gray-500">
+                <p class="text-xs uppercase tracking-wider text-gray-400">Escribe al menos 2 letras para buscar...</p>
+            </div>
         </div>
-      </div>
-
-      <!-- ╔══════════════════════════════════════════════════════════════════╗
-           ║  FORMULARIO QUE FUNCIONA (sin programar). Recibes los mensajes    ║
-           ║  en tu email vía FormSubmit (gratis, sin cuenta):                 ║
-           ║  1. Cambia "tu@email.com" de abajo por tu email real.            ║
-           ║  2. Publica la web y envíate un mensaje de prueba.               ║
-           ║  3. La 1ª vez te llega un correo de FormSubmit: pulsa para        ║
-           ║     activarlo. Listo, ya recibes todos los mensajes.            ║
-           ╚══════════════════════════════════════════════════════════════════╝ -->
-      <form class="reveal" action="https://formsubmit.co/tu@email.com" method="POST">
-        <input type="hidden" name="_subject" value="Nuevo mensaje desde mi web" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="text" name="_honey" style="display:none" />
-        <div class="field">
-          <label for="n">Nombre</label>
-          <input id="n" type="text" name="name" placeholder="Tu nombre" required />
-        </div>
-        <div class="field">
-          <label for="e">Email</label>
-          <input id="e" type="email" name="email" placeholder="tu@email.com" required />
-        </div>
-        <div class="field">
-          <label for="m">Mensaje</label>
-          <textarea id="m" name="message" rows="4" placeholder="Cuéntame qué necesitas" required></textarea>
-        </div>
-        <button class="btn btn-primario" type="submit">Enviar mensaje →</button>
-      </form>
     </div>
-  </section>
 
-  <footer>
-    <div class="wrap">
-      <span>© <span id="year"></span> Tu Nombre</span>
-      <span>Hecho con IA siguiendo la guía de <a href="https://axcod.es" target="_blank" rel="noopener">axcodes</a></span>
+    <!-- MOBILE NAVIGATION MENU (Drawer) -->
+    <div id="mobileMenu" class="fixed inset-0 z-50 hidden drawer-overlay transition-lux">
+        <div class="fixed inset-y-0 left-0 max-w-xs w-full bg-white shadow-xl flex flex-col justify-between p-6 overflow-y-auto">
+            <div>
+                <div class="flex items-center justify-between pb-6 border-b border-gray-100">
+                    <div class="flex flex-col">
+                        <span class="font-serif text-2xl font-bold tracking-widest text-brand-black">MF</span>
+                        <span class="text-[9px] tracking-widest font-medium text-gray-500 uppercase">Marlon Footwear</span>
+                    </div>
+                    <button id="closeMobileMenu" class="text-gray-500 hover:text-brand-black p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <nav class="mt-8 flex flex-col space-y-6 text-sm tracking-[0.2em] font-medium uppercase">
+                    <a href="#inicio" class="mobile-nav-link text-brand-black hover:text-brand-gold transition-colors">Inicio</a>
+                    <a href="#coleccion" class="mobile-nav-link text-brand-black hover:text-brand-gold transition-colors">Colección</a>
+                    <a href="#tacones" class="mobile-nav-link text-brand-black hover:text-brand-gold transition-colors">Tacones</a>
+                    <a href="#plataformas" class="mobile-nav-link text-brand-black hover:text-brand-gold transition-colors">Plataformas</a>
+                    <a href="#nosotros" class="mobile-nav-link text-brand-black hover:text-brand-gold transition-colors">Nosotros</a>
+                    <a href="#contacto" class="mobile-nav-link text-brand-black hover:text-brand-gold transition-colors">Contacto</a>
+                </nav>
+            </div>
+
+            <div class="pt-6 border-t border-gray-100 space-y-4 text-xs text-gray-600">
+                <p class="font-serif text-sm font-semibold text-brand-black">MF COLOMBIA</p>
+                <p>Atención directa y pedidos por WhatsApp.</p>
+                <a href="#" onclick="openGeneralWhatsApp(); return false;" class="inline-flex items-center justify-center w-full bg-brand-black text-white py-3 uppercase tracking-widest text-xs font-semibold hover:bg-brand-gold transition-colors">
+                    Chat directo WhatsApp
+                </a>
+            </div>
+        </div>
     </div>
-  </footer>
 
-  <script>
-    // Año automático.
-    document.getElementById("year").textContent = new Date().getFullYear();
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-grow">
 
-    // Aparición suave al hacer scroll. No tienes que tocar nada.
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.12 });
-    document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
-  </script>
+        <!-- 2. HERO PRINCIPAL (Editorial Fashion Cover) -->
+        <section id="inicio" class="relative bg-brand-cream overflow-hidden min-h-[85vh] flex items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 lg:py-20">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    
+                    <!-- Left Copy & CTA -->
+                    <div class="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center text-left space-y-6">
+                        <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Novedades / MF Colombia</span>
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif text-brand-black leading-tight">
+                            PRESENCIA, ELEGANCIA Y CARÁCTER
+                        </h1>
+                        <p class="text-sm sm:text-base text-gray-600 font-light leading-relaxed">
+                            Diseños exclusivos de alto impacto para mujeres que dejan huella. Tacones y plataformas concebidos con máxima sofisticación y acabados impecables.
+                        </p>
+                        
+                        <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                            <a href="#coleccion" class="inline-block text-center bg-brand-black text-white px-8 py-4 text-xs font-medium uppercase tracking-[0.2em] hover:bg-brand-gold transition-lux shadow-sm">
+                                VER COLECCIÓN
+                            </a>
+                            <a href="#" onclick="openGeneralWhatsApp('Hola MF Colombia, me gustaría asesoría sobre su nueva colección de calzado.'); return false;" class="inline-flex items-center justify-center border border-brand-black text-brand-black px-6 py-4 text-xs font-medium uppercase tracking-[0.2em] hover:bg-brand-black hover:text-white transition-lux">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                                </svg>
+                                COMPRAR POR WHATSAPP
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Editorial Image -->
+                    <div class="lg:col-span-7 order-1 lg:order-2">
+                        <div class="relative img-hover-zoom bg-gray-100 aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] max-h-[650px] w-full mx-auto shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1200&q=80" 
+                                 alt="Marlon Footwear Tacones de Alto Impacto" 
+                                 class="w-full h-full object-cover object-center"
+                                 loading="eager"
+                                 onerror="this.src='https://placehold.co/1000x1250/F9F8F6/0D0D0D?text=MARLON+FOOTWEAR'">
+                            <div class="absolute inset-0 bg-black/5 pointer-events-none"></div>
+                            <div class="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md px-4 py-3 hidden sm:block border border-gray-100">
+                                <p class="text-[10px] tracking-[0.2em] uppercase text-gray-500">Diseño Destacado</p>
+                                <p class="font-serif text-sm font-semibold text-brand-black">Edición Limitada MF</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. EXPERIENCIA DE COMPRA (Compra Fácil y Segura) -->
+        <section class="border-y border-gray-100 bg-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Proceso Transparente</span>
+                    <h2 class="text-2xl font-serif text-brand-black mt-1">COMPRA FÁCIL Y SEGURA</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center p-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-cream flex items-center justify-center text-brand-black font-serif font-bold text-lg mb-4 border border-brand-sand">1</div>
+                        <h3 class="text-sm font-medium tracking-wider uppercase text-brand-black mb-2">Elige tu modelo</h3>
+                        <p class="text-xs text-gray-500 font-light max-w-xs">Explora nuestra colección exclusiva de tacones y plataformas de alto impacto.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center p-4 border-t md:border-t-0 md:border-l border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-brand-cream flex items-center justify-center text-brand-black font-serif font-bold text-lg mb-4 border border-brand-sand">2</div>
+                        <h3 class="text-sm font-medium tracking-wider uppercase text-brand-black mb-2">Selecciona tu talla</h3>
+                        <p class="text-xs text-gray-500 font-light max-w-xs">Disponibilidad garantizada en numeración desde la talla 34 hasta la 40.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center p-4 border-t md:border-t-0 md:border-l border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-brand-cream flex items-center justify-center text-brand-black font-serif font-bold text-lg mb-4 border border-brand-sand">3</div>
+                        <h3 class="text-sm font-medium tracking-wider uppercase text-brand-black mb-2">Compra Directa</h3>
+                        <p class="text-xs text-gray-500 font-light max-w-xs">Finaliza tu orden directamente con atención personalizada vía WhatsApp.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CATEGORÍAS VISUALES -->
+        <section class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Categorías Principales</span>
+                    <h2 class="text-3xl font-serif text-brand-black mt-1">EXPLORA NUESTRO CATÁLOGO</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                    <!-- Category 1: Tacones -->
+                    <div class="group relative img-hover-zoom aspect-[3/4] bg-brand-cream overflow-hidden flex flex-col justify-end p-6 border border-gray-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1596149021111-9a9972305541?auto=format&fit=crop&w=800&q=80" 
+                             alt="Categoría Tacones Marlon Footwear" 
+                             class="absolute inset-0 w-full h-full object-cover object-center"
+                             onerror="this.src='https://placehold.co/800x1000/F9F8F6/0D0D0D?text=TACONES'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="relative z-10 text-white space-y-2">
+                            <span class="text-[10px] tracking-[0.3em] text-brand-gold uppercase">Calzado Femenino</span>
+                            <h3 class="text-2xl font-serif font-semibold">TACONES</h3>
+                            <a href="#coleccion" onclick="filterCategory('tacones');" class="inline-block mt-2 text-xs uppercase tracking-[0.2em] text-white border-b border-white/60 hover:border-white transition-all">
+                                VER CATEGORÍA &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Plataformas -->
+                    <div class="group relative img-hover-zoom aspect-[3/4] bg-brand-cream overflow-hidden flex flex-col justify-end p-6 border border-gray-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?auto=format&fit=crop&w=800&q=80" 
+                             alt="Categoría Plataformas Marlon Footwear" 
+                             class="absolute inset-0 w-full h-full object-cover object-center"
+                             onerror="this.src='https://placehold.co/800x1000/F9F8F6/0D0D0D?text=PLATAFORMAS'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="relative z-10 text-white space-y-2">
+                            <span class="text-[10px] tracking-[0.3em] text-brand-gold uppercase">Altura y Confort</span>
+                            <h3 class="text-2xl font-serif font-semibold">PLATAFORMAS</h3>
+                            <a href="#coleccion" onclick="filterCategory('plataformas');" class="inline-block mt-2 text-xs uppercase tracking-[0.2em] text-white border-b border-white/60 hover:border-white transition-all">
+                                VER CATEGORÍA &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Colección Destacada -->
+                    <div class="group relative img-hover-zoom aspect-[3/4] bg-brand-cream overflow-hidden flex flex-col justify-end p-6 border border-gray-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?auto=format&fit=crop&w=800&q=80" 
+                             alt="Colección Destacada Marlon Footwear" 
+                             class="absolute inset-0 w-full h-full object-cover object-center"
+                             onerror="this.src='https://placehold.co/800x1000/F9F8F6/0D0D0D?text=COLECCION+DESTACADA'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="relative z-10 text-white space-y-2">
+                            <span class="text-[10px] tracking-[0.3em] text-brand-gold uppercase">Selección Exclusiva</span>
+                            <h3 class="text-2xl font-serif font-semibold">COLECCIÓN DESTACADA</h3>
+                            <a href="#coleccion" onclick="filterCategory('todos');" class="inline-block mt-2 text-xs uppercase tracking-[0.2em] text-white border-b border-white/60 hover:border-white transition-all">
+                                EXPLORAR TODO &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. PRODUCTO DESTACADO (Lanzamiento Especial BOSSÉ) -->
+        <section class="py-16 bg-brand-cream border-y border-brand-sand">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white p-6 sm:p-10 lg:p-12 border border-gray-100 shadow-sm">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                        
+                        <!-- Product Image -->
+                        <div class="lg:col-span-6 img-hover-zoom bg-brand-cream aspect-[4/5] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1562273138-f46be4ebdf33?auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Lanzamiento Especial Modelo BOSSÉ" 
+                                 class="w-full h-full object-cover object-center"
+                                 onerror="this.src='https://placehold.co/900x1100/F9F8F6/0D0D0D?text=BOSSE+EDICION+ESPECIAL'">
+                        </div>
+
+                        <!-- Details & Actions -->
+                        <div class="lg:col-span-6 space-y-6">
+                            <div class="inline-block bg-brand-black text-white text-[10px] tracking-[0.3em] font-semibold uppercase px-3 py-1">
+                                Lanzamiento Exclusivo
+                            </div>
+                            <h2 class="text-3xl sm:text-4xl font-serif text-brand-black">BOSSÉ</h2>
+                            <p class="text-2xl font-serif text-brand-gold">$ 280.000 COP</p>
+                            
+                            <p class="text-sm text-gray-600 font-light leading-relaxed">
+                                Diseñado para causar un impacto inolvidable. El modelo BOSSÉ encarna la sofisticación contemporánea con una silueta esculpida, plantilla acolchada de alto confort y un acabado sofisticado que realza cualquier atuendo de gala o noche.
+                            </p>
+
+                            <!-- Size Selector for Bossé -->
+                            <div class="space-y-2 pt-2">
+                                <label class="text-xs uppercase tracking-wider text-gray-700 font-medium block">
+                                    Selecciona tu Talla (Colombia):
+                                </label>
+                                <div class="flex flex-wrap gap-2" id="bosseSizes">
+                                    <button onclick="selectSize('bosse', '34')" class="size-btn bosse-size w-10 h-10 border border-gray-200 text-xs text-brand-black hover:border-brand-black transition-colors" data-size="34">34</button>
+                                    <button onclick="selectSize('bosse', '35')" class="size-btn bosse-size w-10 h-10 border border-gray-200 text-xs text-brand-black hover:border-brand-black transition-colors" data-size="35">35</button>
+                                    <button onclick="selectSize('bosse', '36')" class="size-btn bosse-size w-10 h-10 border border-gray-200 text-xs text-brand-black hover:border-brand-black transition-colors active" data-size="36">36</button>
+                                    <button onclick="selectSize('bosse', '37')" class="size-btn bosse-size w-10 h-10 border border-gray-200 text-xs text-brand-black hover:border-brand-black transition-colors" data-size="37">37</button>
+                                    <button onclick="selectSize('bosse', '38')" class="size-btn bosse-size w-10 h-10 border border-gray-200 text-xs text-brand-black hover:border-brand-black transition-colors" data-size="38">38</button>
+                                    <button onclick="selectSize('bosse', '39')" class="size-btn bosse-size w-10 h-10 border border-gray-200 text-xs text-brand-black hover:border-brand-black transition-colors" data-size="39">39</button>
+                                    <button onclick="selectSize('bosse', '40')" class="size-btn bosse-size w-10 h-10 border border-gray-200 text-xs text-brand-black hover:border-brand-black transition-colors" data-size="40">40</button>
+                                </div>
+                            </div>
+
+                            <!-- CTAs -->
+                            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                                <button onclick="addFeaturedToCart('BOSSÉ', 280000, 'https://images.unsplash.com/photo-1562273138-f46be4ebdf33?auto=format&fit=crop&w=800&q=80', 'bosse')" class="flex-1 bg-brand-black text-white py-4 px-6 text-xs uppercase tracking-[0.2em] font-medium hover:bg-brand-gold transition-lux">
+                                    COMPRAR AHORA
+                                </button>
+                                <button onclick="buyNowWhatsApp('BOSSÉ', 280000, 'bosse')" class="flex-1 border border-brand-black text-brand-black py-4 px-6 text-xs uppercase tracking-[0.2em] font-medium hover:bg-brand-black hover:text-white transition-lux flex items-center justify-center">
+                                    CONSULTAR POR WHATSAPP
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CATALOGO & GRID DE PRODUCTOS -->
+        <section id="coleccion" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-gray-100">
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Catálogo Exclusivo</span>
+                        <h2 class="text-3xl font-serif text-brand-black mt-1">NUESTRA COLECCIÓN</h2>
+                    </div>
+
+                    <!-- Category Filters -->
+                    <div class="flex flex-wrap gap-2 mt-6 md:mt-0 text-xs uppercase tracking-wider">
+                        <button onclick="filterCategory('todos')" id="filter-todos" class="filter-btn active bg-brand-black text-white px-4 py-2 transition-colors">Todos</button>
+                        <button onclick="filterCategory('tacones')" id="filter-tacones" class="filter-btn bg-brand-cream text-brand-black hover:bg-gray-200 px-4 py-2 transition-colors">Tacones</button>
+                        <button onclick="filterCategory('plataformas')" id="filter-plataformas" class="filter-btn bg-brand-cream text-brand-black hover:bg-gray-200 px-4 py-2 transition-colors">Plataformas</button>
+                        <button onclick="filterCategory('novedades')" id="filter-novedades" class="filter-btn bg-brand-cream text-brand-black hover:bg-gray-200 px-4 py-2 transition-colors">Novedades</button>
+                    </div>
+                </div>
+
+                <!-- Product Grid Container -->
+                <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- Dynamic Products Generated by JS -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 8. SOBRE MARLON FOOTWEAR -->
+        <section id="nosotros" class="py-20 bg-brand-cream border-t border-brand-sand text-center">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+                <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Nuestra Esencia</span>
+                <h2 class="text-3xl sm:text-4xl font-serif text-brand-black">MARLON FOOTWEAR</h2>
+                <div class="w-12 h-0.5 bg-brand-gold mx-auto"></div>
+                <p class="text-base sm:text-lg text-brand-darkgray font-serif italic leading-relaxed pt-2">
+                    "Marlon Footwear nace para mujeres que buscan calzado que destaque. Diseñamos y seleccionamos piezas que combinan presencia, elegancia y carácter."
+                </p>
+                <p class="text-xs tracking-[0.2em] uppercase text-gray-500 pt-4">MF Colombia &bull; Ediciones Limitadas</p>
+            </div>
+        </section>
+
+        <!-- 10. CAMBIOS Y ENVÍOS -->
+        <section class="py-16 bg-white border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Políticas Claras</span>
+                    <h2 class="text-2xl font-serif text-brand-black mt-1">CAMBIOS Y ENVÍOS EN COLOMBIA</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-6 bg-brand-cream border border-gray-100">
+                        <h3 class="font-serif font-semibold text-brand-black text-base mb-2">Envíos a Toda Colombia</h3>
+                        <p class="text-xs text-gray-600 font-light leading-relaxed">
+                            Despachamos de manera directa a todas las ciudades y municipios del país con guía de seguimiento para tu tranquilidad.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-brand-cream border border-gray-100">
+                        <h3 class="font-serif font-semibold text-brand-black text-base mb-2">Garantía de Cambios</h3>
+                        <p class="text-xs text-gray-600 font-light leading-relaxed">
+                            Aceptamos cambios únicamente de productos completamente nuevos, sin uso y conservados en su empaque original.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-brand-cream border border-gray-100">
+                        <h3 class="font-serif font-semibold text-brand-black text-base mb-2">Asesoría de Horma y Talla</h3>
+                        <p class="text-xs text-gray-600 font-light leading-relaxed">
+                            Es fundamental seleccionar la talla correcta. Si tienes inquietudes sobre la horma de algún modelo, escríbenos a WhatsApp antes de comprar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. INSTAGRAM FEED GALLERY -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">@marlonfootwear</span>
+                    <h2 class="text-2xl font-serif text-brand-black mt-1">SÍGUENOS EN INSTAGRAM</h2>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <!-- Insta Item 1 -->
+                    <div class="group relative aspect-square overflow-hidden bg-gray-100 img-hover-zoom">
+                        <img src="https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?auto=format&fit=crop&w=600&q=80" alt="Instagram Marlon Footwear 1" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs uppercase tracking-wider font-medium">
+                            Ver Instagram
+                        </div>
+                    </div>
+                    <!-- Insta Item 2 -->
+                    <div class="group relative aspect-square overflow-hidden bg-gray-100 img-hover-zoom">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80" alt="Instagram Marlon Footwear 2" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs uppercase tracking-wider font-medium">
+                            Ver Instagram
+                        </div>
+                    </div>
+                    <!-- Insta Item 3 -->
+                    <div class="group relative aspect-square overflow-hidden bg-gray-100 img-hover-zoom">
+                        <img src="https://images.unsplash.com/photo-1596149021111-9a9972305541?auto=format&fit=crop&w=600&q=80" alt="Instagram Marlon Footwear 3" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs uppercase tracking-wider font-medium">
+                            Ver Instagram
+                        </div>
+                    </div>
+                    <!-- Insta Item 4 -->
+                    <div class="group relative aspect-square overflow-hidden bg-gray-100 img-hover-zoom">
+                        <img src="https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?auto=format&fit=crop&w=600&q=80" alt="Instagram Marlon Footwear 4" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs uppercase tracking-wider font-medium">
+                            Ver Instagram
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. CONTACTO DIRECTO -->
+        <section id="contacto" class="py-16 bg-brand-black text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+                <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Atención Personalizada</span>
+                <h2 class="text-3xl font-serif">MARLON FOOTWEAR &bull; MF COLOMBIA</h2>
+                <p class="text-xs sm:text-sm text-gray-400 max-w-xl mx-auto font-light">
+                    ¿Tienes dudas sobre tallas, pedidos o envíos? Escríbenos directamente y te asesoraremos de manera personalizada.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6 pt-4 text-xs tracking-widest uppercase">
+                    <a href="#" onclick="openGeneralWhatsApp(); return false;" class="flex items-center text-brand-gold hover:text-white transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        WhatsApp Directo
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="flex items-center text-brand-gold hover:text-white transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        Instagram
+                    </a>
+                    <a href="mailto:[EMAIL]" id="emailLink" class="flex items-center text-brand-gold hover:text-white transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+                        <span id="emailPlaceholderText">[EMAIL]</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SLIDE-OVER CART DRAWER -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 hidden drawer-overlay transition-lux">
+        <div class="fixed inset-y-0 right-0 max-w-md w-full bg-white shadow-2xl flex flex-col justify-between p-6">
+            <div>
+                <!-- Cart Header -->
+                <div class="flex items-center justify-between pb-4 border-b border-gray-200">
+                    <div class="flex items-center space-x-2">
+                        <h3 class="font-serif text-lg font-bold text-brand-black">TU CARRITO</h3>
+                        <span id="cartItemCount" class="text-xs text-gray-500">(0 artículos)</span>
+                    </div>
+                    <button id="closeCartBtn" class="text-gray-400 hover:text-brand-black p-1">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+
+                <!-- Cart Items Container -->
+                <div id="cartItemsList" class="mt-6 space-y-4 max-h-[60vh] overflow-y-auto pr-1">
+                    <!-- Items appended via JS -->
+                </div>
+            </div>
+
+            <!-- Cart Footer -->
+            <div class="pt-6 border-t border-gray-200 space-y-4">
+                <div class="flex justify-between text-sm font-medium text-brand-black">
+                    <span>Total Estimado:</span>
+                    <span id="cartTotalPrice" class="font-serif text-lg text-brand-gold">$ 0 COP</span>
+                </div>
+                <p class="text-[10px] text-gray-400">El pago y envío se acuerdan de forma segura por WhatsApp.</p>
+                <button id="checkoutWhatsAppBtn" class="w-full bg-brand-black text-white py-4 text-xs font-semibold uppercase tracking-[0.2em] hover:bg-brand-gold transition-lux flex items-center justify-center">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                    FINALIZAR PEDIDO POR WHATSAPP
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOATING QUICK WHATSAPP BUTTON -->
+    <a href="#" onclick="openGeneralWhatsApp(); return false;" class="fixed bottom-6 right-6 z-40 bg-brand-black text-white p-3.5 rounded-full shadow-2xl hover:bg-brand-gold transition-lux pulse-subtle border border-brand-gold/30 flex items-center justify-center" aria-label="Contacto por WhatsApp">
+        <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+    </a>
+
+    <!-- 13. FOOTER -->
+    <footer class="bg-brand-black text-white pt-16 pb-8 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4">
+                    <span class="font-serif text-2xl font-bold tracking-widest text-white">MF</span>
+                    <p class="text-xs uppercase tracking-widest text-brand-gold">Marlon Footwear</p>
+                    <p class="text-xs text-gray-400 font-light leading-relaxed">
+                        Calzado femenino premium enfocado en tacones, plataformas y piezas vanguardistas de alto impacto.
+                    </p>
+                </div>
+
+                <!-- Col 2: Navigation -->
+                <div class="space-y-3">
+                    <h4 class="text-xs uppercase tracking-[0.2em] font-semibold text-white">Navegación</h4>
+                    <ul class="space-y-2 text-xs text-gray-400 font-light">
+                        <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#coleccion" class="hover:text-white transition-colors">Colección Completa</a></li>
+                        <li><a href="#tacones" class="hover:text-white transition-colors">Tacones</a></li>
+                        <li><a href="#plataformas" class="hover:text-white transition-colors">Plataformas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Customer Service -->
+                <div class="space-y-3">
+                    <h4 class="text-xs uppercase tracking-[0.2em] font-semibold text-white">Atención al Cliente</h4>
+                    <ul class="space-y-2 text-xs text-gray-400 font-light">
+                        <li><a href="#nosotros" class="hover:text-white transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="#" onclick="openGeneralWhatsApp('Hola MF Colombia, quisiera ayuda con la guía de tallas.'); return false;" class="hover:text-white transition-colors">Guía de Tallas (34-40)</a></li>
+                        <li><a href="#contacto" class="hover:text-white transition-colors">Política de Cambios</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Region & Social -->
+                <div class="space-y-3">
+                    <h4 class="text-xs uppercase tracking-[0.2em] font-semibold text-white">MF Colombia</h4>
+                    <p class="text-xs text-gray-400">Envíos seguros a todo el territorio nacional.</p>
+                    <div class="pt-2">
+                        <span class="text-[10px] uppercase tracking-widest text-gray-500 block">Síguenos</span>
+                        <p class="text-xs text-brand-gold font-medium mt-1">@marlonfootwear</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] text-gray-500">
+                <p>&copy; <span id="currentYear">2026</span> MARLON FOOTWEAR &bull; MF COLOMBIA. Todos los derechos reservados.</p>
+                <p class="mt-2 sm:mt-0 font-light">Tienda Premium de Calzado Femenino</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* 
+         * CENTRAL BRAND CONFIGURATION
+         * Replace [WHATSAPP_NUMBER] and [EMAIL] with your real business values
+         */
+        const WHATSAPP_NUMBER = "573000000000"; // Example Colombia WhatsApp: 57 + Number
+        const EMAIL = "contacto@marlonfootwear.com";
+
+        // Dynamic Product Database
+        const PRODUCTS = [
+            {
+                id: "p1",
+                name: "TACÓN STILETTO VANGUARD",
+                category: "tacones",
+                price: 245000,
+                isNew: true,
+                image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80",
+                selectedSize: "36"
+            },
+            {
+                id: "p2",
+                name: "PLATAFORMA IMPERIAL GOLD",
+                category: "plataformas",
+                price: 265000,
+                isNew: true,
+                image: "https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?auto=format&fit=crop&w=800&q=80",
+                selectedSize: "37"
+            },
+            {
+                id: "p3",
+                name: "TACÓN MULE NOIR",
+                category: "tacones",
+                price: 230000,
+                isNew: false,
+                image: "https://images.unsplash.com/photo-1596149021111-9a9972305541?auto=format&fit=crop&w=800&q=80",
+                selectedSize: "36"
+            },
+            {
+                id: "p4",
+                name: "PLATAFORMA COUTURE ROSÉ",
+                category: "plataformas",
+                price: 275000,
+                isNew: false,
+                image: "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?auto=format&fit=crop&w=800&q=80",
+                selectedSize: "38"
+            },
+            {
+                id: "p5",
+                name: "TACÓN STRAP ELEGANCE",
+                category: "tacones",
+                price: 250000,
+                isNew: true,
+                image: "https://images.unsplash.com/photo-1562273138-f46be4ebdf33?auto=format&fit=crop&w=800&q=80",
+                selectedSize: "35"
+            },
+            {
+                id: "p6",
+                name: "PLATAFORMA MAJESTY BLACK",
+                category: "plataformas",
+                price: 280000,
+                isNew: false,
+                image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80",
+                selectedSize: "37"
+            }
+        ];
+
+        // Shopping Cart State
+        let cart = [];
+        let selectedSizesState = {};
+
+        // On Page Initialization
+        window.addEventListener('DOMContentLoaded', () => {
+            // Set dynamic placeholders
+            const emailElem = document.getElementById('emailPlaceholderText');
+            if (emailElem) emailElem.textContent = EMAIL;
+            const emailLink = document.getElementById('emailLink');
+            if (emailLink) emailLink.href = `mailto:${EMAIL}`;
+
+            // Render Product Grid
+            renderProducts(PRODUCTS);
+
+            // Bind Event Listeners
+            initHeaderAndDrawers();
+            initSearch();
+            
+            // Set dynamic current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+
+        function initHeaderAndDrawers() {
+            // Mobile Menu
+            const mobileMenu = document.getElementById('mobileMenu');
+            document.getElementById('openMobileMenu').addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+            document.getElementById('closeMobileMenu').addEventListener('click', () => mobileMenu.classList.add('hidden'));
+
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+
+            // Cart Drawer
+            const cartDrawer = document.getElementById('cartDrawer');
+            document.getElementById('openCartBtn').addEventListener('click', () => cartDrawer.classList.remove('hidden'));
+            document.getElementById('closeCartBtn').addEventListener('click', () => cartDrawer.classList.add('hidden'));
+
+            // Search Modal
+            const searchModal = document.getElementById('searchModal');
+            document.getElementById('openSearchBtn').addEventListener('click', () => {
+                searchModal.classList.remove('hidden');
+                document.getElementById('searchInput').focus();
+            });
+            document.getElementById('closeSearchBtn').addEventListener('click', () => searchModal.classList.add('hidden'));
+
+            // WhatsApp Cart Checkout
+            document.getElementById('checkoutWhatsAppBtn').addEventListener('click', checkoutCartWhatsApp);
+        }
+
+        // Render Products to HTML Grid
+        function renderProducts(items) {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = '';
+
+            if (items.length === 0) {
+                grid.innerHTML = `<p class="col-span-full text-center py-12 text-gray-400 text-sm">No se encontraron productos en esta categoría.</p>`;
+                return;
+            }
+
+            items.forEach(product => {
+                // Initialize default size if not present
+                if (!selectedSizesState[product.id]) {
+                    selectedSizesState[product.id] = '36';
+                }
+
+                const card = document.createElement('div');
+                card.className = "group flex flex-col bg-white border border-gray-100 p-4 transition-lux hover:shadow-lg relative";
+
+                card.innerHTML = `
+                    <!-- Badge -->
+                    ${product.isNew ? `<span class="absolute top-6 left-6 z-10 bg-brand-black text-white text-[9px] tracking-[0.2em] uppercase px-2 py-1">Novedad</span>` : ''}
+                    
+                    <!-- Image -->
+                    <div class="img-hover-zoom aspect-[4/5] bg-brand-cream overflow-hidden mb-4 relative">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover object-center" onerror="this.src='https://placehold.co/600x750/F9F8F6/0D0D0D?text=MF+FOOTWEAR'">
+                    </div>
+
+                    <!-- Details -->
+                    <div class="flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] tracking-[0.2em] text-gray-400 uppercase">${product.category}</span>
+                            <h3 class="font-serif text-sm font-semibold text-brand-black mt-1 leading-snug">${product.name}</h3>
+                            <p class="text-sm font-serif text-brand-gold mt-1 font-medium">$ ${product.price.toLocaleString('es-CO')} COP</p>
+                        </div>
+
+                        <!-- Sizes Selector -->
+                        <div class="mt-4 pt-3 border-t border-gray-100">
+                            <span class="text-[10px] uppercase tracking-wider text-gray-500 block mb-1.5">Talla Colombia:</span>
+                            <div class="flex flex-wrap gap-1">
+                                ${['34','35','36','37','38','39','40'].map(size => `
+                                    <button onclick="setGridProductSize('${product.id}', '${size}')" 
+                                            class="size-btn-${product.id} w-7 h-7 text-[11px] border border-gray-200 transition-colors ${selectedSizesState[product.id] === size ? 'bg-brand-black text-white border-brand-black' : 'hover:border-brand-black text-gray-700'}" 
+                                            data-size="${size}">
+                                        ${size}
+                                    </button>
+                                `).join('')}
+                            </div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-4 flex flex-col sm:flex-row gap-2">
+                            <button onclick="addToCart('${product.id}')" class="flex-1 bg-brand-black text-white py-2.5 px-2 text-[10px] uppercase tracking-widest font-medium hover:bg-brand-gold transition-colors">
+                                Añadir al Carrito
+                            </button>
+                            <button onclick="quickWhatsAppBuy('${product.id}')" class="border border-brand-black text-brand-black p-2 hover:bg-brand-black hover:text-white transition-colors flex items-center justify-center" title="Comprar directo por WhatsApp">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Category Filtering
+        function filterCategory(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-black', 'text-white');
+                btn.classList.add('bg-brand-cream', 'text-brand-black');
+            });
+
+            const activeBtn = document.getElementById(`filter-${category}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-brand-cream', 'text-brand-black');
+                activeBtn.classList.add('bg-brand-black', 'text-white');
+            }
+
+            if (category === 'todos') {
+                renderProducts(PRODUCTS);
+            } else if (category === 'novedades') {
+                renderProducts(PRODUCTS.filter(p => p.isNew));
+            } else {
+                renderProducts(PRODUCTS.filter(p => p.category === category));
+            }
+        }
+
+        // Handle Size Selection in Card Grid
+        function setGridProductSize(productId, size) {
+            selectedSizesState[productId] = size;
+            const buttons = document.querySelectorAll(`.size-btn-${productId}`);
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-size') === size) {
+                    btn.className = `size-btn-${productId} w-7 h-7 text-[11px] border border-brand-black bg-brand-black text-white transition-colors`;
+                } else {
+                    btn.className = `size-btn-${productId} w-7 h-7 text-[11px] border border-gray-200 text-gray-700 hover:border-brand-black transition-colors`;
+                }
+            });
+        }
+
+        // Handle Size Selection for Bossé Featured Banner
+        let bosseSelectedSize = '36';
+        function selectSize(prefix, size) {
+            bosseSelectedSize = size;
+            document.querySelectorAll('.bosse-size').forEach(btn => {
+                if (btn.getAttribute('data-size') === size) {
+                    btn.classList.add('bg-brand-black', 'text-white');
+                    btn.classList.remove('border-gray-200');
+                } else {
+                    btn.classList.remove('bg-brand-black', 'text-white');
+                    btn.classList.add('border-gray-200');
+                }
+            });
+        }
+
+        // Add Featured BOSSÉ to Cart
+        function addFeaturedToCart(name, price, image, sizePrefix) {
+            const size = bosseSelectedSize;
+            const existingIndex = cart.findIndex(item => item.name === name && item.size === size);
+            
+            if (existingIndex > -1) {
+                cart[existingIndex].qty += 1;
+            } else {
+                cart.push({ id: 'bosse', name, price, image, size, qty: 1 });
+            }
+
+            updateCartUI();
+            document.getElementById('cartDrawer').classList.remove('hidden');
+        }
+
+        // Buy BOSSÉ Immediately via WhatsApp
+        function buyNowWhatsApp(name, price, sizePrefix) {
+            const size = bosseSelectedSize;
+            const message = `Hola MF Colombia, quiero comprar el modelo ${name} en talla ${size} (Precio: $${price.toLocaleString('es-CO')} COP).`;
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        // Add Product from Grid to Cart
+        function addToCart(productId) {
+            const product = PRODUCTS.find(p => p.id === productId);
+            if (!product) return;
+
+            const size = selectedSizesState[productId] || '36';
+            const existingIndex = cart.findIndex(item => item.id === productId && item.size === size);
+
+            if (existingIndex > -1) {
+                cart[existingIndex].qty += 1;
+            } else {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    size: size,
+                    qty: 1
+                });
+            }
+
+            updateCartUI();
+            document.getElementById('cartDrawer').classList.remove('hidden');
+        }
+
+        // Quick WhatsApp Buy Button on Cards
+        function quickWhatsAppBuy(productId) {
+            const product = PRODUCTS.find(p => p.id === productId);
+            if (!product) return;
+
+            const size = selectedSizesState[productId] || '36';
+            const message = `Hola MF Colombia, quiero comprar el modelo ${product.name} en talla ${size}.`;
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        // Update Cart Drawer UI
+        function updateCartUI() {
+            const cartList = document.getElementById('cartItemsList');
+            const cartCountBadge = document.getElementById('cartCountBadge');
+            const cartItemCount = document.getElementById('cartItemCount');
+            const cartTotalPrice = document.getElementById('cartTotalPrice');
+
+            const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            // Badge
+            if (totalQty > 0) {
+                cartCountBadge.textContent = totalQty;
+                cartCountBadge.classList.remove('hidden');
+            } else {
+                cartCountBadge.classList.add('hidden');
+            }
+
+            cartItemCount.textContent = `(${totalQty} artículo${totalQty === 1 ? '' : 's'})`;
+            cartTotalPrice.textContent = `$ ${totalPrice.toLocaleString('es-CO')} COP`;
+
+            if (cart.length === 0) {
+                cartList.innerHTML = `<p class="text-center py-10 text-xs text-gray-400 uppercase tracking-wider">Tu carrito está vacío</p>`;
+                return;
+            }
+
+            cartList.innerHTML = '';
+            cart.forEach((item, index) => {
+                const itemElem = document.createElement('div');
+                itemElem.className = "flex items-center space-x-4 border-b border-gray-100 pb-3";
+                itemElem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="w-16 h-20 object-cover bg-brand-cream border border-gray-100">
+                    <div class="flex-grow text-xs">
+                        <h4 class="font-serif font-semibold text-brand-black">${item.name}</h4>
+                        <p class="text-gray-500 mt-0.5">Talla: <span class="text-brand-black font-medium">${item.size}</span></p>
+                        <p class="text-brand-gold font-medium mt-1">$ ${item.price.toLocaleString('es-CO')} COP</p>
+                        
+                        <div class="flex items-center space-x-2 mt-2">
+                            <button onclick="changeQty(${index}, -1)" class="w-5 h-5 border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-gray-100">-</button>
+                            <span class="text-xs font-medium">${item.qty}</span>
+                            <button onclick="changeQty(${index}, 1)" class="w-5 h-5 border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-gray-100">+</button>
+                        </div>
+                    </div>
+                    <button onclick="removeFromCart(${index})" class="text-gray-400 hover:text-red-500 p-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                `;
+                cartList.appendChild(itemElem);
+            });
+        }
+
+        function changeQty(index, delta) {
+            if (cart[index]) {
+                cart[index].qty += delta;
+                if (cart[index].qty <= 0) {
+                    cart.splice(index, 1);
+                }
+                updateCartUI();
+            }
+        }
+
+        function removeFromCart(index) {
+            if (cart[index]) {
+                cart.splice(index, 1);
+                updateCartUI();
+            }
+        }
+
+        // Finalize Whole Cart Purchase via WhatsApp
+        function checkoutCartWhatsApp() {
+            if (cart.length === 0) {
+                alert('Tu carrito está vacío. Añade al menos un producto.');
+                return;
+            }
+
+            let message = "Hola MF Colombia, deseo realizar el siguiente pedido:\n\n";
+            let total = 0;
+
+            cart.forEach((item, i) => {
+                const subtotal = item.price * item.qty;
+                total += subtotal;
+                message += `${i + 1}. Modelo: ${item.name}\n   - Talla: ${item.size}\n   - Cantidad: ${item.qty}\n   - Precio: $${subtotal.toLocaleString('es-CO')} COP\n\n`;
+            });
+
+            message += `TOTAL PEDIDO: $${total.toLocaleString('es-CO')} COP\n\nQuedo atento(a) para confirmar la disponibilidad y coordinar el pago/envío.`;
+
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        // General WhatsApp Trigger
+        function openGeneralWhatsApp(customText) {
+            const defaultText = customText || "Hola MF Colombia, me gustaría recibir información sobre su calzado femenino premium.";
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(defaultText)}`;
+            window.open(url, '_blank');
+        }
+
+        // Search Input Filter Logic
+        function initSearch() {
+            const input = document.getElementById('searchInput');
+            const results = document.getElementById('searchResults');
+
+            input.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                if (query.length < 2) {
+                    results.innerHTML = `<p class="text-xs uppercase tracking-wider text-gray-400">Escribe al menos 2 letras para buscar...</p>`;
+                    return;
+                }
+
+                const matches = PRODUCTS.filter(p => p.name.toLowerCase().includes(query) || p.category.toLowerCase().includes(query));
+
+                if (matches.length === 0) {
+                    results.innerHTML = `<p class="text-xs text-gray-500">No se encontraron productos coincidentes.</p>`;
+                    return;
+                }
+
+                results.innerHTML = matches.map(m => `
+                    <div class="flex items-center justify-between py-2 border-b border-gray-100 hover:bg-gray-50 px-2 cursor-pointer" onclick="selectSearchResult('${m.id}')">
+                        <div class="flex items-center space-x-3">
+                            <img src="${m.image}" class="w-10 h-12 object-cover">
+                            <div>
+                                <p class="font-serif text-xs font-semibold text-brand-black">${m.name}</p>
+                                <p class="text-[10px] text-gray-400 uppercase">${m.category}</p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-serif text-brand-gold">$ ${m.price.toLocaleString('es-CO')}</span>
+                    </div>
+                `).join('');
+            });
+        }
+
+        function selectSearchResult(productId) {
+            document.getElementById('searchModal').classList.add('hidden');
+            const targetElem = document.getElementById('coleccion');
+            if (targetElem) {
+                targetElem.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
 </body>
 </html>
