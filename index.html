@@ -1,1079 +1,1102 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARLON FOOTWEAR | Calzado Femenino Premium en Colombia</title>
-    <meta name="description" content="Descubre la colección exclusiva de MARLON FOOTWEAR. Tacones finos, plataformas y calzado femenino premium diseñado con presencia, elegancia y carácter. Envíos a toda Colombia.">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="MARLON FOOTWEAR | Calzado Femenino Premium">
-    <meta property="og:description" content="Tacones finos, plataformas y diseño de alto impacto. Presencia, elegancia y carácter en cada paso.">
-    <meta property="og:site_name" content="MARLON FOOTWEAR">
-    <meta property="og:locale" content="es_CO">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marlon Footwear | MF Colombia – Tacones y plataformas para mujer</title>
+<meta name="description" content="Marlon Footwear, MF Colombia: tacones, plataformas y calzado femenino de alto impacto. Elige tu modelo y tu talla (34 a 40) y compra directo por WhatsApp. Envíos a Colombia.">
+<meta name="theme-color" content="#FAF8F5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Marlon Footwear | MF Colombia">
+<meta property="og:title" content="Marlon Footwear | MF Colombia – Tacones y plataformas para mujer">
+<meta property="og:description" content="Calzado femenino de alto impacto. Elige tu modelo y tu talla y compra directo por WhatsApp.">
+<meta property="og:locale" content="es_CO">
+<meta property="og:image" content="https://marlonfootwear-colombia.netlify.app/assets/026-ff2341dac0.jpg">
+<meta property="og:url" content="https://marlonfootwear-colombia.netlify.app/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23B89B6A' text-anchor='middle'%3EMF%3C/text%3E%3C/svg%3E">
 
-    <!-- Fonts: Playfair Display for luxury titles, Inter for sleek UI -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   MARLON FOOTWEAR · MF COLOMBIA
+   Colores y tipografía en :root para modificarlos fácilmente.
+   ========================================================================== */
+:root{
+  --ivory:#FAF8F5;
+  --paper:#FFFFFF;
+  --ink:#111111;
+  --muted:#6B665F;
+  --stone:#ECE8E2;
+  --line:#DDD8D0;
+  --champagne:#B89B6A;
+  --champagne-deep:#84693F;
+  --mauve:#B98A9C;
+  --mauve-deep:#7A4D5E;
+  --mauve-soft:#F1E6EA;
+  --serif:"Cormorant Garamond","Didot","Bodoni MT","Playfair Display","Hoefler Text",Georgia,"Times New Roman",serif;
+  --sans:"Helvetica Neue",Helvetica,Arial,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --pad:clamp(64px,9vw,128px);
+  --gutter:clamp(16px,4vw,48px);
+  --max:1360px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body.lock,body:has(dialog[open]){overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+h1,h2,h3,p,ul,ol,figure,fieldset{margin:0;padding:0}
+ul,ol{list-style:none}
+fieldset{border:0;min-width:0}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.on-dark :focus-visible,.footer :focus-visible,.menu :focus-visible{outline-color:var(--champagne)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:8px;top:-60px;background:var(--ink);color:#fff;padding:10px 16px;z-index:100;text-decoration:none}
+.skip:focus{top:8px}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.section{padding:var(--pad) 0}
 
-    <!-- Tailwind CSS CDN for fluid utility styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            black: '#0D0D0D',
-                            white: '#FFFFFF',
-                            cream: '#F9F8F6',
-                            sand: '#EFECE6',
-                            gold: '#C5A880',
-                            goldlight: '#D4AF37',
-                            darkgray: '#222222',
-                            lightgray: '#E5E5E5'
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['Inter', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+/* Tipografía */
+.h-sec{font-family:var(--serif);font-weight:500;font-size:clamp(28px,4.2vw,44px);line-height:1.1;letter-spacing:.06em;text-transform:uppercase}
+.sub{color:var(--muted);max-width:52ch;margin-top:12px}
+.sec-head{margin-bottom:clamp(28px,4vw,52px)}
+.sec-head.row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px}
 
-    <style>
-        :root {
-            --bg-black: #0D0D0D;
-            --bg-cream: #F9F8F6;
-            --accent-gold: #C5A880;
-        }
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border:1px solid var(--ink);background:transparent;color:var(--ink);font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;text-align:center;transition:background .25s,color .25s,border-color .25s}
+.btn-solid{background:var(--ink);color:#fff}
+.btn:hover{background:var(--ink);color:#fff}
+.btn-solid:hover{background:var(--champagne-deep);border-color:var(--champagne-deep)}
+.btn-block{width:100%}
+.btn-light{border-color:#fff;color:#fff}
+.btn-light:hover{background:#fff;color:var(--ink)}
+.btn-solid-light{background:#fff;color:var(--ink);border-color:#fff}
+.btn-solid-light:hover{background:var(--champagne);border-color:var(--champagne);color:var(--ink)}
+.icon-btn{display:grid;place-items:center;width:48px;height:48px;background:transparent;border:1px solid var(--line);position:relative}
+.icon-btn:hover{border-color:var(--ink)}
+.icon-btn svg,.ic{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.link-u{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--champagne);padding-bottom:4px}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #FFFFFF;
-            color: #0D0D0D;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
+/* Barra superior */
+.top{background:var(--ink);color:#EDE8DF;text-align:center;font-size:12.5px;letter-spacing:.06em;padding:9px var(--gutter)}
 
-        h1, h2, h3, h4, .font-serif-brand {
-            font-family: 'Playfair Display', serif;
-        }
+/* Header */
+.hdr{position:sticky;top:0;z-index:40;background:rgba(250,248,245,.97);border-bottom:1px solid var(--line)}
+.hdr-in{display:grid;grid-template-columns:1fr auto 1fr;grid-template-areas:"burger logo actions";align-items:center;height:68px;padding:0 8px}
+.burger{grid-area:burger;justify-self:start;border:0;width:52px;height:52px}
+.logo{grid-area:logo;display:grid;justify-items:center;line-height:1;text-decoration:none;color:var(--ink)}
+.logo-mf{font-family:var(--serif);font-size:30px;font-weight:500;letter-spacing:.1em;padding-left:.1em}
+.logo-mf::after{content:"";display:block;height:1px;background:var(--champagne);margin-top:3px}
+.logo-word{font-size:8.5px;letter-spacing:.36em;padding-left:.36em;margin-top:4px;color:var(--muted)}
+.nav{grid-area:nav;display:none}
+.actions{grid-area:actions;justify-self:end;display:flex;gap:2px}
+.actions .icon-btn{border:0}
+.badge{position:absolute;top:6px;right:4px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--ink);color:#fff;font-size:11px;line-height:18px;text-align:center}
+.badge[hidden]{display:none}
+@media(min-width:1024px){
+  .hdr-in{grid-template-columns:auto 1fr auto;grid-template-areas:"logo nav actions";padding:0 var(--gutter);gap:32px;height:80px}
+  .burger{display:none}
+  .nav{display:block;justify-self:center}
+  .nav ul{display:flex;gap:clamp(20px,3vw,44px)}
+  .nav a{text-decoration:none;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;padding:8px 0;border-bottom:1px solid transparent}
+  .nav a:hover{border-color:var(--champagne)}
+  .actions .icon-btn{border:0}
+}
 
-        /* Custom subtle scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #F9F8F6;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #C5A880;
-            border-radius: 3px;
-        }
+/* Menú móvil */
+.menu{position:fixed;inset:0;z-index:60;background:var(--ink);color:#fff;display:flex;flex-direction:column;padding:8px 8px 28px;visibility:hidden;opacity:0;transform:translateY(-12px);transition:opacity .3s,transform .3s,visibility 0s .3s;overflow-y:auto}
+.menu.open{visibility:visible;opacity:1;transform:none;transition:opacity .3s,transform .3s}
+.menu-top{display:flex;justify-content:space-between;align-items:center;height:68px;padding-left:12px}
+.menu .logo{color:#fff}
+.menu .logo-word{color:#B9B3A8}
+.menu .icon-btn{border:0}
+.menu nav{margin:auto 0;padding:24px 20px}
+.menu nav a{display:block;font-family:var(--serif);font-size:clamp(34px,10vw,46px);font-weight:400;line-height:1.15;padding:10px 0;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.12)}
+.menu-foot{padding:0 20px;display:grid;gap:12px}
+@media(min-width:1024px){.menu{display:none}}
 
-        /* Subtle smooth animations */
-        .transition-lux {
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+/* Fotos y placeholders */
+.media{display:block;position:relative;background:var(--stone);overflow:hidden}
+.media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:16px;color:#857F76;font-size:11px;letter-spacing:.16em;text-transform:uppercase;background-image:repeating-linear-gradient(135deg,transparent 0 14px,rgba(0,0,0,.03) 14px 15px)}
+.ph-mf{font-family:var(--serif);font-size:38px;letter-spacing:.08em;color:var(--champagne);text-transform:none}
+.ph small{font-size:10px;letter-spacing:.06em;text-transform:none;color:#9A948A;word-break:break-all}
+.r45{aspect-ratio:4/5}
+.r32{aspect-ratio:3/2}
+.r11{aspect-ratio:1/1}
 
-        /* Image hover zoom effect */
-        .img-hover-zoom {
-            overflow: hidden;
-        }
-        .img-hover-zoom img {
-            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .img-hover-zoom:hover img {
-            transform: scale(1.04);
-        }
+/* Hero */
+.hero{display:grid}
+.hero-media{aspect-ratio:4/5;max-height:70svh;width:100%;order:-1}
+.hero-copy{padding:40px var(--gutter) 56px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:20px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,9vw,84px);line-height:1.02;letter-spacing:.01em}
+.hero p{color:var(--muted);max-width:40ch;font-size:17px}
+.hero-btns{display:grid;gap:12px;width:100%;margin-top:8px}
+.hero-mark{display:none}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero-copy>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-copy>*:nth-child(2){animation-delay:.12s}
+.hero-copy>*:nth-child(3){animation-delay:.24s}
+@media(min-width:560px){.hero-btns{display:flex;flex-wrap:wrap;width:auto}}
+@media(min-width:900px){
+  .hero{grid-template-columns:5fr 7fr;min-height:calc(100svh - 118px);max-height:860px}
+  .hero-copy{padding:64px clamp(32px,5vw,88px);order:1}
+  .hero h1{font-size:clamp(40px,4.6vw,64px)}
+  .hero-media{order:2;aspect-ratio:auto;max-height:none;height:100%}
+  .hero-mark{display:block;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--champagne-deep)}
+}
 
-        /* Size selector active state */
-        .size-btn.active {
-            background-color: #0D0D0D;
-            color: #FFFFFF;
-            border-color: #0D0D0D;
-        }
+/* Colección destacada (tarjetas grandes) */
+.feature-grid{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--gutter) 8px;margin:0 calc(var(--gutter) * -1);scrollbar-width:none}
+.feature-grid::-webkit-scrollbar{display:none}
+.fcard{scroll-snap-align:center;display:flex;flex-direction:column;background:var(--paper)}
+.fcard-media{display:block;width:100%;padding:0;border:0;background:none;text-align:left}
+.fcard-body{padding:20px 18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.fcard h3{font-family:var(--serif);font-weight:500;font-size:26px;line-height:1.15}
+.fcard .meta{color:var(--muted);font-size:14px}
+.fcard-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto;padding-top:16px}
+.fcard-btns .btn{padding:0 10px;letter-spacing:.12em}
+@media(min-width:900px){
+  .feature-grid{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);grid-auto-columns:auto;overflow:visible;padding:0;margin:0;gap:24px}
+}
 
-        /* Drawer overlays */
-        .drawer-overlay {
-            background-color: rgba(13, 13, 13, 0.5);
-            backdrop-filter: blur(4px);
-        }
+/* Categorías */
+.cats{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+.cat-tile{display:flex;flex-direction:column;gap:16px}
+.cat-tile h3{font-family:var(--serif);font-weight:500;font-size:clamp(22px,2.4vw,28px);letter-spacing:.06em;text-transform:uppercase}
+.cat-link{display:block;text-decoration:none}
+.cat-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+@media(min-width:760px){.cats{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.cat-tile .r32{aspect-ratio:4/5}}
 
-        /* Floating WhatsApp Button Pulse */
-        @keyframes subtlePulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        .pulse-subtle {
-            animation: subtlePulse 3s infinite ease-in-out;
-        }
-    </style>
+/* Productos */
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{min-height:46px;padding:0 clamp(12px,3.6vw,22px);background:transparent;border:1px solid var(--line);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.tabs button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.count{color:var(--muted);font-size:14px;margin:18px 0 26px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 12px}
+@media(min-width:720px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 20px}}
+@media(min-width:1100px){.grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:56px 24px}}
+.card{display:flex;flex-direction:column;min-width:0}
+.card-media{display:block;width:100%;padding:0;border:0;background:none;position:relative}
+.tag{position:absolute;top:10px;left:10px;z-index:2;background:var(--mauve-soft);color:var(--mauve-deep);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px}
+.card-body{display:flex;flex-direction:column;gap:6px;padding-top:14px;flex:1}
+.cat{font-size:12.5px;color:var(--muted);line-height:1.35}
+.card h3{font-family:var(--serif);font-weight:500;font-size:clamp(19px,2.4vw,23px);line-height:1.15}
+.price{font-weight:600;font-size:16px}
+.price.pending{font-weight:400;color:var(--muted);font-size:14px}
+.sizes{margin-top:8px}
+.sizes legend{font-size:12px;color:var(--muted);margin-bottom:6px;padding:0}
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:4px}
+.chip{position:relative;display:block}
+.chip input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.chip span{display:grid;place-items:center;min-width:38px;height:42px;border:1px solid var(--line);background:var(--paper);font-size:14px}
+.chip input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip input:focus-visible+span{outline:2px solid var(--ink);outline-offset:2px}
+.chip:hover span{border-color:var(--ink)}
+.hint{min-height:20px;font-size:13px;color:var(--mauve-deep);margin-top:4px}
+@keyframes shake{0%,100%{transform:none}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.need{animation:shake .35s}
+.need .chip span{border-color:var(--mauve)}
+.card-actions{display:grid;grid-template-columns:1fr 48px;gap:6px;margin-top:auto}
+.card-actions .btn{padding:0 8px;letter-spacing:.12em;min-height:48px}
+.card-actions .icon-btn{height:48px;border-color:var(--ink)}
+.card-actions .icon-btn:hover{background:var(--ink);color:#fff}
+.card-actions.single{grid-template-columns:1fr}
+
+/* Producto destacado */
+.spot{background:var(--ink);color:#fff}
+.spot-grid{display:grid;gap:32px}
+.spot .media{background:#1D1B18}
+.spot .ph{color:#8B857B}
+.spot-info{display:flex;flex-direction:column;gap:18px;justify-content:center}
+.spot h2{font-family:var(--serif);font-weight:400;font-size:clamp(44px,8vw,84px);line-height:1;letter-spacing:.02em}
+.spot .cat{color:#B9B3A8;font-size:14px}
+.spot .desc{color:#D9D4CA;max-width:46ch}
+.spot .price{font-size:26px;font-family:var(--serif);font-weight:500;color:var(--champagne)}
+.spot .price.pending{color:#B9B3A8;font-size:16px;font-family:var(--sans)}
+.spot .sizes legend{color:#B9B3A8}
+.spot .chip span{background:transparent;border-color:#3A3732;color:#fff}
+.spot .chip:hover span{border-color:#fff}
+.spot .chip input:checked+span{background:#fff;color:var(--ink);border-color:#fff}
+.spot .chip input:focus-visible+span{outline-color:var(--champagne)}
+.spot .hint{color:#E4BFCD}
+.spot-btns{display:grid;gap:12px;margin-top:6px}
+@media(min-width:560px){.spot-btns{display:flex;flex-wrap:wrap}}
+@media(min-width:900px){.spot-grid{grid-template-columns:1.1fr 1fr;gap:clamp(40px,6vw,96px);align-items:center}}
+
+/* Compra fácil */
+.steps{display:grid;gap:0;border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:56px 1fr;gap:8px 12px;padding:26px 0;border-bottom:1px solid var(--line)}
+.step-n{font-family:var(--serif);font-size:40px;line-height:1;color:var(--champagne-deep)}
+.step h3{font-family:var(--serif);font-weight:500;font-size:26px;line-height:1.15}
+.step p{color:var(--muted);grid-column:2}
+@media(min-width:800px){
+  .steps{grid-template-columns:repeat(3,1fr);border-top:0;gap:40px}
+  .step{grid-template-columns:1fr;border:0;border-top:1px solid var(--ink);padding:24px 0 0}
+  .step p{grid-column:auto}
+}
+
+/* Nosotros */
+.about{background:var(--mauve-soft)}
+.about-grid{display:grid;gap:36px;align-items:center}
+.about p.lead{font-family:var(--serif);font-size:clamp(26px,3.6vw,38px);line-height:1.3;font-weight:400;max-width:26em;margin:18px 0 28px}
+@media(min-width:900px){.about-grid{grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,110px)}}
+
+/* Cambios y envíos */
+.policy{display:grid;gap:0;border-top:1px solid var(--line)}
+.policy li{padding:20px 0;border-bottom:1px solid var(--line);display:grid;gap:4px}
+.policy strong{font-family:var(--serif);font-weight:500;font-size:22px}
+.policy span{color:var(--muted)}
+.policy-cta{margin-top:28px}
+@media(min-width:900px){
+  .policy-wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
+  .policy{border-top:1px solid var(--ink)}
+}
+
+/* Instagram */
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.ig-grid a{display:block}
+.ig-grid .media{transition:opacity .25s}
+.ig-grid a:hover .media{opacity:.85}
+@media(min-width:800px){.ig-grid{grid-template-columns:repeat(6,1fr);gap:8px}}
+
+/* Contacto */
+.contact-grid{display:grid;gap:36px}
+.contact h2.brand{font-family:var(--serif);font-weight:400;font-size:clamp(34px,6vw,64px);line-height:1.05;letter-spacing:.03em}
+.contact dl{margin:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.contact dl div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid var(--line);align-items:center}
+.contact dt{font-size:13px;color:var(--muted)}
+.contact dd{margin:0;word-break:break-word}
+.contact dd a{text-decoration:none;border-bottom:1px solid var(--champagne)}
+.contact dd a:not([href]){border:0}
+@media(min-width:900px){.contact-grid{grid-template-columns:1fr 1fr;gap:100px;align-items:center}}
+
+/* Footer */
+.footer{background:var(--ink);color:#D9D4CA;padding:64px 0 32px}
+.footer .logo{justify-items:start;color:#fff}
+.footer .logo-word{color:#B9B3A8}
+.foot-grid{display:grid;gap:36px}
+.foot-links{display:grid;gap:4px}
+.foot-links a{display:inline-block;padding:8px 0;text-decoration:none}
+.foot-links a:hover{color:var(--champagne)}
+.foot-copy{margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;color:#B9B3A8}
+@media(min-width:800px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr;gap:64px}}
+
+/* Diálogos: producto, bolsa, búsqueda */
+dialog{color:var(--ink);background:var(--paper);border:0;padding:0;max-width:none}
+dialog::backdrop{background:rgba(17,17,17,.55)}
+dialog[open]{animation:fade .25s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.dlg-close{position:absolute;top:8px;right:8px;z-index:3;background:var(--paper);border:0;width:48px;height:48px;display:grid;place-items:center}
+.pd{width:min(980px,calc(100% - 20px));max-height:calc(100dvh - 20px);overflow:auto;margin:auto}
+.pd-grid{display:grid}
+.pd-info{padding:24px 20px 28px;display:flex;flex-direction:column;gap:10px}
+.pd-info h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4vw,42px);line-height:1.1}
+.pd-info .desc{color:var(--muted);margin:4px 0 6px}
+.pd-btns{display:grid;gap:10px;margin-top:8px}
+@media(min-width:760px){.pd-grid{grid-template-columns:1fr 1fr}.pd-info{padding:48px 40px}}
+.drawer{margin:0 0 0 auto;height:100dvh;max-height:100dvh;width:min(440px,100%);flex-direction:column}
+.drawer[open]{display:flex;animation:slide .3s cubic-bezier(.2,.7,.2,1)}
+@keyframes slide{from{transform:translateX(40px);opacity:0}to{transform:none;opacity:1}}
+.dr-head{display:flex;justify-content:space-between;align-items:center;padding:8px 8px 8px 20px;border-bottom:1px solid var(--line)}
+.dr-head h2{font-family:var(--serif);font-weight:500;font-size:26px}
+.dr-head .dlg-close{position:static}
+.dr-list{flex:1;overflow:auto;padding:8px 20px}
+.dr-empty{padding:32px 0;color:var(--muted)}
+.dr-item{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.dr-item strong{font-family:var(--serif);font-weight:500;font-size:20px}
+.dr-item .meta{color:var(--muted);font-size:14px}
+.qty{display:flex;align-items:center;gap:4px;margin-top:6px}
+.qty button{width:40px;height:40px;border:1px solid var(--line);background:none}
+.qty span{min-width:28px;text-align:center}
+.qty .rm{width:auto;border:0;padding:0 10px;text-decoration:underline;color:var(--muted);font-size:14px}
+.dr-foot{padding:16px 20px calc(20px + env(safe-area-inset-bottom));border-top:1px solid var(--line);display:grid;gap:12px}
+.dr-sub{display:flex;justify-content:space-between;font-size:17px}
+.sd{margin:0 auto;width:min(760px,100%);max-height:100dvh;overflow:auto;padding:12px 16px 24px}
+.sd-row{display:flex;gap:8px;align-items:center;border-bottom:1px solid var(--ink)}
+.sd input{flex:1;min-width:0;border:0;background:none;font:inherit;font-size:18px;height:56px;outline:0}
+.sd-row .icon-btn{border:0}
+.sd ul{margin-top:8px}
+.sd li button{width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:14px 4px;display:flex;justify-content:space-between;gap:12px;min-height:56px;align-items:center}
+.sd li strong{font-family:var(--serif);font-weight:500;font-size:20px;display:block}
+.sd li small{color:var(--muted)}
+.sd-msg{color:var(--muted);padding:16px 4px}
+
+.pd-gal{display:flex;flex-direction:column;min-width:0}
+.thumbs{display:flex;gap:6px;overflow-x:auto;padding:8px;background:var(--paper);scrollbar-width:thin}
+.thumb{flex:0 0 58px;height:72px;padding:0;border:1px solid transparent;background:var(--stone);opacity:.6}
+.thumb[aria-pressed="true"]{border-color:var(--ink);opacity:1}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.facts{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 8px}
+.facts li{font-size:13px;border:1px solid var(--line);padding:5px 10px;color:var(--muted)}
+
+/* Finalizar pedido */
+.co{width:min(640px,100%);height:100dvh;max-height:100dvh;margin:0 auto;overflow:auto}
+.co-in{padding:8px 24px calc(40px + env(safe-area-inset-bottom))}
+.co-head{display:flex;justify-content:space-between;align-items:center;min-height:64px;margin-right:-16px}
+.co-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(28px,6vw,36px);line-height:1.1}
+.co-head .dlg-close{position:static}
+.field{display:block;margin-top:26px}
+.field>span{display:block;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#3A3732}
+.field input{display:block;width:100%;border:0;border-bottom:1px solid var(--line);background:none;border-radius:0;font:inherit;font-size:18px;padding:14px 0;color:var(--ink);outline:0;transition:border-color .2s}
+.field input::placeholder{color:#B5AFA5}
+.field input:focus{border-color:var(--ink)}
+.field input[aria-invalid="true"]{border-color:var(--mauve-deep)}
+.err{min-height:0;font-size:13px;color:var(--mauve-deep);margin-top:6px}
+.err:empty{display:none}
+.pay-title{margin-top:32px;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#3A3732}
+.pays{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pay{min-height:48px;padding:0 18px;background:transparent;border:1px solid var(--line);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.pay[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.pay:hover{border-color:var(--ink)}
+.co-note{color:var(--muted);font-size:14px;margin-top:12px}
+.co-sum{margin-top:28px;padding-top:8px;border-top:1px solid var(--line)}
+.co-items li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;font-size:16px}
+.co-items small{color:var(--muted);font-size:inherit}
+.co-total{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:22px 0;border-top:1px solid var(--line);margin-top:8px}
+.co-total span{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.co-total strong{font-family:var(--serif);font-weight:600;font-size:34px}
+.co-edit{background:none;border:0;padding:8px 0;text-decoration:underline;color:var(--muted);font-size:14px}
+.co-fine{text-align:center;color:var(--muted);font-size:14px;margin-top:16px}
+
+/* WhatsApp flotante y aviso */
+.wa-float{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:30;width:56px;height:56px;border-radius:50%;background:var(--ink);color:var(--champagne);display:grid;place-items:center;border:1px solid rgba(255,255,255,.2)}
+.wa-float svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.wa-float:hover{background:var(--champagne-deep);color:#fff}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translate(-50%,12px);background:var(--ink);color:#fff;padding:12px 20px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:200;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.noscript{padding:24px;text-align:center}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
 </head>
-<body class="antialiased flex flex-col min-h-screen">
+<body>
+<a class="skip" href="#productos">Ir a los productos</a>
 
-    <!-- ANNOUNCEMENT BAR -->
-    <div class="bg-brand-black text-white text-xs tracking-widest uppercase py-2.5 px-4 text-center border-b border-gray-800">
-        <p class="font-light">Envíos a toda Colombia &nbsp;|&nbsp; Atención personalizada por <span class="text-brand-gold font-normal">WhatsApp</span></p>
-    </div>
+<div class="top">Envíos a Colombia. Compra directo por WhatsApp.</div>
 
-    <!-- MAIN HEADER -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-lux" id="mainHeader">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            
-            <!-- Mobile Menu Toggle Button -->
-            <button id="openMobileMenu" class="lg:hidden p-2 text-brand-black hover:text-brand-gold transition-colors focus:outline-none" aria-label="Abrir menú">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-                </svg>
-            </button>
+<!-- ============ 1. HEADER ============ -->
+<header class="hdr">
+  <div class="hdr-in">
+    <button class="icon-btn burger" id="menuOpen" type="button" aria-label="Abrir menú" aria-controls="menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg>
+    </button>
 
-            <!-- Brand Logo -->
-            <a href="#" class="flex flex-col items-center group">
-                <span class="font-serif text-2xl sm:text-3xl font-bold tracking-widest text-brand-black group-hover:text-brand-gold transition-colors">MARLON</span>
-                <span class="text-[9px] sm:text-[10px] tracking-[0.3em] font-medium text-gray-500 uppercase -mt-1">FOOTWEAR</span>
-            </a>
-
-            <!-- Desktop Navigation Links -->
-            <nav class="hidden lg:flex items-center space-x-8 text-xs tracking-[0.2em] font-medium uppercase">
-                <a href="#inicio" class="text-brand-black hover:text-brand-gold transition-colors py-2 border-b border-transparent hover:border-brand-gold">Inicio</a>
-                <a href="#coleccion" class="text-brand-black hover:text-brand-gold transition-colors py-2 border-b border-transparent hover:border-brand-gold">Colección</a>
-                <a href="#tacones" class="text-brand-black hover:text-brand-gold transition-colors py-2 border-b border-transparent hover:border-brand-gold">Tacones</a>
-                <a href="#plataformas" class="text-brand-black hover:text-brand-gold transition-colors py-2 border-b border-transparent hover:border-brand-gold">Plataformas</a>
-                <a href="#nosotros" class="text-brand-black hover:text-brand-gold transition-colors py-2 border-b border-transparent hover:border-brand-gold">Nosotros</a>
-                <a href="#contacto" class="text-brand-black hover:text-brand-gold transition-colors py-2 border-b border-transparent hover:border-brand-gold">Contacto</a>
-            </nav>
-
-            <!-- Action Icons (Search & Cart) -->
-            <div class="flex items-center space-x-4 sm:space-x-6">
-                <!-- Search Button -->
-                <button id="openSearchBtn" class="text-brand-black hover:text-brand-gold transition-colors p-1" aria-label="Buscar producto">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path>
-                    </svg>
-                </button>
-
-                <!-- Shopping Cart Toggle Button -->
-                <button id="openCartBtn" class="relative text-brand-black hover:text-brand-gold transition-colors p-1" aria-label="Ver carrito">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"></path>
-                    </svg>
-                    <span id="cartCountBadge" class="absolute -top-1.5 -right-2 bg-brand-gold text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center hidden">0</span>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- SEARCH MODAL -->
-    <div id="searchModal" class="fixed inset-0 z-50 hidden drawer-overlay flex items-start justify-center pt-20 px-4 transition-lux">
-        <div class="bg-white w-full max-w-2xl rounded-none p-6 shadow-2xl relative border border-gray-100">
-            <div class="flex items-center justify-between pb-4 border-b border-gray-200">
-                <input type="text" id="searchInput" placeholder="Buscar por modelo, tacón o plataforma..." class="w-full text-base sm:text-lg focus:outline-none text-brand-black font-light pr-4">
-                <button id="closeSearchBtn" class="text-gray-400 hover:text-brand-black p-1">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <div id="searchResults" class="mt-4 max-h-60 overflow-y-auto text-sm text-gray-500">
-                <p class="text-xs uppercase tracking-wider text-gray-400">Escribe al menos 2 letras para buscar...</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- MOBILE NAVIGATION MENU (Drawer) -->
-    <div id="mobileMenu" class="fixed inset-0 z-50 hidden drawer-overlay transition-lux">
-        <div class="fixed inset-y-0 left-0 max-w-xs w-full bg-white shadow-xl flex flex-col justify-between p-6 overflow-y-auto">
-            <div>
-                <div class="flex items-center justify-between pb-6 border-b border-gray-100">
-                    <div class="flex flex-col">
-                        <span class="font-serif text-2xl font-bold tracking-widest text-brand-black">MARLON</span>
-                        <span class="text-[9px] tracking-widest font-medium text-gray-500 uppercase">FOOTWEAR</span>
-                    </div>
-                    <button id="closeMobileMenu" class="text-gray-500 hover:text-brand-black p-2">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
-                </div>
-
-                <nav class="mt-8 flex flex-col space-y-6 text-sm tracking-[0.2em] font-medium uppercase">
-                    <a href="#inicio" class="mobile-nav-link text-brand-black hover:text-brand-gold transition-colors">Inicio</a>
-                    <a href="#coleccion" class="mobile-nav-link text-brand-black hover:text-brand-gold transition-colors">Colección</a>
-                    <a href="#tacones" class="mobile-nav-link text-brand-black hover:text-brand-gold transition-colors">Tacones</a>
-                    <a href="#plataformas" class="mobile-nav-link text-brand-black hover:text-brand-gold transition-colors">Plataformas</a>
-                    <a href="#nosotros" class="mobile-nav-link text-brand-black hover:text-brand-gold transition-colors">Nosotros</a>
-                    <a href="#contacto" class="mobile-nav-link text-brand-black hover:text-brand-gold transition-colors">Contacto</a>
-                </nav>
-            </div>
-
-            <div class="pt-6 border-t border-gray-100 space-y-4 text-xs text-gray-600">
-                <p class="font-serif text-sm font-semibold text-brand-black">MARLON FOOTWEAR</p>
-                <p>Atención directa y pedidos por WhatsApp.</p>
-                <a href="#" onclick="openGeneralWhatsApp(); return false;" class="inline-flex items-center justify-center w-full bg-brand-black text-white py-3 uppercase tracking-widest text-xs font-semibold hover:bg-brand-gold transition-colors">
-                    Chat directo WhatsApp
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- MAIN CONTENT AREA -->
-    <main class="flex-grow">
-
-        <!-- HERO PRINCIPAL -->
-        <section id="inicio" class="relative bg-brand-cream overflow-hidden min-h-[85vh] flex items-center">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 lg:py-20">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                    
-                    <!-- Left Copy & CTA -->
-                    <div class="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center text-left space-y-6">
-                        <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Novedades / Marlon Footwear</span>
-                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif text-brand-black leading-tight">
-                            PRESENCIA, ELEGANCIA Y CARÁCTER
-                        </h1>
-                        <p class="text-sm sm:text-base text-gray-600 font-light leading-relaxed">
-                            Diseños exclusivos de alto impacto para mujeres que dejan huella. Tacones finos, plataformas y sandalias de gala concebidos con máxima sofisticación.
-                        </p>
-                        
-                        <div class="pt-4 flex flex-col sm:flex-row gap-4">
-                            <a href="#coleccion" class="inline-block text-center bg-brand-black text-white px-8 py-4 text-xs font-medium uppercase tracking-[0.2em] hover:bg-brand-gold transition-lux shadow-sm">
-                                VER COLECCIÓN
-                            </a>
-                            <a href="#" onclick="openGeneralWhatsApp('Hola Marlon Footwear, me gustaría asesoría sobre su nueva colección de calzado.'); return false;" class="inline-flex items-center justify-center border border-brand-black text-brand-black px-6 py-4 text-xs font-medium uppercase tracking-[0.2em] hover:bg-brand-black hover:text-white transition-lux">
-                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-                                </svg>
-                                COMPRAR POR WHATSAPP
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Right Editorial Image -->
-                    <div class="lg:col-span-7 order-1 lg:order-2">
-                        <div class="relative img-hover-zoom bg-gray-100 aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] max-h-[650px] w-full mx-auto shadow-sm">
-                            <img src="assets/051-b5d7ccac74.jpg" 
-                                 alt="Marlon Footwear Tacones de Alto Impacto" 
-                                 class="w-full h-full object-cover object-center"
-                                 loading="eager"
-                                 onerror="this.src='https://placehold.co/1000x1250/F9F8F6/0D0D0D?text=MARLON+FOOTWEAR'">
-                            <div class="absolute inset-0 bg-black/5 pointer-events-none"></div>
-                            <div class="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md px-4 py-3 hidden sm:block border border-gray-100">
-                                <p class="text-[10px] tracking-[0.2em] uppercase text-gray-500">Diseño Destacado</p>
-                                <p class="font-serif text-sm font-semibold text-brand-black">Edición Limitada Marlon Footwear</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- EXPERIENCIA DE COMPRA -->
-        <section class="border-y border-gray-100 bg-white py-12">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-8">
-                    <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Proceso Transparente</span>
-                    <h2 class="text-2xl font-serif text-brand-black mt-1">COMPRA FÁCIL Y SEGURA</h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div class="flex flex-col items-center p-4">
-                        <div class="w-12 h-12 rounded-full bg-brand-cream flex items-center justify-center text-brand-black font-serif font-bold text-lg mb-4 border border-brand-sand">1</div>
-                        <h3 class="text-sm font-medium tracking-wider uppercase text-brand-black mb-2">Elige tu modelo</h3>
-                        <p class="text-xs text-gray-500 font-light max-w-xs">Explora nuestra colección exclusiva de tacones finos y plataformas.</p>
-                    </div>
-                    <div class="flex flex-col items-center p-4 border-t md:border-t-0 md:border-l border-gray-100">
-                        <div class="w-12 h-12 rounded-full bg-brand-cream flex items-center justify-center text-brand-black font-serif font-bold text-lg mb-4 border border-brand-sand">2</div>
-                        <h3 class="text-sm font-medium tracking-wider uppercase text-brand-black mb-2">Selecciona tu talla</h3>
-                        <p class="text-xs text-gray-500 font-light max-w-xs">Disponibilidad garantizada en numeración desde la talla 34 hasta la 40.</p>
-                    </div>
-                    <div class="flex flex-col items-center p-4 border-t md:border-t-0 md:border-l border-gray-100">
-                        <div class="w-12 h-12 rounded-full bg-brand-cream flex items-center justify-center text-brand-black font-serif font-bold text-lg mb-4 border border-brand-sand">3</div>
-                        <h3 class="text-sm font-medium tracking-wider uppercase text-brand-black mb-2">Compra Directa</h3>
-                        <p class="text-xs text-gray-500 font-light max-w-xs">Finaliza tu orden directamente con atención personalizada vía WhatsApp.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CATEGORÍAS VISUALES -->
-        <section class="py-16 sm:py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Categorías Principales</span>
-                    <h2 class="text-3xl font-serif text-brand-black mt-1">EXPLORA NUESTRO CATÁLOGO</h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                    <!-- Category 1: Tacones -->
-                    <div class="group relative img-hover-zoom aspect-[3/4] bg-brand-cream overflow-hidden flex flex-col justify-end p-6 border border-gray-100 shadow-sm">
-                        <img src="assets/051-b5d7ccac74.jpg" 
-                             alt="Categoría Tacones Marlon Footwear" 
-                             class="absolute inset-0 w-full h-full object-cover object-center"
-                             onerror="this.src='https://placehold.co/800x1000/F9F8F6/0D0D0D?text=TACONES'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                        <div class="relative z-10 text-white space-y-2">
-                            <span class="text-[10px] tracking-[0.3em] text-brand-gold uppercase">Calzado Femenino</span>
-                            <h3 class="text-2xl font-serif font-semibold">TACONES FINOS</h3>
-                            <a href="#coleccion" onclick="filterCategory('tacones');" class="inline-block mt-2 text-xs uppercase tracking-[0.2em] text-white border-b border-white/60 hover:border-white transition-all">
-                                VER CATEGORÍA &rarr;
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Category 2: Plataformas -->
-                    <div class="group relative img-hover-zoom aspect-[3/4] bg-brand-cream overflow-hidden flex flex-col justify-end p-6 border border-gray-100 shadow-sm">
-                        <img src="assets/076-976d15ff4d.jpg" 
-                             alt="Categoría Plataformas Marlon Footwear" 
-                             class="absolute inset-0 w-full h-full object-cover object-center"
-                             onerror="this.src='https://placehold.co/800x1000/F9F8F6/0D0D0D?text=PLATAFORMAS'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                        <div class="relative z-10 text-white space-y-2">
-                            <span class="text-[10px] tracking-[0.3em] text-brand-gold uppercase">Altura y Confort</span>
-                            <h3 class="text-2xl font-serif font-semibold">PLATAFORMAS</h3>
-                            <a href="#coleccion" onclick="filterCategory('plataformas');" class="inline-block mt-2 text-xs uppercase tracking-[0.2em] text-white border-b border-white/60 hover:border-white transition-all">
-                                VER CATEGORÍA &rarr;
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Category 3: Colección Destacada -->
-                    <div class="group relative img-hover-zoom aspect-[3/4] bg-brand-cream overflow-hidden flex flex-col justify-end p-6 border border-gray-100 shadow-sm">
-                        <img src="assets/051-b5d7ccac74.jpg" 
-                             alt="Colección Destacada Marlon Footwear" 
-                             class="absolute inset-0 w-full h-full object-cover object-center"
-                             onerror="this.src='https://placehold.co/800x1000/F9F8F6/0D0D0D?text=COLECCION+DESTACADA'">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                        <div class="relative z-10 text-white space-y-2">
-                            <span class="text-[10px] tracking-[0.3em] text-brand-gold uppercase">Selección Exclusiva</span>
-                            <h3 class="text-2xl font-serif font-semibold">COLECCIÓN DESTACADA</h3>
-                            <a href="#coleccion" onclick="filterCategory('todos');" class="inline-block mt-2 text-xs uppercase tracking-[0.2em] text-white border-b border-white/60 hover:border-white transition-all">
-                                EXPLORAR TODO &rarr;
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PRODUCTO DESTACADO (Lanzamiento Especial BOSSÉ) -->
-        <section class="py-16 bg-brand-cream border-y border-brand-sand">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-white p-6 sm:p-10 lg:p-12 border border-gray-100 shadow-sm">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                        
-                        <!-- Product Image -->
-                        <div class="lg:col-span-6 img-hover-zoom bg-brand-cream aspect-[4/5] overflow-hidden">
-                            <img src="assets/051-b5d7ccac74.jpg" 
-                                 alt="Lanzamiento Especial Modelo BOSSÉ" 
-                                 class="w-full h-full object-cover object-center"
-                                 onerror="this.src='https://placehold.co/900x1100/F9F8F6/0D0D0D?text=BOSSE+EDICION+ESPECIAL'">
-                        </div>
-
-                        <!-- Details & Actions -->
-                        <div class="lg:col-span-6 space-y-6">
-                            <div class="inline-block bg-brand-black text-white text-[10px] tracking-[0.3em] font-semibold uppercase px-3 py-1">
-                                Lanzamiento Exclusivo
-                            </div>
-                            <h2 class="text-3xl sm:text-4xl font-serif text-brand-black">BOSSÉ</h2>
-                            <p class="text-2xl font-serif text-brand-gold">$ 280.000 COP</p>
-                            
-                            <p class="text-sm text-gray-600 font-light leading-relaxed">
-                                Diseñado para causar un impacto inolvidable. El modelo BOSSÉ encarna la sofisticación contemporánea con una silueta esculpida, plantilla acolchada de alto confort y un acabado sofisticado que realza cualquier atuendo de gala o noche.
-                            </p>
-
-                            <!-- Size Selector for Bossé -->
-                            <div class="space-y-2 pt-2">
-                                <label class="text-xs uppercase tracking-wider text-gray-700 font-medium block">
-                                    Selecciona tu Talla (Colombia):
-                                </label>
-                                <div class="flex flex-wrap gap-2" id="bosseSizes">
-                                    <button onclick="selectSize('bosse', '34')" class="size-btn bosse-size w-10 h-10 border border-gray-200 text-xs text-brand-black hover:border-brand-black transition-colors" data-size="34">34</button>
-                                    <button onclick="selectSize('bosse', '35')" class="size-btn bosse-size w-10 h-10 border border-gray-200 text-xs text-brand-black hover:border-brand-black transition-colors" data-size="35">35</button>
-                                    <button onclick="selectSize('bosse', '36')" class="size-btn bosse-size w-10 h-10 border border-gray-200 text-xs text-brand-black hover:border-brand-black transition-colors active" data-size="36">36</button>
-                                    <button onclick="selectSize('bosse', '37')" class="size-btn bosse-size w-10 h-10 border border-gray-200 text-xs text-brand-black hover:border-brand-black transition-colors" data-size="37">37</button>
-                                    <button onclick="selectSize('bosse', '38')" class="size-btn bosse-size w-10 h-10 border border-gray-200 text-xs text-brand-black hover:border-brand-black transition-colors" data-size="38">38</button>
-                                    <button onclick="selectSize('bosse', '39')" class="size-btn bosse-size w-10 h-10 border border-gray-200 text-xs text-brand-black hover:border-brand-black transition-colors" data-size="39">39</button>
-                                    <button onclick="selectSize('bosse', '40')" class="size-btn bosse-size w-10 h-10 border border-gray-200 text-xs text-brand-black hover:border-brand-black transition-colors" data-size="40">40</button>
-                                </div>
-                            </div>
-
-                            <!-- CTAs -->
-                            <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                                <button onclick="addFeaturedToCart('BOSSÉ', 280000, 'assets/051-b5d7ccac74.jpg', 'bosse')" class="flex-1 bg-brand-black text-white py-4 px-6 text-xs uppercase tracking-[0.2em] font-medium hover:bg-brand-gold transition-lux">
-                                    COMPRAR AHORA
-                                </button>
-                                <button onclick="buyNowWhatsApp('BOSSÉ', 280000, 'bosse')" class="flex-1 border border-brand-black text-brand-black py-4 px-6 text-xs uppercase tracking-[0.2em] font-medium hover:bg-brand-black hover:text-white transition-lux flex items-center justify-center">
-                                    CONSULTAR POR WHATSAPP
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CATALOGO & GRID DE PRODUCTOS -->
-        <section id="coleccion" class="py-16 sm:py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-gray-100">
-                    <div>
-                        <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Catálogo Exclusivo</span>
-                        <h2 class="text-3xl font-serif text-brand-black mt-1">NUESTRA COLECCIÓN</h2>
-                    </div>
-
-                    <!-- Category Filters -->
-                    <div class="flex flex-wrap gap-2 mt-6 md:mt-0 text-xs uppercase tracking-wider">
-                        <button onclick="filterCategory('todos')" id="filter-todos" class="filter-btn active bg-brand-black text-white px-4 py-2 transition-colors">Todos</button>
-                        <button onclick="filterCategory('tacones')" id="filter-tacones" class="filter-btn bg-brand-cream text-brand-black hover:bg-gray-200 px-4 py-2 transition-colors">Tacones</button>
-                        <button onclick="filterCategory('plataformas')" id="filter-plataformas" class="filter-btn bg-brand-cream text-brand-black hover:bg-gray-200 px-4 py-2 transition-colors">Plataformas</button>
-                        <button onclick="filterCategory('novedades')" id="filter-novedades" class="filter-btn bg-brand-cream text-brand-black hover:bg-gray-200 px-4 py-2 transition-colors">Novedades</button>
-                    </div>
-                </div>
-
-                <!-- Product Grid Container -->
-                <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    <!-- Dynamic Products Generated by JS -->
-                </div>
-
-            </div>
-        </section>
-
-        <!-- SOBRE MARLON FOOTWEAR -->
-        <section id="nosotros" class="py-20 bg-brand-cream border-t border-brand-sand text-center">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-                <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Nuestra Esencia</span>
-                <h2 class="text-3xl sm:text-4xl font-serif text-brand-black">MARLON FOOTWEAR</h2>
-                <div class="w-12 h-0.5 bg-brand-gold mx-auto"></div>
-                <p class="text-base sm:text-lg text-brand-darkgray font-serif italic leading-relaxed pt-2">
-                    "Marlon Footwear nace para mujeres que buscan calzado que destaque. Diseñamos y seleccionamos piezas que combinan presencia, elegancia y carácter."
-                </p>
-                <p class="text-xs tracking-[0.2em] uppercase text-gray-500 pt-4">Marlon Footwear Colombia &bull; Ediciones Limitadas</p>
-            </div>
-        </section>
-
-        <!-- CAMBIOS Y ENVÍOS -->
-        <section class="py-16 bg-white border-b border-gray-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-10">
-                    <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Políticas Claras</span>
-                    <h2 class="text-2xl font-serif text-brand-black mt-1">CAMBIOS Y ENVÍOS EN COLOMBIA</h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="p-6 bg-brand-cream border border-gray-100">
-                        <h3 class="font-serif font-semibold text-brand-black text-base mb-2">Envíos a Toda Colombia</h3>
-                        <p class="text-xs text-gray-600 font-light leading-relaxed">
-                            Despachamos de manera directa a todas las ciudades y municipios del país con guía de seguimiento para tu tranquilidad.
-                        </p>
-                    </div>
-
-                    <div class="p-6 bg-brand-cream border border-gray-100">
-                        <h3 class="font-serif font-semibold text-brand-black text-base mb-2">Garantía de Cambios</h3>
-                        <p class="text-xs text-gray-600 font-light leading-relaxed">
-                            Aceptamos cambios únicamente de productos completamente nuevos, sin uso y conservados en su empaque original.
-                        </p>
-                    </div>
-
-                    <div class="p-6 bg-brand-cream border border-gray-100">
-                        <h3 class="font-serif font-semibold text-brand-black text-base mb-2">Asesoría de Horma y Talla</h3>
-                        <p class="text-xs text-gray-600 font-light leading-relaxed">
-                            Es fundamental seleccionar la talla correcta. Si tienes inquietudes sobre la horma de algún modelo, escríbenos a WhatsApp antes de comprar.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- INSTAGRAM FEED GALLERY -->
-        <section class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-8">
-                    <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">@marlonfootwear</span>
-                    <h2 class="text-2xl font-serif text-brand-black mt-1">SÍGUENOS EN INSTAGRAM</h2>
-                </div>
-
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    <div class="group relative aspect-square overflow-hidden bg-gray-100 img-hover-zoom">
-                        <img src="assets/051-b5d7ccac74.jpg" alt="Instagram Marlon Footwear 1" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs uppercase tracking-wider font-medium">
-                            Ver Instagram
-                        </div>
-                    </div>
-                    <div class="group relative aspect-square overflow-hidden bg-gray-100 img-hover-zoom">
-                        <img src="assets/076-976d15ff4d.jpg" alt="Instagram Marlon Footwear 2" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs uppercase tracking-wider font-medium">
-                            Ver Instagram
-                        </div>
-                    </div>
-                    <div class="group relative aspect-square overflow-hidden bg-gray-100 img-hover-zoom">
-                        <img src="assets/051-b5d7ccac74.jpg" alt="Instagram Marlon Footwear 3" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs uppercase tracking-wider font-medium">
-                            Ver Instagram
-                        </div>
-                    </div>
-                    <div class="group relative aspect-square overflow-hidden bg-gray-100 img-hover-zoom">
-                        <img src="assets/076-976d15ff4d.jpg" alt="Instagram Marlon Footwear 4" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs uppercase tracking-wider font-medium">
-                            Ver Instagram
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACTO DIRECTO -->
-        <section id="contacto" class="py-16 bg-brand-black text-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-                <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold">Atención Personalizada</span>
-                <h2 class="text-3xl font-serif">MARLON FOOTWEAR &bull; COLOMBIA</h2>
-                <p class="text-xs sm:text-sm text-gray-400 max-w-xl mx-auto font-light">
-                    ¿Tienes dudas sobre tallas, pedidos o envíos? Escríbenos directamente y te asesoraremos de manera personalizada.
-                </p>
-
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-6 pt-4 text-xs tracking-widest uppercase">
-                    <a href="#" onclick="openGeneralWhatsApp(); return false;" class="flex items-center text-brand-gold hover:text-white transition-colors">
-                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                        WhatsApp Directo
-                    </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener" class="flex items-center text-brand-gold hover:text-white transition-colors">
-                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        Instagram
-                    </a>
-                    <a href="mailto:contacto@marlonfootwear.com" id="emailLink" class="flex items-center text-brand-gold hover:text-white transition-colors">
-                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-                        <span id="emailPlaceholderText">contacto@marlonfootwear.com</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- SLIDE-OVER CART DRAWER -->
-    <div id="cartDrawer" class="fixed inset-0 z-50 hidden drawer-overlay transition-lux">
-        <div class="fixed inset-y-0 right-0 max-w-md w-full bg-white shadow-2xl flex flex-col justify-between p-6">
-            <div>
-                <!-- Cart Header -->
-                <div class="flex items-center justify-between pb-4 border-b border-gray-200">
-                    <div class="flex items-center space-x-2">
-                        <h3 class="font-serif text-lg font-bold text-brand-black">TU CARRITO</h3>
-                        <span id="cartItemCount" class="text-xs text-gray-500">(0 artículos)</span>
-                    </div>
-                    <button id="closeCartBtn" class="text-gray-400 hover:text-brand-black p-1">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
-                    </button>
-                </div>
-
-                <!-- Cart Items Container -->
-                <div id="cartItemsList" class="mt-6 space-y-4 max-h-[60vh] overflow-y-auto pr-1">
-                    <!-- Items appended via JS -->
-                </div>
-            </div>
-
-            <!-- Cart Footer -->
-            <div class="pt-6 border-t border-gray-200 space-y-4">
-                <div class="flex justify-between text-sm font-medium text-brand-black">
-                    <span>Total Estimado:</span>
-                    <span id="cartTotalPrice" class="font-serif text-lg text-brand-gold">$ 0 COP</span>
-                </div>
-                <p class="text-[10px] text-gray-400">El pago y envío se acuerdan de forma segura por WhatsApp.</p>
-                <button id="checkoutWhatsAppBtn" class="w-full bg-brand-black text-white py-4 text-xs font-semibold uppercase tracking-[0.2em] hover:bg-brand-gold transition-lux flex items-center justify-center">
-                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                    FINALIZAR PEDIDO POR WHATSAPP
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- FLOATING QUICK WHATSAPP BUTTON -->
-    <a href="#" onclick="openGeneralWhatsApp(); return false;" class="fixed bottom-6 right-6 z-40 bg-brand-black text-white p-3.5 rounded-full shadow-2xl hover:bg-brand-gold transition-lux pulse-subtle border border-brand-gold/30 flex items-center justify-center" aria-label="Contacto por WhatsApp">
-        <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+    <a class="logo" href="#inicio" aria-label="Marlon Footwear, MF Colombia. Ir al inicio">
+      <span class="logo-mf">MF</span>
+      <span class="logo-word">MARLON FOOTWEAR</span>
     </a>
 
-    <!-- FOOTER -->
-    <footer class="bg-brand-black text-white pt-16 pb-8 border-t border-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
-                
-                <!-- Col 1: Brand Info -->
-                <div class="space-y-4">
-                    <span class="font-serif text-2xl font-bold tracking-widest text-white">MARLON</span>
-                    <p class="text-xs uppercase tracking-widest text-brand-gold">FOOTWEAR</p>
-                    <p class="text-xs text-gray-400 font-light leading-relaxed">
-                        Calzado femenino premium enfocado en tacones finos, plataformas y piezas vanguardistas de alto impacto.
-                    </p>
-                </div>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#coleccion">Colección</a></li>
+        <li><a href="#productos" data-filter="tacones">Tacones</a></li>
+        <li><a href="#productos" data-filter="plataformas">Plataformas</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
 
-                <!-- Col 2: Navigation -->
-                <div class="space-y-3">
-                    <h4 class="text-xs uppercase tracking-[0.2em] font-semibold text-white">Navegación</h4>
-                    <ul class="space-y-2 text-xs text-gray-400 font-light">
-                        <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
-                        <li><a href="#coleccion" class="hover:text-white transition-colors">Colección Completa</a></li>
-                        <li><a href="#tacones" class="hover:text-white transition-colors">Tacones</a></li>
-                        <li><a href="#plataformas" class="hover:text-white transition-colors">Plataformas</a></li>
-                    </ul>
-                </div>
+    <div class="actions">
+      <button class="icon-btn" id="searchOpen" type="button" aria-label="Buscar productos">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+      </button>
+      <button class="icon-btn" id="bagOpen" type="button" aria-label="Abrir bolsa de compras">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8h13l-1 12h-11l-1-12z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+        <span class="badge" id="bagCount" hidden>0</span>
+      </button>
+    </div>
+  </div>
+</header>
 
-                <!-- Col 3: Customer Service -->
-                <div class="space-y-3">
-                    <h4 class="text-xs uppercase tracking-[0.2em] font-semibold text-white">Atención al Cliente</h4>
-                    <ul class="space-y-2 text-xs text-gray-400 font-light">
-                        <li><a href="#nosotros" class="hover:text-white transition-colors">Sobre Nosotros</a></li>
-                        <li><a href="#" onclick="openGeneralWhatsApp('Hola Marlon Footwear, quisiera ayuda con la guía de tallas.'); return false;" class="hover:text-white transition-colors">Guía de Tallas (34-40)</a></li>
-                        <li><a href="#contacto" class="hover:text-white transition-colors">Política de Cambios</a></li>
-                    </ul>
-                </div>
+<!-- Menú móvil -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menú">
+  <div class="menu-top">
+    <a class="logo" href="#inicio" data-menu-close aria-label="Marlon Footwear, MF Colombia. Ir al inicio">
+      <span class="logo-mf">MF</span>
+      <span class="logo-word">MARLON FOOTWEAR</span>
+    </a>
+    <button class="icon-btn" id="menuClose" type="button" aria-label="Cerrar menú">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Menú móvil">
+    <a href="#inicio" data-menu-close>Inicio</a>
+    <a href="#coleccion" data-menu-close>Colección</a>
+    <a href="#productos" data-filter="tacones" data-menu-close>Tacones</a>
+    <a href="#productos" data-filter="plataformas" data-menu-close>Plataformas</a>
+    <a href="#nosotros" data-menu-close>Nosotros</a>
+    <a href="#contacto" data-menu-close>Contacto</a>
+  </nav>
+  <div class="menu-foot">
+    <a class="btn btn-solid-light btn-block" href="#contacto" data-wa="Hola, MF Colombia. Quiero información sobre sus productos." data-menu-close>Comprar por WhatsApp</a>
+  </div>
+</div>
 
-                <!-- Col 4: Region & Social -->
-                <div class="space-y-3">
-                    <h4 class="text-xs uppercase tracking-[0.2em] font-semibold text-white">MARLON FOOTWEAR COLOMBIA</h4>
-                    <p class="text-xs text-gray-400">Envíos seguros a todo el territorio nacional.</p>
-                    <div class="pt-2">
-                        <span class="text-[10px] uppercase tracking-widest text-gray-500 block">Síguenos</span>
-                        <p class="text-xs text-brand-gold font-medium mt-1">@marlonfootwear</p>
-                    </div>
-                </div>
+<main id="contenido">
+<noscript><p class="noscript">Para ver el catálogo activa JavaScript o escríbenos por WhatsApp.</p></noscript>
 
-            </div>
+<!-- ============ 2. HERO ============ -->
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="hero-mark">MF Colombia</p>
+    <div>
+      <h1 id="hero-title">Tacones y plataformas para mujeres que destacan.</h1>
+    </div>
+    <div style="display:grid;gap:20px;justify-items:start;width:100%">
+      <p>Calzado femenino de alto impacto, pensado para que cada paso se note.</p>
+      <div class="hero-btns">
+        <a class="btn btn-solid" href="#productos">Ver colección</a>
+        <a class="btn" href="#contacto" data-wa="Hola, MF Colombia. Quiero ver la colección y comprar por WhatsApp.">Comprar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <!-- FOTO: reemplaza por img/hero.jpg (vertical, 4:5 o similar) -->
+  <div class="hero-media" data-slot="hero" data-alt="Tacón de Marlon Footwear, portada de la colección"></div>
+</section>
 
-            <!-- Copyright -->
-            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] text-gray-500">
-                <p>&copy; <span id="currentYear">2026</span> MARLON FOOTWEAR. Todos los derechos reservados.</p>
-                <p class="mt-2 sm:mt-0 font-light">Tienda Premium de Calzado Femenino</p>
-            </div>
-        </div>
-    </footer>
+<!-- ============ 3. COLECCIÓN DESTACADA ============ -->
+<section class="section" id="coleccion" aria-labelledby="col-title">
+  <div class="wrap">
+    <div class="sec-head row">
+      <div>
+        <h2 class="h-sec" id="col-title">Colección destacada</h2>
+        <p class="sub">Una selección de nuestros modelos. Tallas 34 a 40.</p>
+      </div>
+      <a class="link-u" href="#productos" data-filter="todos">Ver todos los modelos</a>
+    </div>
+    <div class="feature-grid" id="featureGrid"></div>
+  </div>
+</section>
 
-    <script>
-        /* 
-         * CENTRAL BRAND CONFIGURATION
-         */
-        const WHATSAPP_NUMBER = "573000000000"; // Número de WhatsApp de Marlon Footwear
-        const EMAIL = "contacto@marlonfootwear.com";
+<!-- ============ 4. CATEGORÍAS ============ -->
+<section class="section" id="categorias" style="padding-top:0" aria-labelledby="cat-title">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="h-sec" id="cat-title">Compra por categoría</h2></div>
+    <div class="cats">
+      <article class="cat-tile">
+        <a class="cat-link" href="#productos" data-filter="tacones" aria-label="Ver tacones">
+          <div class="r32" data-slot="cat-tacones" data-alt="Colección de tacones Marlon Footwear"></div>
+        </a>
+        <div class="cat-foot"><h3>Tacones</h3><a class="btn" href="#productos" data-filter="tacones">Ver tacones</a></div>
+      </article>
+      <article class="cat-tile">
+        <a class="cat-link" href="#productos" data-filter="plataformas" aria-label="Ver plataformas">
+          <div class="r32" data-slot="cat-plataformas" data-alt="Colección de plataformas Marlon Footwear"></div>
+        </a>
+        <div class="cat-foot"><h3>Plataformas</h3><a class="btn" href="#productos" data-filter="plataformas">Ver plataformas</a></div>
+      </article>
+      <article class="cat-tile">
+        <a class="cat-link" href="#coleccion" aria-label="Ver colección destacada">
+          <div class="r32" data-slot="cat-destacada" data-alt="Colección destacada de Marlon Footwear"></div>
+        </a>
+        <div class="cat-foot"><h3>Colección destacada</h3><a class="btn" href="#coleccion">Ver colección</a></div>
+      </article>
+    </div>
+  </div>
+</section>
 
-        // Dynamic Product Database - Marlon Footwear
-        const PRODUCTS = [
-            {
-                id: "p1",
-                name: "TACÓN LUXURY GOLD",
-                category: "tacones",
-                price: 245000,
-                isNew: true,
-                image: "assets/051-b5d7ccac74.jpg",
-                selectedSize: "36"
-            },
-            {
-                id: "p2",
-                name: "PLATAFORMA IMPERIAL CHAMPAGNE",
-                category: "plataformas",
-                price: 265000,
-                isNew: true,
-                image: "assets/076-976d15ff4d.jpg",
-                selectedSize: "37"
-            },
-            {
-                id: "p3",
-                name: "TACÓN ELEGANCE NOIR",
-                category: "tacones",
-                price: 230000,
-                isNew: false,
-                image: "assets/051-b5d7ccac74.jpg",
-                selectedSize: "36"
-            },
-            {
-                id: "p4",
-                name: "PLATAFORMA COUTURE ROSÉ",
-                category: "plataformas",
-                price: 275000,
-                isNew: false,
-                image: "assets/076-976d15ff4d.jpg",
-                selectedSize: "38"
-            },
-            {
-                id: "p5",
-                name: "SANDALIA GALA STRAP",
-                category: "tacones",
-                price: 250000,
-                isNew: true,
-                image: "assets/051-b5d7ccac74.jpg",
-                selectedSize: "35"
-            },
-            {
-                id: "p6",
-                name: "PLATAFORMA MAJESTY BLACK",
-                category: "plataformas",
-                price: 280000,
-                isNew: false,
-                image: "assets/076-976d15ff4d.jpg",
-                selectedSize: "37"
-            }
-        ];
+<!-- ============ 5. PRODUCTOS ============ -->
+<section class="section" id="productos" style="padding-top:0" aria-labelledby="prod-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h-sec" id="prod-title">Todos los modelos</h2>
+      <p class="sub">Elige tu talla y compra directo por WhatsApp.</p>
+    </div>
+    <div class="tabs" role="group" aria-label="Filtrar por categoría">
+      <button type="button" data-filter="todos" aria-pressed="true">Todos</button>
+      <button type="button" data-filter="tacones" aria-pressed="false">Tacones</button>
+      <button type="button" data-filter="plataformas" aria-pressed="false">Plataformas</button>
+    </div>
+    <p class="count" id="resultCount" role="status" aria-live="polite"></p>
+    <div class="grid" id="productGrid"></div>
+  </div>
+</section>
 
-        // Shopping Cart State
-        let cart = [];
-        let selectedSizesState = {};
+<!-- ============ 6. PRODUCTO DESTACADO ============ -->
+<section class="section spot on-dark" id="destacado" aria-label="Producto destacado">
+  <div class="wrap">
+    <div class="spot-grid" id="spot"></div>
+  </div>
+</section>
 
-        // On Page Initialization
-        window.addEventListener('DOMContentLoaded', () => {
-            // Set dynamic placeholders
-            const emailElem = document.getElementById('emailPlaceholderText');
-            if (emailElem) emailElem.textContent = EMAIL;
-            const emailLink = document.getElementById('emailLink');
-            if (emailLink) emailLink.href = `mailto:${EMAIL}`;
+<!-- ============ 7. EXPERIENCIA DE COMPRA ============ -->
+<section class="section" id="compra" aria-labelledby="buy-title">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="h-sec" id="buy-title">Compra fácil y segura</h2></div>
+    <ol class="steps">
+      <li class="step"><span class="step-n" aria-hidden="true">1</span><h3>Elige tu modelo</h3><p>Explora tacones y plataformas y abre el que más te guste.</p></li>
+      <li class="step"><span class="step-n" aria-hidden="true">2</span><h3>Selecciona tu talla</h3><p>Disponibles de la 34 a la 40. Si tienes dudas, escríbenos.</p></li>
+      <li class="step"><span class="step-n" aria-hidden="true">3</span><h3>Compra directamente con nosotros</h3><p>Finaliza por WhatsApp con el modelo y la talla ya escritos.</p></li>
+    </ol>
+  </div>
+</section>
 
-            // Render Product Grid
-            renderProducts(PRODUCTS);
+<!-- ============ 8. SOBRE MARLON FOOTWEAR ============ -->
+<section class="section about" id="nosotros" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <div>
+      <h2 class="h-sec" id="about-title">Sobre Marlon Footwear</h2>
+      <p class="lead">Marlon Footwear nace para mujeres que buscan calzado que destaque. Diseñamos y seleccionamos piezas que combinan presencia, elegancia y carácter.</p>
+      <a class="btn btn-solid" href="#productos" data-filter="todos">Ver colección</a>
+    </div>
+    <!-- FOTO: reemplaza por img/nosotros.jpg -->
+    <div class="r45" data-slot="nosotros" data-alt="Marlon Footwear, calzado femenino MF Colombia"></div>
+  </div>
+</section>
 
-            // Bind Event Listeners
-            initHeaderAndDrawers();
-            initSearch();
-            
-            // Set dynamic current year
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-        });
+<!-- ============ 10. CAMBIOS Y ENVÍOS ============ -->
+<section class="section" id="envios" aria-labelledby="ship-title">
+  <div class="wrap policy-wrap">
+    <div class="sec-head"><h2 class="h-sec" id="ship-title">Cambios y envíos</h2></div>
+    <div>
+      <ul class="policy">
+        <li><strong>Envíos a Colombia</strong></li>
+        <li><strong>Cambios</strong><span>Únicamente de productos nuevos, sin uso y en su empaque original.</span></li>
+        <li><strong>Tu talla</strong><span>El cliente debe seleccionar correctamente su talla.</span></li>
+        <li><strong>¿Dudas con la talla?</strong><span>Contáctanos por WhatsApp antes de comprar.</span></li>
+      </ul>
+      <div class="policy-cta"><a class="btn" href="#contacto" data-wa="Hola, MF Colombia. Tengo una duda sobre las tallas.">Preguntar por WhatsApp</a></div>
+    </div>
+  </div>
+</section>
 
-        function initHeaderAndDrawers() {
-            // Mobile Menu
-            const mobileMenu = document.getElementById('mobileMenu');
-            document.getElementById('openMobileMenu').addEventListener('click', () => mobileMenu.classList.remove('hidden'));
-            document.getElementById('closeMobileMenu').addEventListener('click', () => mobileMenu.classList.add('hidden'));
+<!-- ============ 11. INSTAGRAM ============ -->
+<section class="section" id="instagram" style="padding-top:0" aria-labelledby="ig-title">
+  <div class="wrap">
+    <div class="sec-head row">
+      <div>
+        <h2 class="h-sec" id="ig-title">Síguenos en Instagram</h2>
+        <p class="sub">Fotografías de nuestros modelos y contenido de la marca.</p>
+      </div>
+      <a class="link-u" data-ig>Ver Instagram</a>
+    </div>
+    <!-- FOTOS: img/insta1.jpg ... img/insta6.jpg -->
+    <div class="ig-grid" id="igGrid"></div>
+  </div>
+</section>
 
-            document.querySelectorAll('.mobile-nav-link').forEach(link => {
-                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-            });
+<!-- ============ 12. CONTACTO ============ -->
+<section class="section contact" id="contacto" style="padding-top:0" aria-labelledby="contact-title">
+  <div class="wrap contact-grid">
+    <div>
+      <h2 class="brand" id="contact-title">MARLON FOOTWEAR<br>MF COLOMBIA</h2>
+      <p class="sub">Escríbenos para elegir tu modelo y tu talla.</p>
+      <p style="margin-top:24px"><a class="btn btn-solid" href="#contacto" data-wa="Hola, MF Colombia. Quiero información.">Comprar por WhatsApp</a></p>
+    </div>
+    <dl>
+      <div><dt>WhatsApp</dt><dd><a data-wa="Hola, MF Colombia. Quiero información." data-wa-text href="#contacto">WhatsApp</a></dd></div>
+      <div><dt>Instagram</dt><dd><a data-ig data-ig-text>[INSTAGRAM]</a></dd></div>
+      <div><dt>Correo</dt><dd><a data-email>[EMAIL]</a></dd></div>
+    </dl>
+  </div>
+</section>
+</main>
 
-            // Cart Drawer
-            const cartDrawer = document.getElementById('cartDrawer');
-            document.getElementById('openCartBtn').addEventListener('click', () => cartDrawer.classList.remove('hidden'));
-            document.getElementById('closeCartBtn').addEventListener('click', () => cartDrawer.classList.add('hidden'));
+<!-- ============ 13. FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#inicio" aria-label="Marlon Footwear, MF Colombia. Ir al inicio">
+          <span class="logo-mf">MF</span>
+          <span class="logo-word">MARLON FOOTWEAR</span>
+        </a>
+        <p style="margin-top:18px;max-width:34ch">Marlon Footwear, MF Colombia. Calzado femenino: tacones, plataformas y piezas de alto impacto.</p>
+      </div>
+      <nav class="foot-links" aria-label="Enlaces del pie de página">
+        <a href="#coleccion">Colección</a>
+        <a href="#productos" data-filter="tacones">Tacones</a>
+        <a href="#productos" data-filter="plataformas">Plataformas</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#envios">Cambios y envíos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="foot-links">
+        <a data-wa="Hola, MF Colombia. Quiero información." href="#contacto">WhatsApp</a>
+        <a data-ig>Instagram</a>
+      </div>
+    </div>
+    <p class="foot-copy">© <span id="year">2026</span> Marlon Footwear · MF Colombia. Todos los derechos reservados.</p>
+  </div>
+</footer>
 
-            // Search Modal
-            const searchModal = document.getElementById('searchModal');
-            document.getElementById('openSearchBtn').addEventListener('click', () => {
-                searchModal.classList.remove('hidden');
-                document.getElementById('searchInput').focus();
-            });
-            document.getElementById('closeSearchBtn').addEventListener('click', () => searchModal.classList.add('hidden'));
+<!-- WhatsApp flotante -->
+<a class="wa-float" data-wa="Hola, MF Colombia. Quiero información." href="#contacto" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.4-4.3A8.2 8.2 0 1 1 8.5 18.7L4 20z"/><path d="M9.5 9.2c.3 2.4 2.2 4.3 4.6 4.8l1.1-1.2-1.9-1-.8.6a3.7 3.7 0 0 1-1.6-1.6l.6-.8-1-1.9-1 1.1z"/></svg>
+</a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-            // WhatsApp Cart Checkout
-            document.getElementById('checkoutWhatsAppBtn').addEventListener('click', checkoutCartWhatsApp);
-        }
+<!-- Diálogo de producto -->
+<dialog class="pd" id="pd" aria-label="Detalle del producto"></dialog>
 
-        // Render Products to HTML Grid
-        function renderProducts(items) {
-            const grid = document.getElementById('productGrid');
-            grid.innerHTML = '';
+<!-- Bolsa -->
+<dialog class="drawer" id="drawer" aria-labelledby="drTitle">
+  <div class="dr-head">
+    <h2 id="drTitle">Tu bolsa</h2>
+    <button class="dlg-close" type="button" data-close aria-label="Cerrar bolsa"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <div class="dr-list" id="drList"></div>
+  <div class="dr-foot" id="drFoot"></div>
+</dialog>
 
-            if (items.length === 0) {
-                grid.innerHTML = `<p class="col-span-full text-center py-12 text-gray-400 text-sm">No se encontraron productos en esta categoría.</p>`;
-                return;
-            }
+<!-- Finalizar pedido -->
+<dialog class="co" id="co" aria-labelledby="coTitle">
+  <div class="co-in">
+    <div class="co-head">
+      <h2 id="coTitle">Finaliza tu pedido</h2>
+      <button class="dlg-close" type="button" data-close aria-label="Cerrar"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    </div>
+    <form id="coForm" novalidate>
+      <label class="field"><span>Nombre completo</span><input name="name" type="text" autocomplete="name" placeholder="Daniela Restrepo Ocampo" aria-describedby="err-name" required></label>
+      <p class="err" id="err-name" role="alert"></p>
+      <label class="field"><span>Dirección de entrega</span><input name="address" type="text" autocomplete="street-address" placeholder="Carrera 43A # 18-95, apto 702" aria-describedby="err-address" required></label>
+      <p class="err" id="err-address" role="alert"></p>
+      <label class="field"><span>Ciudad</span><input name="city" type="text" autocomplete="address-level2" placeholder="Medellín, Antioquia" aria-describedby="err-city" required></label>
+      <p class="err" id="err-city" role="alert"></p>
+      <label class="field"><span>Teléfono / WhatsApp</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="300 123 4567" aria-describedby="err-phone" required></label>
+      <p class="err" id="err-phone" role="alert"></p>
 
-            items.forEach(product => {
-                if (!selectedSizesState[product.id]) {
-                    selectedSizesState[product.id] = '36';
-                }
+      <p class="pay-title" id="payTitle">Medio de pago (opcional)</p>
+      <div class="pays" role="group" aria-labelledby="payTitle">
+        <button class="pay" type="button" data-pay="Transferencia bancaria" aria-pressed="false">Transferencia bancaria</button>
+        <button class="pay" type="button" data-pay="Nequi" aria-pressed="false">Nequi</button>
+        <button class="pay" type="button" data-pay="Bancolombia" aria-pressed="false">Bancolombia</button>
+        <button class="pay" type="button" data-pay="Daviplata" aria-pressed="false">Daviplata</button>
+        <button class="pay" type="button" data-pay="Nu" aria-pressed="false">Nu</button>
+      </div>
+      <p class="co-note">Te enviamos los datos de pago por WhatsApp.</p>
 
-                const card = document.createElement('div');
-                card.className = "group flex flex-col bg-white border border-gray-100 p-4 transition-lux hover:shadow-lg relative";
+      <div class="co-sum">
+        <ul class="co-items" id="coItems"></ul>
+        <div class="co-total"><span>Total del pedido</span><strong id="coTotal"></strong></div>
+        <button class="co-edit" type="button" data-edit-bag>Editar bolsa</button>
+      </div>
+      <button class="btn btn-solid btn-block" type="submit" style="margin-top:12px">Finalizar pedido por WhatsApp
+        <svg class="ic" style="width:18px;height:18px" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+      <p class="co-fine">No se cobra nada en línea.</p>
+    </form>
+  </div>
+</dialog>
 
-                card.innerHTML = `
-                    ${product.isNew ? `<span class="absolute top-6 left-6 z-10 bg-brand-black text-white text-[9px] tracking-[0.2em] uppercase px-2 py-1">Novedad</span>` : ''}
-                    
-                    <div class="img-hover-zoom aspect-[4/5] bg-brand-cream overflow-hidden mb-4 relative">
-                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover object-center" onerror="this.src='https://placehold.co/600x750/F9F8F6/0D0D0D?text=MARLON+FOOTWEAR'">
-                    </div>
+<!-- Búsqueda -->
+<dialog class="sd" id="sd" aria-label="Buscar productos">
+  <div class="sd-row">
+    <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+    <label class="sr" for="sdInput">Buscar por nombre, tipo o color</label>
+    <input id="sdInput" type="search" placeholder="Busca por nombre, tipo o color" autocomplete="off">
+    <button class="icon-btn" type="button" data-close aria-label="Cerrar búsqueda"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <ul id="sdList"></ul>
+</dialog>
 
-                    <div class="flex-grow flex flex-col justify-between">
-                        <div>
-                            <span class="text-[10px] tracking-[0.2em] text-gray-400 uppercase">${product.category}</span>
-                            <h3 class="font-serif text-sm font-semibold text-brand-black mt-1 leading-snug">${product.name}</h3>
-                            <p class="text-sm font-serif text-brand-gold mt-1 font-medium">$ ${product.price.toLocaleString('es-CO')} COP</p>
-                        </div>
+<script>
+(function () {
+  "use strict";
 
-                        <div class="mt-4 pt-3 border-t border-gray-100">
-                            <span class="text-[10px] uppercase tracking-wider text-gray-500 block mb-1.5">Talla Colombia:</span>
-                            <div class="flex flex-wrap gap-1">
-                                ${['34','35','36','37','38','39','40'].map(size => `
-                                    <button onclick="setGridProductSize('${product.id}', '${size}')" 
-                                            class="size-btn-${product.id} w-7 h-7 text-[11px] border border-gray-200 transition-colors${selectedSizesState[product.id] === size ? 'bg-brand-black text-white border-brand-black' : 'hover:border-brand-black text-gray-700'}" 
-                                            data-size="${size}">
-                                        ${size}
-                                    </button>
-                                `).join('')}
-                            </div>
-                        </div>
+  /* ========================================================================
+     CONFIGURACIÓN · edita solo esta sección
+     ======================================================================== */
+  var CONFIG = {
+    // WhatsApp de la tienda: código de país + número, sin espacios ni "+".
+    // Para cambiarlo, reemplaza únicamente este valor.
+    whatsapp: "573115752334",
 
-                        <div class="mt-4 flex flex-col sm:flex-row gap-2">
-                            <button onclick="addToCart('${product.id}')" class="flex-1 bg-brand-black text-white py-2.5 px-2 text-[10px] uppercase tracking-widest font-medium hover:bg-brand-gold transition-colors">
-                                Añadir al Carrito
-                            </button>
-                            <button onclick="quickWhatsAppBuy('${product.id}')" class="border border-brand-black text-brand-black p-2 hover:bg-brand-black hover:text-white transition-colors flex items-center justify-center" title="Comprar directo por WhatsApp">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
+    email: "[EMAIL]",            // Ej.: "hola@tudominio.com"
+    instagram: "[INSTAGRAM]",    // Usuario sin @. Ej.: "mfcolombia"
 
-        // Category Filtering
-        function filterCategory(category) {
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('bg-brand-black', 'text-white');
-                btn.classList.add('bg-brand-cream', 'text-brand-black');
-            });
+    // Fotos de portada, categorías, nosotros e Instagram (las de cada producto están en PRODUCTS > imgs).
+    // Para cambiar una, escribe la ruta de otra imagen; si dejas "" se muestra un placeholder.
+    slots: {
+      "hero": "assets/026-ff2341dac0.jpg",
+      "cat-tacones": "assets/066-e49793ccc1.jpg",
+      "cat-plataformas": "assets/083-82a82bdcfb.jpg",
+      "cat-destacada": "assets/016-1f924fd122.jpg",
+      "nosotros": "assets/022-a2375478ec.jpg",
+      "insta1": "assets/019-b2f3dbeae8.jpg",
+      "insta2": "assets/049-3438f6f30c.jpg",
+      "insta3": "assets/031-e2e359fbc4.jpg",
+      "insta4": "assets/103-ff1388b9b9.jpg",
+      "insta5": "assets/068-6e9598f10e.jpg",
+      "insta6": "assets/091-176648dd89.jpg"
+    },
+    photos: { folder: "img/", ext: ".jpg" },   // solo para el nombre que muestran los placeholders
 
-            const activeBtn = document.getElementById(`filter-${category}`);
-            if (activeBtn) {
-                activeBtn.classList.remove('bg-brand-cream', 'text-brand-black');
-                activeBtn.classList.add('bg-brand-black', 'text-white');
-            }
+    sizes: [34, 35, 36, 37, 38, 39, 40],
 
-            if (category === 'todos') {
-                renderProducts(PRODUCTS);
-            } else if (category === 'novedades') {
-                renderProducts(PRODUCTS.filter(p => p.isNew));
-            } else {
-                renderProducts(PRODUCTS.filter(p => p.category === category));
-            }
-        }
+    // Colección destacada (sección 3) y producto destacado (sección 6): usa los "id" de la lista.
+    collectionIds: ["valentina-trio-platform", "noir-crystal-strappy", "blush-crystal-mule"],
+    spotlightId: "crystal-halo-platform"
+  };
 
-        // Handle Size Selection in Card Grid
-        function setGridProductSize(productId, size) {
-            selectedSizesState[productId] = size;
-            const buttons = document.querySelectorAll(`.size-btn-${productId}`);
-            buttons.forEach(btn => {
-                if (btn.getAttribute('data-size') === size) {
-                    btn.className = `size-btn-${productId} w-7 h-7 text-[11px] border border-brand-black bg-brand-black text-white transition-colors`;
-                } else {
-                    btn.className = `size-btn-${productId} w-7 h-7 text-[11px] border border-gray-200 text-gray-700 hover:border-brand-black transition-colors`;
-                }
-            });
-        }
+  /* ========================================================================
+     PRODUCTOS · fuente: marlon-footwear-productos.xlsx
+     group: "tacones" | "plataformas"   price: número en COP o null (por confirmar)
+     isNew: true muestra la etiqueta "Novedad"
+     imgs: fotos del modelo como [ruta, texto alternativo]; la primera es la principal
+     facts: datos breves que se muestran en la ficha del producto
+     ======================================================================== */
+  var PRODUCTS = [
+    {id:"valentina-trio-platform",name:"Valentina Trio Platform",cat:"Plataforma alta",group:"plataformas",price:249900,isNew:false,imgs:[["assets/001-cf6101ceaa.jpg","Valentina Trio Platform — Blanco — vista 1"],["assets/002-f0b89ae61e.jpg","Valentina Trio Platform — Blanco — vista 2"],["assets/003-a822e52e4d.jpg","Valentina Trio Platform — Blanco — vista 3"],["assets/004-9ccc0b2da9.jpg","Valentina Trio Platform — Negro — vista 1"],["assets/005-46e814e533.jpg","Valentina Trio Platform — Negro — vista 2"],["assets/006-fa0eff38b4.jpg","Valentina Trio Platform — Negro — vista 3"],["assets/007-cd964aaae5.jpg","Valentina Trio Platform — Nude — vista 1"],["assets/008-1a7387442f.jpg","Valentina Trio Platform — Nude — vista 2"],["assets/009-eb51fa0edf.jpg","Valentina Trio Platform — Nude — vista 3"]],facts:["Blanco","Negro","Nude","Tacón 12–14 cm","Correa ajustable","Tacón grueso","Sintético premium"],desc:"Plataforma alta que brinda mayor comodidad, con correa ajustable al tobillo, tacón grueso para mayor estabilidad y un diseño moderno y femenino. Disponible en blanco, negro y nude."},
+    {id:"plataforma-eleve",name:"Plataforma Elevé",cat:"Plataforma tipo mule",group:"plataformas",price:null,isNew:false,imgs:[["assets/010-1ccb8fce41.jpg","Plataforma Elevé blanca — vista 1"],["assets/011-71c43a2c84.jpg","Plataforma Elevé blanca — vista 2"],["assets/012-735ecd299b.jpg","Plataforma Elevé negra — vista 1"],["assets/013-62e2fc5d25.jpg","Plataforma Elevé negra — vista 2"]],facts:["Blanco y negro","Altura 12–14 cm","Diseño mule"],desc:"Plataforma alta para mayor comodidad, tacón ancho que aporta estabilidad, plantilla confortable y material sintético de alta calidad. Ideal para eventos y ocasiones especiales."},
+    {id:"nude-aura-wedge",name:"Nude Aura Wedge",cat:"Plataforma tipo cuña",group:"plataformas",price:190000,isNew:false,imgs:[["assets/014-116d4e04ae.jpg","Nude Aura Wedge — vista en uso"],["assets/015-3732aed0bd.jpg","Nude Aura Wedge — vista completa"]],facts:["Nude","Plataforma cuña","Banda transparente","Puntera abierta","Tacón alto"],desc:"Una sandalia nude de plataforma tipo cuña, con banda transparente, puntera abierta y una silueta elegante que estiliza visualmente la figura. Un diseño versátil para elevar tus looks."},
+    {id:"crystal-halo-platform",name:"Crystal Halo Platform",cat:"Plataforma tipo cuña",group:"plataformas",price:259900,isNew:false,imgs:[["assets/016-1f924fd122.jpg","Crystal Halo Platform"]],facts:["Nude con cristales","Plataforma alta","Cuña cubierta de brillos","Banda transparente","Hebilla ajustable","Puntera abierta"],desc:"Una plataforma nude de cuña alta cubierta de cristales, con banda transparente, hebilla ajustable y acabado glamuroso. Un diseño de alto impacto para eventos y ocasiones especiales."},
+    {id:"nude-eclat-wedge",name:"Nude Éclat Wedge",cat:"Plataforma tipo cuña",group:"plataformas",price:249900,isNew:false,imgs:[["assets/018-1ad2305e4d.jpg","Nude Éclat Wedge — vista en uso"],["assets/017-e43d68d2c4.jpg","Nude Éclat Wedge — vista de producto"]],facts:["Nude con brillos","Plataforma cuña","Cristales brillantes","Banda transparente","Puntera abierta"],desc:"Una plataforma tipo cuña en tono nude, cubierta de brillos y cristales, con banda transparente y puntera abierta. Un diseño glamuroso para destacar en eventos y ocasiones especiales."},
+    {id:"riviera-rope-platform",name:"Riviera Rope Platform",cat:"Plataforma alta",group:"plataformas",price:239900,isNew:false,imgs:[["assets/019-b2f3dbeae8.jpg","Riviera Rope Platform — vista frontal"],["assets/020-b27330c086.png","Riviera Rope Platform — vista superior"],["assets/021-f4855e8074.jpg","Riviera Rope Platform — vista lifestyle"]],facts:["Beige/camel","Plataforma alta","Suela tipo cuerda","Banda tejida","Puntera abierta"],desc:"Una sandalia de plataforma alta en tono beige/camel, con suela texturizada tipo cuerda y banda tejida de inspiración artesanal. Un diseño cómodo, femenino y perfecto para looks de verano."},
+    {id:"cork-muse-wedge",name:"Cork Muse Wedge",cat:"Sandalia de cuña",group:"plataformas",price:199900,isNew:false,imgs:[["assets/022-a2375478ec.jpg","Cork Muse Wedge — vista editorial"],["assets/023-c55bb3a7a7.jpg","Cork Muse Wedge — vista lifestyle"]],facts:["Natural/corcho","Cuña alta","Plataforma de corcho","Tiras transparentes","Puntera abierta"],desc:"Una sandalia de cuña alta con plataforma texturizada de corcho y tiras transparentes. Su diseño fresco y femenino combina comodidad, altura y un estilo natural."},
+    {id:"solea-rope-wedge",name:"Solea Rope Wedge",cat:"Sandalia de cuña",group:"plataformas",price:219900,isNew:false,imgs:[["assets/024-4266030eaa.jpg","Solea Rope Wedge — Acabado negro"],["assets/025-c49bc31f71.jpg","Solea Rope Wedge — Acabado rosa"]],facts:["Negro","Rosa","Cuña alta","Suela tipo cuerda","Banda transparente","Puntera abierta"],desc:"Una sandalia de cuña alta con suela tejida tipo espadrille, banda transparente y acabados en negro y rosa. Un diseño femenino, cómodo y perfecto para looks de temporada."},
+    {id:"essential-bold-platform",name:"Essential Bold Platform",cat:"Sandalia slide de plataforma",group:"plataformas",price:199900,isNew:false,imgs:[["assets/026-ff2341dac0.jpg","Essential Bold Platform — Negro — vista frontal"],["assets/027-03c6c1415b.jpg","Essential Bold Platform — Negro — vista superior"],["assets/028-9dd9239197.jpg","Essential Bold Platform — Negro — vista lateral"],["assets/029-85d4025db8.jpg","Essential Bold Platform — Marfil — vista en uso"],["assets/030-a0a19827d2.jpg","Essential Bold Platform — Marfil — detalle lateral"]],facts:["Negro","Marfil","Plataforma alta","Banda ancha","Suela robusta","Slide"],desc:"Una sandalia slide de plataforma alta con banda ancha, suela robusta y diseño minimalista. Disponible en negro y marfil, combina comodidad, presencia y versatilidad."},
+    {id:"duo-cross-platform",name:"Duo Cross Platform",cat:"Sandalia slide de plataforma",group:"plataformas",price:179900,isNew:false,imgs:[["assets/031-e2e359fbc4.jpg","Duo Cross Platform — Negro"],["assets/032-25d68e923f.jpg","Duo Cross Platform — Blanco"]],facts:["Negro","Blanco","Bandas cruzadas","Plataforma chunky","Puntera abierta","Slide"],desc:"Una sandalia slide de plataforma con bandas cruzadas, suela chunky y diseño cómodo para el día a día. Disponible en negro y blanco para combinar con diferentes estilos."},
+    {id:"aura-duo-platform",name:"Aura Duo Platform",cat:"Sandalia slide de plataforma",group:"plataformas",price:159900,isNew:false,imgs:[["assets/033-e769791713.jpg","Aura Duo Platform — vista 1"],["assets/034-882964d583.jpg","Aura Duo Platform — vista 2"],["assets/035-c23dc27257.jpg","Aura Duo Platform — vista 3"],["assets/036-0064367ef6.jpg","Aura Duo Platform — vista 4"],["assets/037-24ab592942.jpg","Aura Duo Platform — vista 5"],["assets/038-7532451f41.jpg","Aura Duo Platform — vista 6"]],facts:["Blanco y negro","Plataforma slide"],desc:"Una silueta limpia y versátil que combina presencia con un estilo moderno y fácil de llevar. Disponible en blanco y negro."},
+    {id:"siena-camel-wedge",name:"Siena Camel Wedge",cat:"Sandalia de cuña",group:"plataformas",price:210000,isNew:false,imgs:[["assets/039-1bf298ed50.jpg","Siena Camel Wedge — vista 1"],["assets/040-6202b23a0f.jpg","Siena Camel Wedge — vista 2"]],facts:["Tono camel","Cuña tejida","Tiras transparentes","Correa ajustable"],desc:"Sandalia de cuña tejida en tono camel, con tiras transparentes y correa ajustable al tobillo. Un diseño cálido, femenino y versátil para elevar tus looks."},
+    {id:"nude-crystal-stiletto",name:"Nude Crystal Stiletto",cat:"Sandalia de tacón fino",group:"tacones",price:239900,isNew:false,imgs:[["assets/041-74fa31ee51.jpg","Nude Crystal Stiletto — vista 1"],["assets/042-9abf951468.jpg","Nude Crystal Stiletto — vista 2"]],facts:["Tono nude","Tiras transparentes","Punta abierta","Correa al tobillo"],desc:"Un diseño elegante con puntera abierta, tiras transparentes y correa ajustable al tobillo. Ideal para completar looks sofisticados con un toque ligero y moderno."},
+    {id:"eclat-trio-stiletto",name:"Éclat Trio Stiletto",cat:"Sandalia de tacón fino",group:"tacones",price:210000,isNew:false,imgs:[["assets/043-a84f22e16f.jpg","Éclat Trio Stiletto — plateado"],["assets/044-0305692f82.jpg","Éclat Trio Stiletto — plateado, vista 2"],["assets/045-9e5257b676.jpg","Éclat Trio Stiletto — nude"],["assets/046-51afaf4221.jpg","Éclat Trio Stiletto — negro"]],facts:["Plateado","Nude","Negro","Tiras al tobillo"],desc:"Una sandalia de tacón fino con puntera abierta, tiras delicadas y correa ajustable al tobillo. Disponible en plateado, nude y negro para acompañar looks elegantes y sofisticados."},
+    {id:"blush-crystal-mule",name:"Blush Crystal Mule",cat:"Mule de tacón",group:"tacones",price:249900,isNew:false,imgs:[["assets/048-9b19fc342f.jpg","Blush Crystal Mule — vista editorial"],["assets/047-ecd3a8bfdc.jpg","Blush Crystal Mule — vista de producto"]],facts:["Rosa nude","Banda transparente","Tacón de cristal","Puntera abierta","Mule"],desc:"Un mule rosa nude con banda transparente, puntera abierta y tacón de cristal geométrico. Una silueta moderna y sofisticada para elevar tus looks de ocasión."},
+    {id:"nude-prism-heel",name:"Nude Prism Heel",cat:"Mule de tacón",group:"tacones",price:239900,isNew:false,imgs:[["assets/049-3438f6f30c.jpg","Nude Prism Heel — vista editorial"],["assets/050-889768eaae.jpg","Nude Prism Heel — vista lifestyle"]],facts:["Nude","Banda transparente","Tacón de cristal","Puntera abierta","Mule"],desc:"Un mule nude de silueta elegante, con banda transparente, puntera abierta y tacón de cristal de acabado brillante. Un diseño sofisticado para ocasiones especiales."},
+    {id:"nude-glass-heel",name:"Nude Glass Heel",cat:"Sandalia de tacón",group:"tacones",price:229900,isNew:false,imgs:[["assets/051-b5d7ccac74.jpg","Nude Glass Heel — vista 1"],["assets/052-eb12a0c5bc.jpg","Nude Glass Heel — vista 2"],["assets/053-76d8bfb3a3.jpg","Nude Glass Heel — vista 3"]],facts:["Tono nude","Tiras transparentes","Tacón de cristal","Correa al tobillo"],desc:"Una sandalia elegante con tiras transparentes, puntera abierta, correa ajustable al tobillo y un llamativo tacón de cristal. Una silueta sofisticada para destacar."},
+    {id:"camel-muse-mule",name:"Camel Muse Mule",cat:"Mule de tacón aguja",group:"tacones",price:199900,isNew:false,imgs:[["assets/054-45b9526446.jpg","Camel Muse Mule"]],facts:["Tono camel","Tacón aguja","Banda transparente"],desc:"Una mule de tacón aguja con punta fina y banda transparente. Su silueta en tono camel aporta un acabado elegante, limpio y fácil de combinar."},
+    {id:"lumiere-trio-stiletto",name:"Lumière Trio Stiletto",cat:"Sandalia de tacón fino",group:"tacones",price:210000,isNew:false,imgs:[["assets/055-cf7e577bab.jpg","Lumière Trio Stiletto — vista 1"],["assets/056-e81d54c835.jpg","Lumière Trio Stiletto — vista 2"]],facts:["Beige","Nude","Negro","Correa al tobillo"],desc:"Una sandalia de tacón fino con tiras delicadas, puntera abierta y correa ajustable al tobillo. Su diseño elegante está disponible en beige, nude y negro para complementar looks sofisticados."},
+    {id:"elan-clear-stiletto",name:"Élan Clear Stiletto",cat:"Sandalia de tacón aguja",group:"tacones",price:210000,isNew:false,imgs:[["assets/057-4547502ef2.jpg","Élan Clear Stiletto — vista blanca"],["assets/058-eed3586d08.jpg","Élan Clear Stiletto — vista nude lateral"],["assets/059-5c81414bcf.jpg","Élan Clear Stiletto — vista nude frontal"],["assets/060-621eb593b4.jpg","Élan Clear Stiletto — versión negra"]],facts:["Negro","Blanco","Nude","Correa al tobillo"],desc:"Una sandalia de tacón aguja con puntera abierta, tiras delicadas, detalle transparente y correa ajustable al tobillo. Su silueta estilizada combina elegancia y versatilidad en negro, blanco y nude."},
+    {id:"soleil-strappy-stiletto",name:"Soleil Strappy Stiletto",cat:"Sandalia de tacón aguja",group:"tacones",price:199900,isNew:false,imgs:[["assets/061-3a66ee98c0.jpg","Soleil Strappy Stiletto — Nude"],["assets/062-14218fd6bf.jpg","Soleil Strappy Stiletto — Negro"],["assets/063-664de64f04.jpg","Soleil Strappy Stiletto — Rojo — vista frontal"],["assets/064-a6f2f87ca1.jpg","Soleil Strappy Stiletto — Rojo — vista lateral"],["assets/065-f0694a0f30.jpg","Soleil Strappy Stiletto — Dorado"]],facts:["Nude","Negro","Rojo","Dorado","Tacón de aguja","Tiras cruzadas","Correa ajustable","Puntera abierta"],desc:"Una sandalia de tacón aguja con tiras finas cruzadas, puntera abierta y correa ajustable al tobillo. Disponible en nude, negro, rojo y dorado para acompañar looks elegantes y de alto impacto."},
+    {id:"sculpt-duo-stiletto",name:"Sculpt Duo Stiletto",cat:"Sandalia de tacón aguja",group:"tacones",price:219900,isNew:false,imgs:[["assets/066-e49793ccc1.jpg","Sculpt Duo Stiletto — Nude"],["assets/067-3a70b1b1ca.jpg","Sculpt Duo Stiletto — Negro"]],facts:["Nude","Negro","Tacón de aguja","Tiras finas","Correa ajustable","Puntera abierta"],desc:"Una sandalia de tacón aguja con tiras finas, puntera abierta y correa ajustable al tobillo. Su diseño estilizado está disponible en nude y negro para acompañar looks elegantes y sofisticados."},
+    {id:"noir-crystal-strappy",name:"Noir Crystal Strappy",cat:"Sandalia de tacón aguja",group:"tacones",price:219900,isNew:false,imgs:[["assets/068-6e9598f10e.jpg","Noir Crystal Strappy — vista editorial"],["assets/069-61e96f3743.jpg","Noir Crystal Strappy — vista lifestyle"]],facts:["Negro","Tacón de aguja","Tiras delicadas","Detalle brillante","Correa ajustable","Puntera abierta"],desc:"Una sandalia negra de tacón aguja con tiras delicadas, detalles brillantes y correa ajustable al tobillo. Su silueta estilizada aporta elegancia y un toque de glamour."},
+    {id:"clear-muse-stiletto",name:"Clear Muse Stiletto",cat:"Mule de tacón aguja",group:"tacones",price:179900,isNew:false,imgs:[["assets/070-1a9d74849b.jpg","Clear Muse Stiletto — Blanco"],["assets/071-d40fb573e2.jpg","Clear Muse Stiletto — Negro"],["assets/072-42e82249f3.jpg","Clear Muse Stiletto — Blanco — vista en uso"],["assets/073-eb0e92c3dd.jpg","Clear Muse Stiletto — Nude — vista de producto"],["assets/074-5158bf59b7.jpg","Clear Muse Stiletto — Nude — vista en uso"],["assets/075-f5bd2379c1.jpg","Clear Muse Stiletto — Nude — vista lateral"],["assets/076-976d15ff4d.jpg","Clear Muse Stiletto — Nude — detalle"]],facts:["Blanco","Negro","Nude","Banda transparente","Tacón de aguja","Punta fina","Mule"],desc:"Un mule de tacón aguja con banda transparente, punta fina y silueta estilizada. Disponible en blanco, negro y nude para crear looks sofisticados y fáciles de combinar."},
+    {id:"lucent-muse-mule",name:"Lucent Muse Mule",cat:"Mule de tacón aguja",group:"tacones",price:229900,isNew:false,imgs:[["assets/078-bff4645f0b.jpg","Lucent Muse Mule — Champagne"],["assets/077-c55d2ffc15.jpg","Lucent Muse Mule — Negro"],["assets/079-2d91df3860.jpg","Lucent Muse Mule — Nude"]],facts:["Champagne","Negro","Nude","Tacón transparente","Banda translúcida","Mule"],desc:"Un mule de tacón aguja con estructura limpia, banda frontal translúcida y tacón transparente. Disponible en champagne, negro y nude para una propuesta sofisticada y moderna."},
+    {id:"noir-matte-platform",name:"Noir Matte Platform",cat:"Sandalia de plataforma",group:"plataformas",price:249900,isNew:false,imgs:[["assets/080-927ae722f9.jpg","Noir Matte Platform — vista principal"],["assets/081-e406d77c02.jpg","Noir Matte Platform — vista completa"]],facts:["Negro mate","Plataforma alta","Tacón grueso","Puntera abierta","Correa al tobillo"],desc:"Una sandalia negra mate de plataforma alta, con tacón grueso, puntera abierta y correa ajustable al tobillo. Su silueta poderosa aporta altura, estabilidad y un estilo moderno."},
+    {id:"bold-muse-platform",name:"Bold Muse Platform",cat:"Mule de plataforma",group:"plataformas",price:249900,isNew:false,imgs:[["assets/083-82a82bdcfb.jpg","Bold Muse Platform — negro — vista frontal"],["assets/082-dbcc6c13fa.jpg","Bold Muse Platform — negro — vista lateral"],["assets/084-d9e634ab8b.jpg","Bold Muse Platform — negro — vista posterior"],["assets/085-7d7fca7c30.jpg","Bold Muse Platform — blanco — vista frontal"],["assets/086-770da6573e.jpg","Bold Muse Platform — blanco — vista lateral"],["assets/087-fe72d728de.jpg","Bold Muse Platform — blanco — detalle"],["assets/088-1a67fde8c5.jpg","Bold Muse Platform — amarillo — vista lateral"]],facts:["Negro","Blanco","Amarillo","Plataforma alta","Tacón grueso","Puntera abierta","Mule"],desc:"Un mule de plataforma alta con tacón grueso, puntera abierta y una silueta poderosa. Disponible en negro, blanco y amarillo para crear looks de alto impacto."},
+    {id:"noir-gloss-mule",name:"Noir Gloss Mule",cat:"Mule",group:"tacones",price:189900,isNew:false,imgs:[["assets/090-5af5cccbd7.jpg","Noir Gloss Mule — vista 1"],["assets/089-82d259356e.jpg","Noir Gloss Mule — vista 2"]],facts:["Negro","Acabado brillante","Banda ancha","Puntera abierta","Mule"],desc:"Un mule negro de acabado brillante, banda ancha y puntera abierta. Su diseño minimalista y sofisticado es fácil de combinar y aporta una presencia elegante."},
+    {id:"nude-croco-mule",name:"Nude Croco Mule",cat:"Mule de tacón aguja",group:"tacones",price:199900,isNew:false,imgs:[["assets/091-176648dd89.jpg","Nude Croco Mule"],["assets/092-efb32970fe.jpg","Nude Croco Mule — imagen adicional en negro"],["assets/093-9acfe9c6b9.jpg","Nude Croco Mule — dorado en uso"],["assets/094-a8fd7a46e7.jpg","Nude Croco Mule — dorado detalle"]],facts:["Nude","Negro","Dorado","Textura tipo croco","Tacón de aguja","Tiras cruzadas","Puntera abierta"],desc:"Un mule nude de tacón aguja con textura tipo croco, diseño de tiras cruzadas y puntera abierta. Una silueta femenina y sofisticada para elevar cualquier look. Disponible en nude, negro y dorado."},
+    {id:"nude-sculpt-platform",name:"Nude Sculpt Platform",cat:"Sandalia de plataforma",group:"plataformas",price:249900,isNew:false,imgs:[["assets/095-6b0ee5fbbc.jpg","Nude Sculpt Platform — vista principal"],["assets/096-dc5b206a22.jpg","Nude Sculpt Platform — vistas del modelo"]],facts:["Nude","Plataforma alta","Tacón de aguja","Puntera abierta","Correa ajustable"],desc:"Sandalia nude de plataforma alta con tacón de aguja, puntera abierta, banda frontal y correa ajustable al tobillo. Su diseño estilizado alarga visualmente la silueta y aporta una elegancia sofisticada."},
+    {id:"aurelia-metallic-platform",name:"Aurelia Metallic Platform",cat:"Sandalia de plataforma metalizada",group:"plataformas",price:249900,isNew:false,imgs:[["assets/097-f77c01816f.jpg","Aurelia Metallic Platform — Blanco marfil"],["assets/098-07670138a1.jpg","Aurelia Metallic Platform — Dorado metálico"],["assets/099-cca8d0bf37.jpg","Aurelia Metallic Platform — Blanco marfil frontal"],["assets/100-176315cda8.jpg","Aurelia Metallic Platform — Plateado metálico"],["assets/101-e1eeac83e5.jpg","Aurelia Metallic Platform — Dorado champagne"],["assets/102-634f5cf135.jpg","Aurelia Metallic Platform — Negro"]],facts:["Blanco","Dorado","Plateado","Negro","Plataforma alta","Tacón grueso","Correa ajustable"],desc:"Una sandalia de plataforma alta con tacón grueso, puntera abierta y correa ajustable al tobillo. Su acabado metalizado en blanco, dorado, plateado y negro aporta brillo, elegancia y una presencia poderosa."},
+    {id:"aurora-crystal-wedge",name:"Aurora Crystal Wedge",cat:"Plataforma tipo cuña",group:"plataformas",price:249000,isNew:false,imgs:[["assets/103-ff1388b9b9.jpg","Aurora Crystal Wedge"]],facts:["Acabado dorado","Plataforma cuña","Cristales brillantes","Correa ajustable"],desc:"Una plataforma alta tipo cuña con acabado dorado brillante, tiras adornadas con cristales y correa ajustable al tobillo. Un diseño de alto impacto para eventos y ocasiones especiales."}
+  ];
 
-        // Handle Size Selection for Bossé Featured Banner
-        let bosseSelectedSize = '36';
-        function selectSize(prefix, size) {
-            bosseSelectedSize = size;
-            document.querySelectorAll('.bosse-size').forEach(btn => {
-                if (btn.getAttribute('data-size') === size) {
-                    btn.classList.add('bg-brand-black', 'text-white');
-                    btn.classList.remove('border-gray-200');
-                } else {
-                    btn.classList.remove('bg-brand-black', 'text-white');
-                    btn.classList.add('border-gray-200');
-                }
-            });
-        }
+  /* ======================================================================== */
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var byId = function (id) { return PRODUCTS.filter(function (p) { return p.id === id; })[0]; };
+  var fmt = function (n) { return "$" + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "."); };
+  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+  var norm = function (s) { return String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); };
+  var waURL = function (t) { return "https://wa.me/" + CONFIG.whatsapp + (t ? "?text=" + encodeURIComponent(t) : ""); };
 
-        // Add Featured BOSSÉ to Cart
-        function addFeaturedToCart(name, price, image, sizePrefix) {
-            const size = bosseSelectedSize;
-            const existingIndex = cart.findIndex(item => item.name === name && item.size === size);
-            
-            if (existingIndex > -1) {
-                cart[existingIndex].qty += 1;
-            } else {
-                cart.push({ id: 'bosse', name, price, image, size, qty: 1 });
-            }
+  function openWA(text) {
+    var a = document.createElement("a");
+    a.href = waURL(text); a.target = "_blank"; a.rel = "noopener";
+    document.body.appendChild(a); a.click(); a.remove();
+  }
 
-            updateCartUI();
-            document.getElementById('cartDrawer').classList.remove('hidden');
-        }
+  var toastTimer;
+  function toast(msg) {
+    var t = $("#toast"); t.textContent = msg; t.classList.add("show");
+    clearTimeout(toastTimer); toastTimer = setTimeout(function () { t.classList.remove("show"); }, 2200);
+  }
 
-        // Buy BOSSÉ Immediately via WhatsApp
-        function buyNowWhatsApp(name, price, sizePrefix) {
-            const size = bosseSelectedSize;
-            const message = `Hola Marlon Footwear, quiero comprar el modelo ${name} en talla ${size} (Precio: $${price.toLocaleString('es-CO')} COP).`;
-            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank');
-        }
+  /* ---------- Fotos ---------- */
+  function mediaInner(src, alt, label, eager) {
+    return '<span class="ph" aria-hidden="true"><span class="ph-mf">MF</span><span>Foto pendiente</span><small>' + esc(label || "") + "</small></span>" +
+      (src ? '<img src="' + esc(src) + '" alt="' + esc(alt) + '" ' + (eager ? 'fetchpriority="high"' : 'loading="lazy"') + ' decoding="async" onerror="this.remove()">' : "");
+  }
+  function media(alt, cls, p, idx) {
+    var im = p && p.imgs && p.imgs[idx || 0];
+    return '<span class="media ' + (cls || "") + '"' + (im ? "" : ' role="img" aria-label="' + esc(alt) + '"') + ">" +
+      mediaInner(im ? im[0] : "", im ? im[1] : alt, p ? CONFIG.photos.folder + p.id + CONFIG.photos.ext : "") + "</span>";
+  }
+  function galleryHTML(p) {
+    var n = p.imgs ? p.imgs.length : 0;
+    return '<div class="pd-gal" data-gal="' + p.id + '">' + media(p.name + ", " + p.cat, "r45", p, 0) +
+      (n > 1 ? '<div class="thumbs" role="group" aria-label="Fotos de ' + esc(p.name) + '">' + p.imgs.map(function (im, i) {
+        return '<button class="thumb" type="button" data-thumb="' + i + '" aria-pressed="' + (i === 0) + '" aria-label="Ver foto ' + (i + 1) + " de " + n + '"><img src="' + esc(im[0]) + '" alt="" loading="lazy"></button>';
+      }).join("") + "</div>" : "") + "</div>";
+  }
+  function hydrateSlots() {
+    $$("[data-slot]").forEach(function (el) {
+      var key = el.getAttribute("data-slot"), alt = el.getAttribute("data-alt") || "", src = CONFIG.slots[key] || "";
+      el.classList.add("media");
+      if (!src) { el.setAttribute("role", "img"); el.setAttribute("aria-label", alt); }
+      el.innerHTML = mediaInner(src, alt, CONFIG.photos.folder + key + CONFIG.photos.ext, key === "hero");
+    });
+  }
 
-        // Add Product from Grid to Cart
-        function addToCart(productId) {
-            const product = PRODUCTS.find(p => p.id === productId);
-            if (!product) return;
+  /* ---------- Plantillas ---------- */
+  function sizesHTML(prefix, id) {
+    return '<fieldset class="sizes"><legend>Talla</legend><div class="chips">' +
+      CONFIG.sizes.map(function (s) {
+        return '<label class="chip"><input type="radio" name="' + prefix + "-" + id + '" value="' + s + '"><span>' + s + "</span></label>";
+      }).join("") + "</div></fieldset>";
+  }
+  function priceHTML(p) {
+    return p.price == null ? '<span class="price pending">Precio por confirmar</span>' : '<span class="price">' + fmt(p.price) + "</span>";
+  }
+  var BAG_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8h13l-1 12h-11l-1-12z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>';
 
-            const size = selectedSizesState[productId] || '36';
-            const existingIndex = cart.findIndex(item => item.id === productId && item.size === size);
+  function cardHTML(p) {
+    var pending = p.price == null;
+    return '<article class="card" data-product="' + p.id + '">' +
+      '<button class="card-media" type="button" data-view="' + p.id + '" aria-label="Ver producto: ' + esc(p.name) + '">' +
+        (p.isNew ? '<span class="tag">Novedad</span>' : "") + media(p.name + ", " + p.cat, "r45", p) +
+      "</button>" +
+      '<div class="card-body"><p class="cat">' + esc(p.cat) + "</p><h3>" + esc(p.name) + "</h3>" + priceHTML(p) +
+        sizesHTML("c", p.id) + '<p class="hint" role="status"></p>' +
+        '<div class="card-actions' + (pending ? " single" : "") + '">' +
+          '<button class="btn btn-solid" type="button" data-buy>' + (pending ? "Consultar precio" : "Comprar") + "</button>" +
+          (pending ? "" : '<button class="icon-btn" type="button" data-bag aria-label="Añadir ' + esc(p.name) + ' a la bolsa">' + BAG_SVG + "</button>") +
+        "</div></div></article>";
+  }
 
-            if (existingIndex > -1) {
-                cart[existingIndex].qty += 1;
-            } else {
-                cart.push({
-                    id: product.id,
-                    name: product.name,
-                    price: product.price,
-                    image: product.image,
-                    size: size,
-                    qty: 1
-                });
-            }
+  function featureHTML(p) {
+    return '<article class="fcard">' +
+      '<button class="fcard-media" type="button" data-view="' + p.id + '" aria-label="Ver producto: ' + esc(p.name) + '">' +
+        media(p.name + ", " + p.cat, "r45", p) + "</button>" +
+      '<div class="fcard-body"><h3>' + esc(p.name) + "</h3>" + priceHTML(p) +
+        '<p class="meta">Tallas ' + CONFIG.sizes[0] + " a " + CONFIG.sizes[CONFIG.sizes.length - 1] + "</p>" +
+        '<div class="fcard-btns"><button class="btn" type="button" data-view="' + p.id + '">Ver producto</button>' +
+        '<button class="btn btn-solid" type="button" data-view="' + p.id + '" data-need-size>Comprar</button></div></div></article>';
+  }
 
-            updateCartUI();
-            document.getElementById('cartDrawer').classList.remove('hidden');
-        }
+  /* ---------- Render ---------- */
+  var state = { group: "todos" };
 
-        // Quick WhatsApp Buy Button on Cards
-        function quickWhatsAppBuy(productId) {
-            const product = PRODUCTS.find(p => p.id === productId);
-            if (!product) return;
+  function renderGrid() {
+    var list = PRODUCTS.filter(function (p) { return state.group === "todos" || p.group === state.group; });
+    $("#productGrid").innerHTML = list.map(cardHTML).join("");
+    $("#resultCount").textContent = list.length + (list.length === 1 ? " modelo" : " modelos");
+    $$(".tabs [data-filter]").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.filter === state.group ? "true" : "false"); });
+  }
+  function renderFeatured() {
+    $("#featureGrid").innerHTML = CONFIG.collectionIds.map(byId).filter(Boolean).map(featureHTML).join("");
+  }
+  function renderSpot() {
+    var p = byId(CONFIG.spotlightId) || PRODUCTS[0]; if (!p) return;
+    var el = $("#spot"); el.setAttribute("data-product", p.id);
+    el.innerHTML = media(p.name + ", " + p.cat, "r45", p, 0) +
+      '<div class="spot-info"><p class="cat">' + esc(p.cat) + "</p><h2>" + esc(p.name) + "</h2>" +
+      '<p class="desc">' + esc(p.desc) + "</p>" + priceHTML(p) + sizesHTML("f", p.id) + '<p class="hint" role="status"></p>' +
+      '<div class="spot-btns"><button class="btn btn-solid-light" type="button" data-buy>' + (p.price == null ? "Consultar precio" : "Comprar ahora") + "</button>" +
+      '<button class="btn btn-light" type="button" data-consult>Consultar por WhatsApp</button></div></div>';
+  }
+  function renderInstagram() {
+    var h = "";
+    for (var i = 1; i <= 6; i++) h += '<a data-ig aria-label="Ver publicación ' + i + ' en Instagram"><div class="r11" data-slot="insta' + i + '" data-alt="Fotografía ' + i + ' de Marlon Footwear en Instagram"></div></a>';
+    $("#igGrid").innerHTML = h;
+  }
 
-            const size = selectedSizesState[productId] || '36';
-            const message = `Hola Marlon Footwear, quiero comprar el modelo ${product.name} en talla ${size}.`;
-            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank');
-        }
+  /* ---------- Mensajes de WhatsApp ---------- */
+  function msgBuy(p, size) {
+    return "Hola, MF Colombia. Quiero comprar: " + p.name + (size ? ", talla " + size : "") + (p.price != null ? " (" + fmt(p.price) + ")" : "") + ".";
+  }
+  function msgConsult(p, size) {
+    return "Hola, MF Colombia. Quiero consultar por: " + p.name + (size ? ", talla " + size : "") + ".";
+  }
+  function checkedSize(scope) { var i = $("input[type=radio]:checked", scope); return i ? i.value : null; }
+  function needSize(scope, text) {
+    var fs = $(".sizes", scope), hint = $(".hint", scope);
+    if (hint) hint.textContent = text || "Elige tu talla para continuar.";
+    if (fs) { fs.classList.remove("need"); void fs.offsetWidth; fs.classList.add("need"); }
+  }
 
-        // Update Cart Drawer UI
-        function updateCartUI() {
-            const cartList = document.getElementById('cartItemsList');
-            const cartCountBadge = document.getElementById('cartCountBadge');
-            const cartItemCount = document.getElementById('cartItemCount');
-            const cartTotalPrice = document.getElementById('cartTotalPrice');
+  /* ---------- Bolsa ---------- */
+  var bag = [];
+  try { bag = JSON.parse(localStorage.getItem("mf-bag") || "[]").filter(function (i) { return byId(i.id); }); } catch (e) { bag = []; }
+  function saveBag() { try { localStorage.setItem("mf-bag", JSON.stringify(bag)); } catch (e) {} }
+  function addToBag(id, size, quiet) {
+    var f = bag.filter(function (i) { return i.id === id && i.size === size; })[0];
+    if (f) f.qty += 1; else bag.push({ id: id, size: size, qty: 1 });
+    saveBag(); renderBag(); if (!quiet) toast("Añadido a la bolsa");
+  }
+  function renderBag() {
+    var n = bag.reduce(function (a, i) { return a + i.qty; }, 0), b = $("#bagCount");
+    b.textContent = n; b.hidden = n === 0;
+    $("#bagOpen").setAttribute("aria-label", "Abrir bolsa de compras" + (n ? ", " + n + (n === 1 ? " artículo" : " artículos") : ""));
+    var list = $("#drList"), foot = $("#drFoot");
+    if (!n) {
+      list.innerHTML = '<p class="dr-empty">Tu bolsa está vacía. Elige un modelo y su talla para empezar.</p>';
+      foot.innerHTML = '<button class="btn btn-solid btn-block" type="button" data-close data-goto="#productos">Ver productos</button>';
+      return;
+    }
+    var total = 0, lines = [];
+    list.innerHTML = bag.map(function (i, idx) {
+      var p = byId(i.id); total += p.price * i.qty;
+      lines.push("- " + p.name + ", talla " + i.size + " (x" + i.qty + ") " + fmt(p.price * i.qty));
+      return '<div class="dr-item"><div><strong>' + esc(p.name) + '</strong><p class="meta">Talla ' + i.size + "</p>" +
+        '<div class="qty"><button type="button" data-qty="-1" data-idx="' + idx + '" aria-label="Quitar una unidad de ' + esc(p.name) + '">−</button><span aria-live="polite">' + i.qty +
+        '</span><button type="button" data-qty="1" data-idx="' + idx + '" aria-label="Agregar una unidad de ' + esc(p.name) + '">+</button>' +
+        '<button class="rm" type="button" data-remove="' + idx + '">Quitar</button></div></div><div>' + fmt(p.price * i.qty) + "</div></div>";
+    }).join("");
+    var msg = "Hola, MF Colombia. Quiero comprar:\n" + lines.join("\n") + "\nSubtotal: " + fmt(total);
+    foot.innerHTML = '<div class="dr-sub"><span>Subtotal</span><strong>' + fmt(total) + "</strong></div>" +
+      '<button class="btn btn-solid btn-block" type="button" data-checkout>Continuar con el pedido</button>';
+  }
 
-            const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
-            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+  /* ---------- Diálogos ---------- */
+  function openDlg(d) { if (d.showModal) d.showModal(); else d.setAttribute("open", ""); }
+  function closeDlg(d) { if (d.close) d.close(); else d.removeAttribute("open"); }
+  function closeAllDlg() { $$("dialog[open]").forEach(closeDlg); }
 
-            if (totalQty > 0) {
-                cartCountBadge.textContent = totalQty;
-                cartCountBadge.classList.remove('hidden');
-            } else {
-                cartCountBadge.classList.add('hidden');
-            }
+  function openProduct(id, mustPickSize) {
+    var p = byId(id); if (!p) return;
+    closeAllDlg();
+    var pd = $("#pd"), pending = p.price == null;
+    pd.innerHTML = '<button class="dlg-close" type="button" data-close aria-label="Cerrar"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>' +
+      '<div class="pd-grid">' + galleryHTML(p) +
+      '<div class="pd-info" data-product="' + p.id + '"><p class="cat">' + esc(p.cat) + "</p><h2>" + esc(p.name) + "</h2>" + priceHTML(p) +
+      '<p class="desc">' + esc(p.desc) + "</p>" + (p.facts && p.facts.length ? '<ul class="facts">' + p.facts.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") + sizesHTML("m", p.id) + '<p class="hint" role="status"></p>' +
+      '<div class="pd-btns"><button class="btn btn-solid" type="button" data-buy>' + (pending ? "Consultar precio por WhatsApp" : "Comprar") + "</button>" +
+      (pending ? "" : '<button class="btn" type="button" data-bag>Añadir a la bolsa</button>') + "</div></div></div>";
+    pd.setAttribute("aria-label", p.name);
+    openDlg(pd);
+    if (mustPickSize && !pending) needSize($(".pd-info", pd), "Elige tu talla para comprar.");
+  }
 
-            cartItemCount.textContent = `(${totalQty} artículo${totalQty === 1 ? '' : 's'})`;
-            cartTotalPrice.textContent = `$ ${totalPrice.toLocaleString('es-CO')} COP`;
+  /* ---------- Finalizar pedido ---------- */
+  var pay = "";
+  function openCheckout() {
+    if (!bag.length) return;
+    closeAllDlg();
+    var total = 0;
+    $("#coItems").innerHTML = bag.map(function (i) {
+      var p = byId(i.id), sub = p.price * i.qty; total += sub;
+      return "<li><span>" + esc(p.name) + " <small>· T" + i.size + " × " + i.qty + "</small></span><span>" + fmt(sub) + "</span></li>";
+    }).join("");
+    $("#coTotal").textContent = fmt(total);
+    openDlg($("#co"));
+    $("#co").scrollTop = 0;
+  }
+  $("#coForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var f = e.target, v = {}, ok = true, first = null;
+    ["name", "address", "city", "phone"].forEach(function (k) {
+      var inp = f.elements[k], val = inp.value.trim(), bad = !val;
+      if (k === "phone" && val.replace(/\D/g, "").length < 10) bad = true;
+      $("#err-" + k).textContent = bad ? (k === "phone" ? "Escribe tu número de 10 dígitos." : "Este dato es necesario para el envío.") : "";
+      inp.setAttribute("aria-invalid", bad ? "true" : "false");
+      if (bad) { ok = false; if (!first) first = inp; }
+      v[k] = val;
+    });
+    if (!ok) { first.focus(); return; }
+    var total = 0, lines = bag.map(function (i) {
+      var p = byId(i.id); total += p.price * i.qty;
+      return "- " + p.name + ", talla " + i.size + " (x" + i.qty + ") " + fmt(p.price * i.qty);
+    });
+    openWA("Hola, MF Colombia. Quiero finalizar mi pedido:\n" + lines.join("\n") + "\nTotal: " + fmt(total) +
+      "\n\nDatos de entrega\nNombre: " + v.name + "\nDirección: " + v.address + "\nCiudad: " + v.city + "\nTeléfono: " + v.phone +
+      "\nMedio de pago: " + (pay || "por definir"));
+  });
+  $("#coForm").addEventListener("input", function (e) { if (e.target.getAttribute("aria-invalid") === "true") { e.target.setAttribute("aria-invalid", "false"); $("#err-" + e.target.name).textContent = ""; } });
 
-            if (cart.length === 0) {
-                cartList.innerHTML = `<p class="text-center py-10 text-xs text-gray-400 uppercase tracking-wider">Tu carrito está vacío</p>`;
-                return;
-            }
+  /* ---------- Menú móvil ---------- */
+  var menu = $("#menu"), menuBtn = $("#menuOpen");
+  function setMenu(open) {
+    menu.classList.toggle("open", open); document.body.classList.toggle("lock", open);
+    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    if (open) $("#menuClose").focus(); else menuBtn.focus({ preventScroll: true });
+  }
+  menuBtn.addEventListener("click", function () { setMenu(true); });
+  $("#menuClose").addEventListener("click", function () { setMenu(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && menu.classList.contains("open")) setMenu(false); });
+  window.matchMedia("(min-width:1024px)").addEventListener("change", function (m) { if (m.matches && menu.classList.contains("open")) { menu.classList.remove("open"); document.body.classList.remove("lock"); menuBtn.setAttribute("aria-expanded", "false"); } });
 
-            cartList.innerHTML = '';
-            cart.forEach((item, index) => {
-                const itemElem = document.createElement('div');
-                itemElem.className = "flex items-center space-x-4 border-b border-gray-100 pb-3";
-                itemElem.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}" class="w-16 h-20 object-cover bg-brand-cream border border-gray-100">
-                    <div class="flex-grow text-xs">
-                        <h4 class="font-serif font-semibold text-brand-black">${item.name}</h4>
-                        <p class="text-gray-500 mt-0.5">Talla: <span class="text-brand-black font-medium">${item.size}</span></p>
-                        <p class="text-brand-gold font-medium mt-1">$ ${item.price.toLocaleString('es-CO')} COP</p>
-                        
-                        <div class="flex items-center space-x-2 mt-2">
-                            <button onclick="changeQty(${index}, -1)" class="w-5 h-5 border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-gray-100">-</button>
-                            <span class="text-xs font-medium">${item.qty}</span>
-                            <button onclick="changeQty(${index}, 1)" class="w-5 h-5 border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-gray-100">+</button>
-                        </div>
-                    </div>
-                    <button onclick="removeFromCart(${index})" class="text-gray-400 hover:text-red-500 p-1">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
-                    </button>
-                `;
-                cartList.appendChild(itemElem);
-            });
-        }
+  /* ---------- Búsqueda ---------- */
+  var sd = $("#sd"), sdInput = $("#sdInput"), sdList = $("#sdList");
+  $("#searchOpen").addEventListener("click", function () { sdInput.value = ""; sdList.innerHTML = ""; openDlg(sd); sdInput.focus(); });
+  sdInput.addEventListener("input", function () {
+    var q = norm(sdInput.value.trim());
+    if (!q) { sdList.innerHTML = ""; return; }
+    var res = PRODUCTS.filter(function (p) { return norm(p.name + " " + p.cat + " " + p.desc).indexOf(q) > -1; }).slice(0, 8);
+    sdList.innerHTML = res.length ? res.map(function (p) {
+      return '<li><button type="button" data-view="' + p.id + '"><span><strong>' + esc(p.name) + "</strong><small>" + esc(p.cat) + "</small></span><span>" + (p.price != null ? fmt(p.price) : "Por confirmar") + "</span></button></li>";
+    }).join("") : '<li class="sd-msg">No encontramos modelos con esa búsqueda. Prueba con otra palabra o escríbenos por WhatsApp.</li>';
+  });
 
-        function changeQty(index, delta) {
-            if (cart[index]) {
-                cart[index].qty += delta;
-                if (cart[index].qty <= 0) {
-                    cart.splice(index, 1);
-                }
-                updateCartUI();
-            }
-        }
+  /* ---------- Eventos globales ---------- */
+  function setFilter(g) { state.group = g; renderGrid(); }
 
-        function removeFromCart(index) {
-            if (cart[index]) {
-                cart.splice(index, 1);
-                updateCartUI();
-            }
-        }
+  document.addEventListener("change", function (e) {
+    if (e.target.matches(".chip input")) { var h = $(".hint", e.target.closest("[data-product]")); if (h) h.textContent = ""; }
+  });
 
-        // Finalize Whole Cart Purchase via WhatsApp
-        function checkoutCartWhatsApp() {
-            if (cart.length === 0) {
-                alert('Tu carrito está vacío. Añade al menos un producto.');
-                return;
-            }
+  document.addEventListener("click", function (e) {
+    var el = e.target.closest("[data-filter],[data-view],[data-buy],[data-consult],[data-bag],[data-close],[data-menu-close],[data-qty],[data-remove],[data-checkout],[data-edit-bag],[data-pay],[data-thumb],#bagOpen");
+    if (el) {
+      if (el.hasAttribute("data-menu-close") && menu.classList.contains("open")) { menu.classList.remove("open"); document.body.classList.remove("lock"); menuBtn.setAttribute("aria-expanded", "false"); }
+      if (el.dataset.filter) setFilter(el.dataset.filter);
 
-            let message = "Hola Marlon Footwear, deseo realizar el siguiente pedido:\n\n";
-            let total = 0;
+      if (el.dataset.view) { openProduct(el.dataset.view, el.hasAttribute("data-need-size")); return; }
 
-            cart.forEach((item, i) => {
-                const subtotal = item.price * item.qty;
-                total += subtotal;
-                message += `${i + 1}. Modelo: ${item.name}\n   - Talla: ${item.size}\n   - Cantidad: ${item.qty}\n   - Precio: $${subtotal.toLocaleString('es-CO')} COP\n\n`;
-            });
+      if (el.matches("[data-buy]")) {
+        var scope = el.closest("[data-product]"), p = byId(scope.dataset.product), size = checkedSize(scope);
+        if (p.price == null) { openWA(msgConsult(p, size)); return; }
+        if (!size) { needSize(scope); return; }
+        addToBag(p.id, size, true); openCheckout(); return;
+      }
+      if (el.matches("[data-consult]")) {
+        var sc = el.closest("[data-product]"); openWA(msgConsult(byId(sc.dataset.product), checkedSize(sc))); return;
+      }
+      if (el.matches("[data-bag]")) {
+        var s2 = el.closest("[data-product]"), p2 = byId(s2.dataset.product), z = checkedSize(s2);
+        if (!z) { needSize(s2, "Elige tu talla para añadir a la bolsa."); return; }
+        addToBag(p2.id, z); return;
+      }
+      if (el.id === "bagOpen") { renderBag(); openDlg($("#drawer")); return; }
+      if (el.matches("[data-thumb]")) {
+        var gal = el.closest("[data-gal]"), gp = byId(gal.dataset.gal), k = +el.dataset.thumb, mi = $(".media img", gal);
+        if (mi) { mi.src = gp.imgs[k][0]; mi.alt = gp.imgs[k][1]; }
+        $$(".thumb", gal).forEach(function (b) { b.setAttribute("aria-pressed", b === el ? "true" : "false"); });
+        return;
+      }
+      if (el.matches("[data-checkout]")) { openCheckout(); return; }
+      if (el.matches("[data-edit-bag]")) { closeDlg($("#co")); renderBag(); openDlg($("#drawer")); return; }
+      if (el.matches("[data-pay]")) {
+        pay = (pay === el.dataset.pay) ? "" : el.dataset.pay;
+        $$(".pay").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.pay === pay ? "true" : "false"); });
+        return;
+      }
+      if (el.matches("[data-qty]")) {
+        var it = bag[+el.dataset.idx]; if (it) { it.qty += +el.dataset.qty; if (it.qty < 1) bag.splice(+el.dataset.idx, 1); saveBag(); renderBag(); } return;
+      }
+      if (el.matches("[data-remove]")) { bag.splice(+el.dataset.remove, 1); saveBag(); renderBag(); return; }
+      if (el.matches("[data-close]")) {
+        var dlg = el.closest("dialog"); if (dlg) closeDlg(dlg);
+        if (el.dataset.goto) { var t = $(el.dataset.goto); if (t) t.scrollIntoView(); }
+        return;
+      }
+    }
+    // clic en el fondo oscuro cierra el diálogo
+    if (e.target.tagName === "DIALOG") closeDlg(e.target);
+  });
 
-            message += `TOTAL PEDIDO: $${total.toLocaleString('es-CO')} COP\n\nQuedo atento(a) para confirmar la disponibilidad y coordinar el pago/envío.`;
+  /* ---------- Enlaces de contacto ---------- */
+  function initLinks() {
+    var n = CONFIG.whatsapp, shown = n.length === 12 ? "+" + n.slice(0, 2) + " " + n.slice(2, 5) + " " + n.slice(5, 8) + " " + n.slice(8) : "+" + n;
+    $$("[data-wa]").forEach(function (a) { a.href = waURL(a.getAttribute("data-wa")); a.target = "_blank"; a.rel = "noopener"; if (a.hasAttribute("data-wa-text")) a.textContent = shown; });
 
-            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank');
-        }
+    var ig = CONFIG.instagram, igOk = ig && ig.charAt(0) !== "[";
+    $$("[data-ig]").forEach(function (a) {
+      if (igOk) { a.href = "https://www.instagram.com/" + ig.replace(/^@/, "") + "/"; a.target = "_blank"; a.rel = "noopener"; }
+      else { a.removeAttribute("href"); a.setAttribute("aria-disabled", "true"); }
+      if (a.hasAttribute("data-ig-text")) a.textContent = igOk ? "@" + ig.replace(/^@/, "") : "[INSTAGRAM]";
+    });
 
-        // General WhatsApp Trigger
-        function openGeneralWhatsApp(customText) {
-            const defaultText = customText || "Hola Marlon Footwear, me gustaría recibir información sobre su calzado femenino premium.";
-            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(defaultText)}`;
-            window.open(url, '_blank');
-        }
+    var em = $("[data-email]");
+    if (CONFIG.email.indexOf("@") > 0) { em.href = "mailto:" + CONFIG.email; em.textContent = CONFIG.email; } else { em.textContent = CONFIG.email; }
 
-        // Search Input Filter Logic
-        function initSearch() {
-            const input = document.getElementById('searchInput');
-            const results = document.getElementById('searchResults');
+    $("#year").textContent = new Date().getFullYear();
+  }
 
-            input.addEventListener('input', (e) => {
-                const query = e.target.value.toLowerCase().trim();
-                if (query.length < 2) {
-                    results.innerHTML = `<p class="text-xs uppercase tracking-wider text-gray-400">Escribe al menos 2 letras para buscar...</p>`;
-                    return;
-                }
-
-                const matches = PRODUCTS.filter(p => p.name.toLowerCase().includes(query) || p.category.toLowerCase().includes(query));
-
-                if (matches.length === 0) {
-                    results.innerHTML = `<p class="text-xs text-gray-500">No se encontraron productos coincidentes.</p>`;
-                    return;
-                }
-
-                results.innerHTML = matches.map(m => `
-                    <div class="flex items-center justify-between py-2 border-b border-gray-100 hover:bg-gray-50 px-2 cursor-pointer" onclick="selectSearchResult('${m.id}')">
-                        <div class="flex items-center space-x-3">
-                            <img src="${m.image}" class="w-10 h-12 object-cover">
-                            <div>
-                                <p class="font-serif text-xs font-semibold text-brand-black">${m.name}</p>
-                                <p class="text-[10px] text-gray-400 uppercase">${m.category}</p>
-                            </div>
-                        </div>
-                        <span class="text-xs font-serif text-brand-gold">$ ${m.price.toLocaleString('es-CO')}</span>
-                    </div>
-                `).join('');
-            });
-        }
-
-        function selectSearchResult(productId) {
-            document.getElementById('searchModal').classList.add('hidden');
-            const targetElem = document.getElementById('coleccion');
-            if (targetElem) {
-                targetElem.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    </script>
+  /* ---------- Inicio ---------- */
+  renderInstagram();
+  hydrateSlots();
+  renderFeatured();
+  renderGrid();
+  renderSpot();
+  renderBag();
+  initLinks();
+})();
+</script>
 </body>
 </html>
